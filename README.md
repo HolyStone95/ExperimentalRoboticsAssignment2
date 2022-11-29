@@ -76,7 +76,7 @@ https://user-images.githubusercontent.com/61761835/187249845-1b03e627-d32e-4464-
 
 Here there is the UML components diagram of the project
 
-<img src="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/main/media/component_diagrams/v3/component_diagram.jpg" >
+<img src="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/tree/master/media/component_diagrams/v3/component_diagram.jpg" >
 
 As shown in the above component diagram, this software architecture relies on the synergy of various modules:
 
