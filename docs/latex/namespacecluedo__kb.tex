@@ -1,0 +1,213 @@
+\hypertarget{namespacecluedo__kb}{}\doxysection{cluedo\+\_\+kb Namespace Reference}
+\label{namespacecluedo__kb}\index{cluedo\_kb@{cluedo\_kb}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacecluedo__kb_ac2ce9f31fe1875079d6cdbaa539122f6}{print\+\_\+kb\+\_\+content}} ()
+\item 
+def \mbox{\hyperlink{namespacecluedo__kb_a1d7f88bfe0321a672bdef29136ac817f}{add\+\_\+hint}} (hint)
+\item 
+def \mbox{\hyperlink{namespacecluedo__kb_a5b22ff3cf204215f52ecb6c13d8a806d}{add\+\_\+hint\+\_\+to\+\_\+list}} (hint)
+\item 
+def \mbox{\hyperlink{namespacecluedo__kb_a8f44cecf16139c1d94cbf2a2bfc193cb}{is\+\_\+valid\+\_\+hint}} (hint)
+\item 
+def \mbox{\hyperlink{namespacecluedo__kb_a9c5cbd279b89f36f5f84c0e2dd63fca8}{get\+\_\+id}} (req)
+\item 
+def \mbox{\hyperlink{namespacecluedo__kb_afe9cb44eb6b95930542c455410ad70fe}{mark\+\_\+wrong\+\_\+id}} (req)
+\item 
+def \mbox{\hyperlink{namespacecluedo__kb_ae00019d2c2ba8a48f8255f575cc3fd8a}{shut\+\_\+msg}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespacecluedo__kb_a0fb9cc01990ff96751d9a8df8f473ad2}{record\+\_\+where}} = 0
+\item 
+int \mbox{\hyperlink{namespacecluedo__kb_a727404718e0777bf45e91fa9458e1f18}{record\+\_\+what}} = 1
+\item 
+int \mbox{\hyperlink{namespacecluedo__kb_a0e82193f2d59570204a37c310bc95e7b}{record\+\_\+who}} = 2
+\item 
+int \mbox{\hyperlink{namespacecluedo__kb_af2159774e7dc8e59e293d9057d60e690}{is\+\_\+active}} = 3
+\item 
+int \mbox{\hyperlink{namespacecluedo__kb_a5be4e3b61f6bdb880099c78cf658f5dc}{is\+\_\+complete}} = 4
+\item 
+\mbox{\hyperlink{namespacecluedo__kb_a8636f58ddb22c3c70904f8e30a4dcc5e}{kb}} = None
+\item 
+\mbox{\hyperlink{namespacecluedo__kb_a335d9858030dee0238a6f2fc67a05023}{kb\+\_\+consistent}} = None
+\item 
+\mbox{\hyperlink{namespacecluedo__kb_a1c63dfe724e4e24b2985ef2adb3bbfbb}{srv\+\_\+get\+\_\+id}} = None
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}.. module:: main
+    :platform: Unix
+    :synopsis: Python module aimed at implementong the Reasoning & AI side
+
+.. moduleauthor:: Iacopo Pietrasanta iacopo.pietrasanta@gmail.com
+
+This node implements a knowledge base for the assignment, due to problems in
+using the ARMOR ontology given the particular way in which the ID are generated.
+
+Subscribes to:
+    /oracle_hint [erl2/ErlOracle]
+
+Publishes to:
+    /rosout [rosgraph_msgs/Log]
+
+Service :
+    /get_id
+    /mark_wrong_id\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecluedo__kb_a1d7f88bfe0321a672bdef29136ac817f}\label{namespacecluedo__kb_a1d7f88bfe0321a672bdef29136ac817f}} 
+\index{cluedo\_kb@{cluedo\_kb}!add\_hint@{add\_hint}}
+\index{add\_hint@{add\_hint}!cluedo\_kb@{cluedo\_kb}}
+\doxysubsubsection{\texorpdfstring{add\_hint()}{add\_hint()}}
+{\footnotesize\ttfamily def cluedo\+\_\+kb.\+add\+\_\+hint (\begin{DoxyParamCaption}\item[{}]{hint }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}receive and store (if possible) the hint
+
+Parameters:
+    hint (erl2/ErlOracle):
+        the hint received directly from the Oracle
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacecluedo__kb_a5b22ff3cf204215f52ecb6c13d8a806d}\label{namespacecluedo__kb_a5b22ff3cf204215f52ecb6c13d8a806d}} 
+\index{cluedo\_kb@{cluedo\_kb}!add\_hint\_to\_list@{add\_hint\_to\_list}}
+\index{add\_hint\_to\_list@{add\_hint\_to\_list}!cluedo\_kb@{cluedo\_kb}}
+\doxysubsubsection{\texorpdfstring{add\_hint\_to\_list()}{add\_hint\_to\_list()}}
+{\footnotesize\ttfamily def cluedo\+\_\+kb.\+add\+\_\+hint\+\_\+to\+\_\+list (\begin{DoxyParamCaption}\item[{}]{hint }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}add an hint to the list, if possible
+
+the function tries to add a hint, checking if it is still consistent;
+if the required field is already occupied (i.e. the string in that cell
+is not empty), the ID is marked as inconsistent and deactivated, and
+its index is removed from the indexes list.
+
+Parameters:
+    hint (erl2/ErlOracle):
+        the hint to store in the KB\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacecluedo__kb_a9c5cbd279b89f36f5f84c0e2dd63fca8}\label{namespacecluedo__kb_a9c5cbd279b89f36f5f84c0e2dd63fca8}} 
+\index{cluedo\_kb@{cluedo\_kb}!get\_id@{get\_id}}
+\index{get\_id@{get\_id}!cluedo\_kb@{cluedo\_kb}}
+\doxysubsubsection{\texorpdfstring{get\_id()}{get\_id()}}
+{\footnotesize\ttfamily def cluedo\+\_\+kb.\+get\+\_\+id (\begin{DoxyParamCaption}\item[{}]{req }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}implementation of the service /get_id
+
+the service tries to return the first available index, looking in the
+list of remaining indexes. if no consistent index is available, the
+service returns response.consistent_found=False .
+
+Parameters:
+    req (erl_assignment_2/GetIdRequest):
+        the service request
+
+Returns:
+    (erl_assignment_2/GetIdResponse) the id and if there are
+    still available IDs.
+
+Note:
+    the service could return also (true, -1) in a situation in which
+    there are some active ID, but none of them is complete.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacecluedo__kb_a8f44cecf16139c1d94cbf2a2bfc193cb}\label{namespacecluedo__kb_a8f44cecf16139c1d94cbf2a2bfc193cb}} 
+\index{cluedo\_kb@{cluedo\_kb}!is\_valid\_hint@{is\_valid\_hint}}
+\index{is\_valid\_hint@{is\_valid\_hint}!cluedo\_kb@{cluedo\_kb}}
+\doxysubsubsection{\texorpdfstring{is\_valid\_hint()}{is\_valid\_hint()}}
+{\footnotesize\ttfamily def cluedo\+\_\+kb.\+is\+\_\+valid\+\_\+hint (\begin{DoxyParamCaption}\item[{}]{hint }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}check if the hint is vald or not
+
+the Oracle sometimes could send a wrong hint, i.e. some field is
+an empty string and/or some filed has value "-1". the function
+detects the quality of the hint, and returns if it is admissible
+or not. Also the ID could be negative or zero.
+
+Parameters:
+    hint (erl2/ErlOracle):
+        the hint to store in the KB
+
+Returns:
+    (bool) if the hint is admissible or not.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacecluedo__kb_afe9cb44eb6b95930542c455410ad70fe}\label{namespacecluedo__kb_afe9cb44eb6b95930542c455410ad70fe}} 
+\index{cluedo\_kb@{cluedo\_kb}!mark\_wrong\_id@{mark\_wrong\_id}}
+\index{mark\_wrong\_id@{mark\_wrong\_id}!cluedo\_kb@{cluedo\_kb}}
+\doxysubsubsection{\texorpdfstring{mark\_wrong\_id()}{mark\_wrong\_id()}}
+{\footnotesize\ttfamily def cluedo\+\_\+kb.\+mark\+\_\+wrong\+\_\+id (\begin{DoxyParamCaption}\item[{}]{req }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}discard a ID from the system.
+
+Parameters:
+    req (erl_assignment_2/MarkWrongIdRequest):
+        the service request
+
+Returns:
+    req (erl_assignment_2/MarkWrongIdResponse) empty
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacecluedo__kb_ac2ce9f31fe1875079d6cdbaa539122f6}\label{namespacecluedo__kb_ac2ce9f31fe1875079d6cdbaa539122f6}} 
+\index{cluedo\_kb@{cluedo\_kb}!print\_kb\_content@{print\_kb\_content}}
+\index{print\_kb\_content@{print\_kb\_content}!cluedo\_kb@{cluedo\_kb}}
+\doxysubsubsection{\texorpdfstring{print\_kb\_content()}{print\_kb\_content()}}
+{\footnotesize\ttfamily def cluedo\+\_\+kb.\+print\+\_\+kb\+\_\+content (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}print the content inside the ontology on screen
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacecluedo__kb_ae00019d2c2ba8a48f8255f575cc3fd8a}\label{namespacecluedo__kb_ae00019d2c2ba8a48f8255f575cc3fd8a}} 
+\index{cluedo\_kb@{cluedo\_kb}!shut\_msg@{shut\_msg}}
+\index{shut\_msg@{shut\_msg}!cluedo\_kb@{cluedo\_kb}}
+\doxysubsubsection{\texorpdfstring{shut\_msg()}{shut\_msg()}}
+{\footnotesize\ttfamily def cluedo\+\_\+kb.\+shut\+\_\+msg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacecluedo__kb_af2159774e7dc8e59e293d9057d60e690}\label{namespacecluedo__kb_af2159774e7dc8e59e293d9057d60e690}} 
+\index{cluedo\_kb@{cluedo\_kb}!is\_active@{is\_active}}
+\index{is\_active@{is\_active}!cluedo\_kb@{cluedo\_kb}}
+\doxysubsubsection{\texorpdfstring{is\_active}{is\_active}}
+{\footnotesize\ttfamily int cluedo\+\_\+kb.\+is\+\_\+active = 3}
+
+\mbox{\Hypertarget{namespacecluedo__kb_a5be4e3b61f6bdb880099c78cf658f5dc}\label{namespacecluedo__kb_a5be4e3b61f6bdb880099c78cf658f5dc}} 
+\index{cluedo\_kb@{cluedo\_kb}!is\_complete@{is\_complete}}
+\index{is\_complete@{is\_complete}!cluedo\_kb@{cluedo\_kb}}
+\doxysubsubsection{\texorpdfstring{is\_complete}{is\_complete}}
+{\footnotesize\ttfamily int cluedo\+\_\+kb.\+is\+\_\+complete = 4}
+
+\mbox{\Hypertarget{namespacecluedo__kb_a8636f58ddb22c3c70904f8e30a4dcc5e}\label{namespacecluedo__kb_a8636f58ddb22c3c70904f8e30a4dcc5e}} 
+\index{cluedo\_kb@{cluedo\_kb}!kb@{kb}}
+\index{kb@{kb}!cluedo\_kb@{cluedo\_kb}}
+\doxysubsubsection{\texorpdfstring{kb}{kb}}
+{\footnotesize\ttfamily cluedo\+\_\+kb.\+kb = None}
+
+\mbox{\Hypertarget{namespacecluedo__kb_a335d9858030dee0238a6f2fc67a05023}\label{namespacecluedo__kb_a335d9858030dee0238a6f2fc67a05023}} 
+\index{cluedo\_kb@{cluedo\_kb}!kb\_consistent@{kb\_consistent}}
+\index{kb\_consistent@{kb\_consistent}!cluedo\_kb@{cluedo\_kb}}
+\doxysubsubsection{\texorpdfstring{kb\_consistent}{kb\_consistent}}
+{\footnotesize\ttfamily cluedo\+\_\+kb.\+kb\+\_\+consistent = None}
+
+\mbox{\Hypertarget{namespacecluedo__kb_a727404718e0777bf45e91fa9458e1f18}\label{namespacecluedo__kb_a727404718e0777bf45e91fa9458e1f18}} 
+\index{cluedo\_kb@{cluedo\_kb}!record\_what@{record\_what}}
+\index{record\_what@{record\_what}!cluedo\_kb@{cluedo\_kb}}
+\doxysubsubsection{\texorpdfstring{record\_what}{record\_what}}
+{\footnotesize\ttfamily int cluedo\+\_\+kb.\+record\+\_\+what = 1}
+
+\mbox{\Hypertarget{namespacecluedo__kb_a0fb9cc01990ff96751d9a8df8f473ad2}\label{namespacecluedo__kb_a0fb9cc01990ff96751d9a8df8f473ad2}} 
+\index{cluedo\_kb@{cluedo\_kb}!record\_where@{record\_where}}
+\index{record\_where@{record\_where}!cluedo\_kb@{cluedo\_kb}}
+\doxysubsubsection{\texorpdfstring{record\_where}{record\_where}}
+{\footnotesize\ttfamily int cluedo\+\_\+kb.\+record\+\_\+where = 0}
+
+\mbox{\Hypertarget{namespacecluedo__kb_a0e82193f2d59570204a37c310bc95e7b}\label{namespacecluedo__kb_a0e82193f2d59570204a37c310bc95e7b}} 
+\index{cluedo\_kb@{cluedo\_kb}!record\_who@{record\_who}}
+\index{record\_who@{record\_who}!cluedo\_kb@{cluedo\_kb}}
+\doxysubsubsection{\texorpdfstring{record\_who}{record\_who}}
+{\footnotesize\ttfamily int cluedo\+\_\+kb.\+record\+\_\+who = 2}
+
+\mbox{\Hypertarget{namespacecluedo__kb_a1c63dfe724e4e24b2985ef2adb3bbfbb}\label{namespacecluedo__kb_a1c63dfe724e4e24b2985ef2adb3bbfbb}} 
+\index{cluedo\_kb@{cluedo\_kb}!srv\_get\_id@{srv\_get\_id}}
+\index{srv\_get\_id@{srv\_get\_id}!cluedo\_kb@{cluedo\_kb}}
+\doxysubsubsection{\texorpdfstring{srv\_get\_id}{srv\_get\_id}}
+{\footnotesize\ttfamily cluedo\+\_\+kb.\+srv\+\_\+get\+\_\+id = None}
+

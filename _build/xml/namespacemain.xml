@@ -15,8 +15,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_2/scripts/main.py" line="33" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="33" bodyend="-1"/>
-        <referencedby refid="namespacemain_1aa56d29f08d0961469cf62ac9f403c6d6" compoundref="main_8py" startline="76" endline="105">set_pred</referencedby>
+        <location file="erl_assignment_2/scripts/main.py" line="32" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="32" bodyend="-1"/>
+        <referencedby refid="namespacemain_1aa56d29f08d0961469cf62ac9f403c6d6" compoundref="main_8py" startline="75" endline="104">set_pred</referencedby>
       </memberdef>
       <memberdef kind="variable" id="namespacemain_1a3e764de4074bfb739d1998abced55ac1" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_2/scripts/main.py" line="37" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="37" bodyend="-1"/>
+        <location file="erl_assignment_2/scripts/main.py" line="36" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacemain_1a0bd46d27f049dfbb09392e957ec34568" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_2/scripts/main.py" line="38" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="38" bodyend="-1"/>
+        <location file="erl_assignment_2/scripts/main.py" line="37" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacemain_1ac1dd3a22818fca415816d8a84cba1a2b" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_2/scripts/main.py" line="40" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="40" bodyend="-1"/>
+        <location file="erl_assignment_2/scripts/main.py" line="39" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacemain_1a5764eb307553af2ba7efd4eccf089952" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_2/scripts/main.py" line="41" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="41" bodyend="-1"/>
+        <location file="erl_assignment_2/scripts/main.py" line="40" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacemain_1ad46251f88aa93898add539a906984b11" prot="public" static="no" mutable="no">
         <type></type>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_2/scripts/main.py" line="109" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="109" bodyend="-1"/>
+        <location file="erl_assignment_2/scripts/main.py" line="108" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="108" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacemain_1a79880777c8390987e5399bf8a2bf1e2a" prot="public" static="no" mutable="no">
         <type></type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_2/scripts/main.py" line="110" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="110" bodyend="-1"/>
+        <location file="erl_assignment_2/scripts/main.py" line="109" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="109" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacemain_1aa64e399b790a8c0a824ef968ff9d2bf2" prot="public" static="no" mutable="no">
         <type></type>
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_2/scripts/main.py" line="116" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="116" bodyend="-1"/>
+        <location file="erl_assignment_2/scripts/main.py" line="115" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="115" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacemain_1a9a220dda4d4806f0613a8a629018b237" prot="public" static="no" mutable="no">
         <type></type>
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_2/scripts/main.py" line="117" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="117" bodyend="-1"/>
+        <location file="erl_assignment_2/scripts/main.py" line="116" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="116" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacemain_1af42266504582dd8a2b308d1b4b29ef5d" prot="public" static="no" mutable="no">
         <type></type>
@@ -142,7 +142,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_2/scripts/main.py" line="118" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="118" bodyend="-1"/>
+        <location file="erl_assignment_2/scripts/main.py" line="117" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="117" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacemain_1a362c7575c2d0679a88a44c15fbed9cc2" prot="public" static="no" mutable="no">
         <type></type>
@@ -156,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_2/scripts/main.py" line="119" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="119" bodyend="-1"/>
+        <location file="erl_assignment_2/scripts/main.py" line="118" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="118" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacemain_1a8b5092cbbc941aa75e1117b09b762777" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -170,7 +170,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_2/scripts/main.py" line="121" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="121" bodyend="-1"/>
+        <location file="erl_assignment_2/scripts/main.py" line="120" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="120" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -185,14 +185,14 @@
 <para><verbatim>Description of the replan_setup_kb function
 
 This function allows to &quot;reset&quot; the ontology predicates&apos; values,
-by setting all the wayoints as &quot;  yet to be visited &quot;, all the 
+by setting all the wayoints as &quot;  yet to be visited &quot;, all the
 hints as &quot; yet to be gathered &quot; and the consistent hypothesis
 as &quot;yet to be collected &quot;.</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_2/scripts/main.py" line="43" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="43" bodyend="75"/>
-        <references refid="namespacemain_1aa56d29f08d0961469cf62ac9f403c6d6" compoundref="main_8py" startline="76" endline="105">set_pred</references>
+        <location file="erl_assignment_2/scripts/main.py" line="42" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="42" bodyend="74"/>
+        <references refid="namespacemain_1aa56d29f08d0961469cf62ac9f403c6d6" compoundref="main_8py" startline="75" endline="104">set_pred</references>
       </memberdef>
       <memberdef kind="function" id="namespacemain_1aa56d29f08d0961469cf62ac9f403c6d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -217,7 +217,7 @@ as &quot;yet to be collected &quot;.</verbatim> </para>
 <para><verbatim>Description of the set_pred function
 
 This function allows to set the predicates and
-populate a request accordingly 
+populate a request accordingly
 
 Note:
 
@@ -226,9 +226,9 @@ Note:
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_2/scripts/main.py" line="76" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="76" bodyend="105"/>
-        <references refid="namespacemain_1a5fcf6b7ac1e63accb6462b8e22ffc14c" compoundref="main_8py" startline="33">cl_update_kb</references>
-        <referencedby refid="namespacemain_1a558d73008c7d1848ed77970cbb746a29" compoundref="main_8py" startline="43" endline="75">replan_setup_kb</referencedby>
+        <location file="erl_assignment_2/scripts/main.py" line="75" column="1" bodyfile="erl_assignment_2/scripts/main.py" bodystart="75" bodyend="104"/>
+        <references refid="namespacemain_1a5fcf6b7ac1e63accb6462b8e22ffc14c" compoundref="main_8py" startline="32">cl_update_kb</references>
+        <referencedby refid="namespacemain_1a558d73008c7d1848ed77970cbb746a29" compoundref="main_8py" startline="42" endline="74">replan_setup_kb</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -240,10 +240,9 @@ Note:
 
 .. moduleauthor:: Iacopo Pietrasanta iacopo.pietrasanta@gmail.com
 
-ROS node representing the core of the overall architechture. Initially,
-it updates the RosPlan Knowledge Base. Secondly, it generates the plan
-with RosPlan. Thirdly, it waits that it gets completed.  Then, if the plam
-does not end up in a final solution, it repeats the aformentioned steps.
+This node represents the upper layer of execution of the entire simulation:
+It initializes the ROS_plan plan, it executes and based on the outcome either
+replan or concludes the game.
 
 Subscribes to:
 /clock [rosgraph_msgs/Clock]

@@ -1,0 +1,171 @@
+\hypertarget{action__interface_8cpp}{}\doxysection{erl\+\_\+assignment\+\_\+2/src/action\+\_\+interface.cpp File Reference}
+\label{action__interface_8cpp}\index{erl\_assignment\_2/src/action\_interface.cpp@{erl\_assignment\_2/src/action\_interface.cpp}}
+
+
+This node implements all the rosplan actions in a single node.  
+
+
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+srvs/\+Set\+Bool.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rosplan\+\_\+action\+\_\+interface/\+R\+P\+Action\+Interface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}diagnostic\+\_\+msgs/\+Key\+Value.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}erl\+\_\+assignment\+\_\+2\+\_\+msgs/\+Get\+Id.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}erl\+\_\+assignment\+\_\+2\+\_\+msgs/\+Mark\+Wrong\+Id.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}erl2/\+Oracle.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}geometry\+\_\+msgs/\+Point.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+Include dependency graph for action\+\_\+interface.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{action__interface_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_k_c_l__rosplan_1_1action__interface__class}{K\+C\+L\+\_\+rosplan\+::action\+\_\+interface\+\_\+class}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_k_c_l__rosplan}{K\+C\+L\+\_\+rosplan}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{action__interface_8cpp_afe4664cca95c5e9b93e4a25874bc871d}{L\+E\+A\+V\+E\+\_\+\+T\+E\+M\+P\+LE}}~\char`\"{}leave\+\_\+temple\char`\"{}
+\begin{DoxyCompactList}\small\item\em (leave\+\_\+temple ?from -\/ temple ?to -\/ waypoint) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{action__interface_8cpp_afbc16abf7fcce6f53cf8977d76c78ece}{G\+O\+\_\+\+T\+O\+\_\+\+WP}}~\char`\"{}go\+\_\+to\+\_\+wp\char`\"{}
+\begin{DoxyCompactList}\small\item\em (go\+\_\+to\+\_\+wp ?from ?to -\/ waypoint) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{action__interface_8cpp_a905f67ab58312915d0c5d40847c80c0c}{S\+H\+I\+F\+T\+\_\+\+G\+R\+I\+P\+P\+ER}}~\char`\"{}shift\+\_\+gripper\char`\"{}
+\begin{DoxyCompactList}\small\item\em (shift\+\_\+gripper ?wp -\/ waypoint) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{action__interface_8cpp_aa69a2751821fe07e1faea957e42c9180}{G\+A\+T\+H\+E\+R\+\_\+\+H\+I\+NT}}~\char`\"{}gather\+\_\+hint\char`\"{}
+\begin{DoxyCompactList}\small\item\em (gather\+\_\+hint ?wp -\/ waypoint) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{action__interface_8cpp_ab348801e93c20ce28d21d673571cbeb5}{R\+E\+A\+C\+H\+\_\+\+T\+E\+M\+P\+LE}}~\char`\"{}reach\+\_\+temple\char`\"{}
+\begin{DoxyCompactList}\small\item\em (reach\+\_\+temple ?from -\/ waypoint ?to -\/ temple) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{action__interface_8cpp_a7413401b40b075490286cc2d28fa6dee}{C\+H\+E\+C\+K\+\_\+\+C\+O\+N\+S\+I\+S\+T\+E\+N\+T\+\_\+\+H\+Y\+PO}}~\char`\"{}check\+\_\+consistent\+\_\+hypo\char`\"{}
+\begin{DoxyCompactList}\small\item\em (check\+\_\+consistent\+\_\+hypo ?wp -\/ waypoint) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{action__interface_8cpp_a6f47e7b691fe6f78786eb95f849f33ea}{Q\+U\+E\+R\+Y\+\_\+\+H\+Y\+PO}}~\char`\"{}query\+\_\+hypo\char`\"{}
+\begin{DoxyCompactList}\small\item\em (query\+\_\+hypo ?tp -\/ temple) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{action__interface_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This node implements all the rosplan actions in a single node. 
+
+@ package erl\+\_\+assignment\+\_\+2
+
+\begin{DoxyAuthor}{Author}
+Iacopo Pietrasanta 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0
+\end{DoxyVersion}
+Subscribes to\+: ~\newline
+ /rosplan\+\_\+plan\+\_\+dispatcher/action\+\_\+dispatch \mbox{[}rosplan\+\_\+dispatch\+\_\+msgs/\+Action\+Dispatch\mbox{]}
+
+Publishes to\+: ~\newline
+ /rosplan\+\_\+knowledge\+\_\+base/pddl\+\_\+action\+\_\+parameters \mbox{[}rosplan\+\_\+knowledge\+\_\+msgs/\+Domain\+Formula\mbox{]} /rosplan\+\_\+plan\+\_\+dispatcher/action\+\_\+feedback \mbox{[}rosplan\+\_\+dispatch\+\_\+msgs/\+Action\+Feedback\mbox{]}
+
+Services\+: ~\newline
+ None
+
+Client Services\+: ~\newline
+ /go\+\_\+to\+\_\+point \mbox{[}std\+\_\+srvs/\+Set\+Bool\mbox{]} /manipulation \mbox{[}std\+\_\+srvs/\+Set\+Bool\mbox{]} /get\+\_\+id \mbox{[}erl\+\_\+assignment\+\_\+2\+\_\+msgs/\+Get\+Id\mbox{]} /oracle\+\_\+solution \mbox{[}erl2/\+Oracle\mbox{]} /mark\+\_\+wrong\+\_\+id \mbox{[}erl\+\_\+assignment\+\_\+2\+\_\+msgs/\+Mark\+Wrong\+Id\mbox{]} \mbox{]} \begin{DoxyVerb}Action Services: <BR>
+    None
+
+Description: <BR>
+    This node represents the sctual implementation of the action ROS_plan actions
+described in the domain.pddl file.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{action__interface_8cpp_a7413401b40b075490286cc2d28fa6dee}\label{action__interface_8cpp_a7413401b40b075490286cc2d28fa6dee}} 
+\index{action\_interface.cpp@{action\_interface.cpp}!CHECK\_CONSISTENT\_HYPO@{CHECK\_CONSISTENT\_HYPO}}
+\index{CHECK\_CONSISTENT\_HYPO@{CHECK\_CONSISTENT\_HYPO}!action\_interface.cpp@{action\_interface.cpp}}
+\doxysubsubsection{\texorpdfstring{CHECK\_CONSISTENT\_HYPO}{CHECK\_CONSISTENT\_HYPO}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+C\+O\+N\+S\+I\+S\+T\+E\+N\+T\+\_\+\+H\+Y\+PO~\char`\"{}check\+\_\+consistent\+\_\+hypo\char`\"{}}
+
+
+
+(check\+\_\+consistent\+\_\+hypo ?wp -\/ waypoint) 
+
+\mbox{\Hypertarget{action__interface_8cpp_aa69a2751821fe07e1faea957e42c9180}\label{action__interface_8cpp_aa69a2751821fe07e1faea957e42c9180}} 
+\index{action\_interface.cpp@{action\_interface.cpp}!GATHER\_HINT@{GATHER\_HINT}}
+\index{GATHER\_HINT@{GATHER\_HINT}!action\_interface.cpp@{action\_interface.cpp}}
+\doxysubsubsection{\texorpdfstring{GATHER\_HINT}{GATHER\_HINT}}
+{\footnotesize\ttfamily \#define G\+A\+T\+H\+E\+R\+\_\+\+H\+I\+NT~\char`\"{}gather\+\_\+hint\char`\"{}}
+
+
+
+(gather\+\_\+hint ?wp -\/ waypoint) 
+
+\mbox{\Hypertarget{action__interface_8cpp_afbc16abf7fcce6f53cf8977d76c78ece}\label{action__interface_8cpp_afbc16abf7fcce6f53cf8977d76c78ece}} 
+\index{action\_interface.cpp@{action\_interface.cpp}!GO\_TO\_WP@{GO\_TO\_WP}}
+\index{GO\_TO\_WP@{GO\_TO\_WP}!action\_interface.cpp@{action\_interface.cpp}}
+\doxysubsubsection{\texorpdfstring{GO\_TO\_WP}{GO\_TO\_WP}}
+{\footnotesize\ttfamily \#define G\+O\+\_\+\+T\+O\+\_\+\+WP~\char`\"{}go\+\_\+to\+\_\+wp\char`\"{}}
+
+
+
+(go\+\_\+to\+\_\+wp ?from ?to -\/ waypoint) 
+
+\mbox{\Hypertarget{action__interface_8cpp_afe4664cca95c5e9b93e4a25874bc871d}\label{action__interface_8cpp_afe4664cca95c5e9b93e4a25874bc871d}} 
+\index{action\_interface.cpp@{action\_interface.cpp}!LEAVE\_TEMPLE@{LEAVE\_TEMPLE}}
+\index{LEAVE\_TEMPLE@{LEAVE\_TEMPLE}!action\_interface.cpp@{action\_interface.cpp}}
+\doxysubsubsection{\texorpdfstring{LEAVE\_TEMPLE}{LEAVE\_TEMPLE}}
+{\footnotesize\ttfamily \#define L\+E\+A\+V\+E\+\_\+\+T\+E\+M\+P\+LE~\char`\"{}leave\+\_\+temple\char`\"{}}
+
+
+
+(leave\+\_\+temple ?from -\/ temple ?to -\/ waypoint) 
+
+\mbox{\Hypertarget{action__interface_8cpp_a6f47e7b691fe6f78786eb95f849f33ea}\label{action__interface_8cpp_a6f47e7b691fe6f78786eb95f849f33ea}} 
+\index{action\_interface.cpp@{action\_interface.cpp}!QUERY\_HYPO@{QUERY\_HYPO}}
+\index{QUERY\_HYPO@{QUERY\_HYPO}!action\_interface.cpp@{action\_interface.cpp}}
+\doxysubsubsection{\texorpdfstring{QUERY\_HYPO}{QUERY\_HYPO}}
+{\footnotesize\ttfamily \#define Q\+U\+E\+R\+Y\+\_\+\+H\+Y\+PO~\char`\"{}query\+\_\+hypo\char`\"{}}
+
+
+
+(query\+\_\+hypo ?tp -\/ temple) 
+
+\mbox{\Hypertarget{action__interface_8cpp_ab348801e93c20ce28d21d673571cbeb5}\label{action__interface_8cpp_ab348801e93c20ce28d21d673571cbeb5}} 
+\index{action\_interface.cpp@{action\_interface.cpp}!REACH\_TEMPLE@{REACH\_TEMPLE}}
+\index{REACH\_TEMPLE@{REACH\_TEMPLE}!action\_interface.cpp@{action\_interface.cpp}}
+\doxysubsubsection{\texorpdfstring{REACH\_TEMPLE}{REACH\_TEMPLE}}
+{\footnotesize\ttfamily \#define R\+E\+A\+C\+H\+\_\+\+T\+E\+M\+P\+LE~\char`\"{}reach\+\_\+temple\char`\"{}}
+
+
+
+(reach\+\_\+temple ?from -\/ waypoint ?to -\/ temple) 
+
+\mbox{\Hypertarget{action__interface_8cpp_a905f67ab58312915d0c5d40847c80c0c}\label{action__interface_8cpp_a905f67ab58312915d0c5d40847c80c0c}} 
+\index{action\_interface.cpp@{action\_interface.cpp}!SHIFT\_GRIPPER@{SHIFT\_GRIPPER}}
+\index{SHIFT\_GRIPPER@{SHIFT\_GRIPPER}!action\_interface.cpp@{action\_interface.cpp}}
+\doxysubsubsection{\texorpdfstring{SHIFT\_GRIPPER}{SHIFT\_GRIPPER}}
+{\footnotesize\ttfamily \#define S\+H\+I\+F\+T\+\_\+\+G\+R\+I\+P\+P\+ER~\char`\"{}shift\+\_\+gripper\char`\"{}}
+
+
+
+(shift\+\_\+gripper ?wp -\/ waypoint) 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{action__interface_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{action__interface_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{action\_interface.cpp@{action\_interface.cpp}!main@{main}}
+\index{main@{main}!action\_interface.cpp@{action\_interface.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+node main function 

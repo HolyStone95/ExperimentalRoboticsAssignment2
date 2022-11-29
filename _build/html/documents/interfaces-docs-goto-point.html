@@ -1,105 +1,64 @@
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interfaces Documentation – node go_to_point.py &mdash; ExperimentalRoboticsAssignment2 v1.0.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-    <script src="../_static/js/theme.js"></script>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interfaces Documentation – node go_to_point.py &#8212; ExperimentalRoboticsAssignment2 v1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="MarkDown Vs reStructured Text" href="markdown-vs-rest.html" />
     <link rel="prev" title="Other Documentation for ExperimentalRoboticsAssignment2" href="index.html" /> 
-</head>
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="markdown-vs-rest.html" title="MarkDown Vs reStructured Text"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Other Documentation for ExperimentalRoboticsAssignment2"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">ExperimentalRoboticsAssignment2 v1.0.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Other Documentation for ExperimentalRoboticsAssignment2</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Interfaces Documentation – node <em>go_to_point.py</em></a></li> 
+      </ul>
+    </div>  
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> ExperimentalRoboticsAssignment2
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Code documentation</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../code_documentation/index.html">Code Documentation for ExperimentalRoboticsAssignment2</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Other Documents</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Other Documentation for ExperimentalRoboticsAssignment2</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Interfaces Documentation – node <em>go_to_point.py</em></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#geometry-msgs-twist">geometry_msgs/Twist</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#geometry-msgs-vector3">geometry_msgs/Vector3</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#nav-msgs-odometry">nav_msgs/Odometry</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#std-msgs-header">std_msgs/Header</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#geometry-msgs-posewithcovariance">geometry_msgs/PoseWithCovariance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#geometry-msgs-pose">geometry_msgs/Pose</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#geometry-msgs-point">geometry_msgs/Point</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#geometry-msgs-quaternion">geometry_msgs/Quaternion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#geometry-msgs-twistwithcovariance-message">geometry_msgs/TwistWithCovariance Message</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#std-srvs-setbool">std_srvs/SetBool</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="markdown-vs-rest.html">MarkDown Vs reStructured Text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="run-the-project.html">How to run the project</a></li>
-</ul>
-</li>
-</ul>
-
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">ExperimentalRoboticsAssignment2</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html">Other Documentation for ExperimentalRoboticsAssignment2</a> &raquo;</li>
-      <li>Interfaces Documentation – node <em>go_to_point.py</em></li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/documents/interfaces-docs-goto-point.md.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
   <div class="tex2jax_ignore mathjax_ignore section" id="interfaces-documentation-node-go-to-point-py">
-<h1>Interfaces Documentation – node <em>go_to_point.py</em><a class="headerlink" href="#interfaces-documentation-node-go-to-point-py" title="Permalink to this heading"></a></h1>
+<h1>Interfaces Documentation – node <em>go_to_point.py</em><a class="headerlink" href="#interfaces-documentation-node-go-to-point-py" title="Permalink to this heading">¶</a></h1>
 <div class="section" id="geometry-msgs-twist">
-<h2>geometry_msgs/Twist<a class="headerlink" href="#geometry-msgs-twist" title="Permalink to this heading"></a></h2>
+<h2>geometry_msgs/Twist<a class="headerlink" href="#geometry-msgs-twist" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>Vector3  linear
 Vector3  angular
 </pre></div>
 </div>
 </div>
 <div class="section" id="geometry-msgs-vector3">
-<h2>geometry_msgs/Vector3<a class="headerlink" href="#geometry-msgs-vector3" title="Permalink to this heading"></a></h2>
+<h2>geometry_msgs/Vector3<a class="headerlink" href="#geometry-msgs-vector3" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>float64 x
 float64 y
 float64 z
@@ -107,54 +66,54 @@ float64 z
 </div>
 </div>
 <div class="section" id="nav-msgs-odometry">
-<h2>nav_msgs/Odometry<a class="headerlink" href="#nav-msgs-odometry" title="Permalink to this heading"></a></h2>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>Header header
-string child_frame_id
-geometry_msgs/PoseWithCovariance pose
-geometry_msgs/TwistWithCovariance twist
+<h2>nav_msgs/Odometry<a class="headerlink" href="#nav-msgs-odometry" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">Header</span><span class="w"> </span><span class="n">header</span><span class="w"></span>
+<span class="n">string</span><span class="w"> </span><span class="n">child_frame_id</span><span class="w"></span>
+<span class="n">geometry_msgs</span><span class="o">/</span><span class="n">PoseWithCovariance</span><span class="w"> </span><span class="n">pose</span><span class="w"></span>
+<span class="n">geometry_msgs</span><span class="o">/</span><span class="n">TwistWithCovariance</span><span class="w"> </span><span class="n">twist</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="std-msgs-header">
-<h2>std_msgs/Header<a class="headerlink" href="#std-msgs-header" title="Permalink to this heading"></a></h2>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span># Standard metadata for higher-level stamped data types.
-# This is generally used to communicate timestamped data 
-# in a particular coordinate frame.
-# 
-# sequence ID: consecutively increasing ID 
-uint32 seq
-#Two-integer timestamp that is expressed as:
-# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called &#39;secs&#39;)
-# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called &#39;nsecs&#39;)
-# time-handling sugar is provided by the client library
-time stamp
-#Frame this data is associated with
-string frame_id
+<h2>std_msgs/Header<a class="headerlink" href="#std-msgs-header" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="c1"># Standard metadata for higher-level stamped data types.</span><span class="w"></span>
+<span class="c1"># This is generally used to communicate timestamped data </span><span class="w"></span>
+<span class="c1"># in a particular coordinate frame.</span><span class="w"></span>
+<span class="c1"># </span><span class="w"></span>
+<span class="c1"># sequence ID: consecutively increasing ID </span><span class="w"></span>
+<span class="n">uint32</span><span class="w"> </span><span class="n">seq</span><span class="w"></span>
+<span class="c1">#Two-integer timestamp that is expressed as:</span><span class="w"></span>
+<span class="c1"># * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called &#39;secs&#39;)</span><span class="w"></span>
+<span class="c1"># * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called &#39;nsecs&#39;)</span><span class="w"></span>
+<span class="c1"># time-handling sugar is provided by the client library</span><span class="w"></span>
+<span class="n">time</span><span class="w"> </span><span class="n">stamp</span><span class="w"></span>
+<span class="c1">#Frame this data is associated with</span><span class="w"></span>
+<span class="n">string</span><span class="w"> </span><span class="n">frame_id</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="geometry-msgs-posewithcovariance">
-<h2>geometry_msgs/PoseWithCovariance<a class="headerlink" href="#geometry-msgs-posewithcovariance" title="Permalink to this heading"></a></h2>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span># This represents a pose in free space with uncertainty.
-Pose pose
+<h2>geometry_msgs/PoseWithCovariance<a class="headerlink" href="#geometry-msgs-posewithcovariance" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="c1"># This represents a pose in free space with uncertainty.</span><span class="w"></span>
+<span class="n">Pose</span><span class="w"> </span><span class="n">pose</span><span class="w"></span>
 
-# Row-major representation of the 6x6 covariance matrix
-# The orientation parameters use a fixed-axis representation.
-# In order, the parameters are:
-# (x, y, z, rotation about X axis, rotation about Y axis, rotation about Z axis)
-float64[36] covariance
+<span class="c1"># Row-major representation of the 6x6 covariance matrix</span><span class="w"></span>
+<span class="c1"># The orientation parameters use a fixed-axis representation.</span><span class="w"></span>
+<span class="c1"># In order, the parameters are:</span><span class="w"></span>
+<span class="c1"># (x, y, z, rotation about X axis, rotation about Y axis, rotation about Z axis)</span><span class="w"></span>
+<span class="n">float64</span><span class="p">[</span><span class="mi">36</span><span class="p">]</span><span class="w"> </span><span class="n">covariance</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="geometry-msgs-pose">
-<h2>geometry_msgs/Pose<a class="headerlink" href="#geometry-msgs-pose" title="Permalink to this heading"></a></h2>
+<h2>geometry_msgs/Pose<a class="headerlink" href="#geometry-msgs-pose" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>Point position
 Quaternion orientation
 </pre></div>
 </div>
 </div>
 <div class="section" id="geometry-msgs-point">
-<h2>geometry_msgs/Point<a class="headerlink" href="#geometry-msgs-point" title="Permalink to this heading"></a></h2>
+<h2>geometry_msgs/Point<a class="headerlink" href="#geometry-msgs-point" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span># This contains the position of a point in free space
 float64 x
 float64 y
@@ -163,7 +122,7 @@ float64 z
 </div>
 </div>
 <div class="section" id="geometry-msgs-quaternion">
-<h2>geometry_msgs/Quaternion<a class="headerlink" href="#geometry-msgs-quaternion" title="Permalink to this heading"></a></h2>
+<h2>geometry_msgs/Quaternion<a class="headerlink" href="#geometry-msgs-quaternion" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>float64 x
 float64 y
 float64 z
@@ -172,59 +131,110 @@ float64 w
 </div>
 </div>
 <div class="section" id="geometry-msgs-twistwithcovariance-message">
-<h2>geometry_msgs/TwistWithCovariance Message<a class="headerlink" href="#geometry-msgs-twistwithcovariance-message" title="Permalink to this heading"></a></h2>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span># This expresses velocity in free space with uncertainty.
-Twist twist
+<h2>geometry_msgs/TwistWithCovariance Message<a class="headerlink" href="#geometry-msgs-twistwithcovariance-message" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="c1"># This expresses velocity in free space with uncertainty.</span><span class="w"></span>
+<span class="n">Twist</span><span class="w"> </span><span class="n">twist</span><span class="w"></span>
 
-# Row-major representation of the 6x6 covariance matrix
-# The orientation parameters use a fixed-axis representation.
-# In order, the parameters are:
-# (x, y, z, rotation about X axis, rotation about Y axis, rotation about Z axis)
-float64[36] covariance
+<span class="c1"># Row-major representation of the 6x6 covariance matrix</span><span class="w"></span>
+<span class="c1"># The orientation parameters use a fixed-axis representation.</span><span class="w"></span>
+<span class="c1"># In order, the parameters are:</span><span class="w"></span>
+<span class="c1"># (x, y, z, rotation about X axis, rotation about Y axis, rotation about Z axis)</span><span class="w"></span>
+<span class="n">float64</span><span class="p">[</span><span class="mi">36</span><span class="p">]</span><span class="w"> </span><span class="n">covariance</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="std-srvs-setbool">
-<h2>std_srvs/SetBool<a class="headerlink" href="#std-srvs-setbool" title="Permalink to this heading"></a></h2>
+<h2>std_srvs/SetBool<a class="headerlink" href="#std-srvs-setbool" title="Permalink to this heading">¶</a></h2>
 <p>see also <a class="reference external" href="http://docs.ros.org/en/api/std_srvs/html/index-msg.html">std_srvs package</a></p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>bool data # e.g. for hardware enabling / disabling
----
-bool success   # indicate successful run of triggered service
-string message # informational, e.g. for error messages
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="nv">bool</span><span class="w"> </span><span class="nv">data</span><span class="w"> </span>#<span class="w"> </span><span class="nv">e</span>.<span class="nv">g</span>.<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">hardware</span><span class="w"> </span><span class="nv">enabling</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nv">disabling</span><span class="w"></span>
+<span class="o">---</span><span class="w"></span>
+<span class="nv">bool</span><span class="w"> </span><span class="nv">success</span><span class="w">   </span>#<span class="w"> </span><span class="nv">indicate</span><span class="w"> </span><span class="nv">successful</span><span class="w"> </span><span class="nv">run</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">triggered</span><span class="w"> </span><span class="nv">service</span><span class="w"></span>
+<span class="nv">string</span><span class="w"> </span><span class="nv">message</span><span class="w"> </span>#<span class="w"> </span><span class="nv">informational</span>,<span class="w"> </span><span class="nv">e</span>.<span class="nv">g</span>.<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">error</span><span class="w"> </span><span class="nv">messages</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 </div>
 
 
-           </div>
+            <div class="clearer"></div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Other Documentation for ExperimentalRoboticsAssignment2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="markdown-vs-rest.html" class="btn btn-neutral float-right" title="MarkDown Vs reStructured Text" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2022, Iacopo Pietrasanta.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
         </div>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Interfaces Documentation – node <em>go_to_point.py</em></a><ul>
+<li><a class="reference internal" href="#geometry-msgs-twist">geometry_msgs/Twist</a></li>
+<li><a class="reference internal" href="#geometry-msgs-vector3">geometry_msgs/Vector3</a></li>
+<li><a class="reference internal" href="#nav-msgs-odometry">nav_msgs/Odometry</a></li>
+<li><a class="reference internal" href="#std-msgs-header">std_msgs/Header</a></li>
+<li><a class="reference internal" href="#geometry-msgs-posewithcovariance">geometry_msgs/PoseWithCovariance</a></li>
+<li><a class="reference internal" href="#geometry-msgs-pose">geometry_msgs/Pose</a></li>
+<li><a class="reference internal" href="#geometry-msgs-point">geometry_msgs/Point</a></li>
+<li><a class="reference internal" href="#geometry-msgs-quaternion">geometry_msgs/Quaternion</a></li>
+<li><a class="reference internal" href="#geometry-msgs-twistwithcovariance-message">geometry_msgs/TwistWithCovariance Message</a></li>
+<li><a class="reference internal" href="#std-srvs-setbool">std_srvs/SetBool</a></li>
+</ul>
+</li>
+</ul>
 
-</body>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">Other Documentation for ExperimentalRoboticsAssignment2</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="markdown-vs-rest.html"
+                          title="next chapter">MarkDown Vs reStructured Text</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/documents/interfaces-docs-goto-point.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="markdown-vs-rest.html" title="MarkDown Vs reStructured Text"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Other Documentation for ExperimentalRoboticsAssignment2"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">ExperimentalRoboticsAssignment2 v1.0.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Other Documentation for ExperimentalRoboticsAssignment2</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Interfaces Documentation – node <em>go_to_point.py</em></a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Iacopo Pietrasanta.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+  </body>
 </html>

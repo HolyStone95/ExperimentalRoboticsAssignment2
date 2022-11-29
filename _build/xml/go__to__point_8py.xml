@@ -17,7 +17,7 @@
 <codeline lineno="6"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:platform:<sp/>Unix</highlight></codeline>
 <codeline lineno="7"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:synopsis:<sp/>Python<sp/>module<sp/>for<sp/>piloting<sp/>the<sp/>robot<sp/>to<sp/>the<sp/>target</highlight></codeline>
 <codeline lineno="8"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="9"><highlight class="stringliteral">..<sp/>moduleauthor::<sp/>Iacopo Pietrasanta<sp/>iacopo.pietrasanta@gmail.com</highlight></codeline>
+<codeline lineno="9"><highlight class="stringliteral">..<sp/>moduleauthor::<sp/>Iacopo<sp/>Pietrasanta<sp/>iacopo.pietrasanta@gmail.com</highlight></codeline>
 <codeline lineno="10"><highlight class="stringliteral"></highlight></codeline>
 <codeline lineno="11"><highlight class="stringliteral">ROS<sp/>node<sp/>for<sp/>driving<sp/>a<sp/>robot<sp/>to<sp/>a<sp/>specific<sp/>point<sp/>within<sp/>a<sp/>simulated</highlight></codeline>
 <codeline lineno="12"><highlight class="stringliteral">environment,<sp/>given<sp/>a<sp/>certain<sp/>orientation.</highlight></codeline>

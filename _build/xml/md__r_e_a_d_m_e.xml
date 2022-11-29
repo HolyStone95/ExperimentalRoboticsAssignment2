@@ -2,129 +2,51 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="md__r_e_a_d_m_e" kind="page">
     <compoundname>md_README</compoundname>
-    <title>README</title>
+    <title>Experimental Robotics Laboratory - second assignment</title>
     <briefdescription>
-<para>Table of Contents </para>
     </briefdescription>
     <detaileddescription>
-<para>Table of Contents</para>
-<para></para>
-<para><ulink url="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/network/members"><image type="html" name="ExperimentalRoboticsAssignment2" inline="yes"></image>
-</ulink> <ulink url="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/stargazers"><image type="html" name="ExperimentalRoboticsAssignment2" inline="yes"></image>
-</ulink> <ulink url="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/issues"><image type="html" name="ExperimentalRoboticsAssignment2" inline="yes"></image>
-</ulink></para>
-<para><linebreak/>
-  <ulink url="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2"><image type="html" name="logo-black.png" inline="yes"></image>
- </ulink></para>
-<para> <heading level="3">Experimental Robotics Laboratory</heading>
+<para>This package contains the source code implemented during the second assignment of the Experimental Robotics Laboratory, course of the first semester of the second year of Robotics Engineering Master Degree course of University of Genoa, Italy.</para>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md18">
+<title>Index</title>
+<para><itemizedlist>
+<listitem><para>Index:<itemizedlist>
+<listitem><para><ulink url="#required-packages">Required packages</ulink></para>
+</listitem><listitem><para><ulink url="#assignment-request">Assignment request</ulink></para>
+</listitem><listitem><para><ulink url="#software-architecture-and-functioning">Software Architecture and Functioning</ulink></para>
+</listitem><listitem><para><ulink url="#ros-nodes-description">ROS nodes description</ulink><itemizedlist>
+<listitem><para><ulink url="#the-go_to_point.py-node">The go_to_point.py node</ulink></para>
+</listitem><listitem><para><ulink url="#the-main.py-node">The main.py node</ulink></para>
+</listitem><listitem><para><ulink url="#the-cluedo_kb.py-node">The cluedo_kb.py node</ulink></para>
+</listitem><listitem><para><ulink url="#the-action_interface.cpp-node">The action_interface.cpp node</ulink></para>
+</listitem><listitem><para><ulink url="#the-manipulation.cpp-node">The manipulation.cpp node</ulink></para>
+</listitem><listitem><para><ulink url="#the-my_simulation.cpp-node">The my_simulation.cpp node</ulink></para>
+</listitem><listitem><para><ulink url="#rqt_graph">Rqt_graph</ulink></para>
+</listitem><listitem><para><ulink url="#uml-temporal-diagram">UML temporal diagram</ulink></para>
+</listitem></itemizedlist>
 </para>
-<para></para>
-<para> </para>
-<para> First assignment for the Experimental Robotics laboratory course <linebreak/>
- <ulink url="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/doc"><bold>Explore the docs »</bold></ulink> <linebreak/>
- <linebreak/>
- <ulink url="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/demo">View Demo</ulink> · <ulink url="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/issues">Report Bug</ulink> · <ulink url="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/issues">Request Feature</ulink> </para>
-<para> </para>
-<para>&lt;details&gt;</para>
-<para><orderedlist>
-<listitem>
-<para><ulink url="#about-the-project">About The Project</ulink> <itemizedlist>
-<listitem>
-<para><ulink url="#built-with">Built With</ulink> </para>
-</listitem>
-</itemizedlist>
+</listitem><listitem><para><ulink url="#how-to-launch-and-additional-documentation">How to launch and additional documentation</ulink></para>
+</listitem><listitem><para><ulink url="#system-limitations">System limitations</ulink></para>
+</listitem><listitem><para><ulink url="#possible-technical-improvements">Possible Technical Improvements</ulink></para>
+</listitem><listitem><para><ulink url="#contact">Contact</ulink></para>
+</listitem></itemizedlist>
 </para>
-</listitem>
-<listitem>
-<para><ulink url="#getting-started">Getting Started</ulink> <itemizedlist>
-<listitem>
-<para><ulink url="#software-architechture">Software architechture</ulink> </para>
-</listitem>
-<listitem>
-<para><ulink url="#ros-node-description-an-overview">ROS node description: an Overview</ulink> </para>
-</listitem>
-<listitem>
-<para><ulink url="#ros-node-description-the-go_to_point.py-node">ROS node description: the go_to_point.py node</ulink> </para>
-</listitem>
-<listitem>
-<para><ulink url="#ros-node-description-the-main.py-node ">ROS node description:-the main.py node</ulink> </para>
-</listitem>
-<listitem>
-<para><ulink url="#ros-node-description-the-cluedo_kb.py-node ">ROS node description: the cluedo_kb.py node</ulink> </para>
-</listitem>
-<listitem>
-<para><ulink url="#ros-node-description-the-action_interface.cpp-node">ROS node description: he action_interface.cpp node</ulink> </para>
-</listitem>
-<listitem>
-<para><ulink url="#ros-node-description-the-manipulation.cpp-node ">ROS node description: the manipulation.cpp node</ulink> </para>
-</listitem>
-<listitem>
-<para><ulink url="#ros-node-description-my_simulation.cpp-node ">ROS node description:my_simulation.cpp node </ulink> <itemizedlist>
-<listitem>
-<para><ulink url="#rossrv">rossrv</ulink> </para>
-</listitem>
-<listitem>
-<para><ulink url="#rosmsg">rosmsg</ulink> </para>
-</listitem>
-<listitem>
-<para><ulink url="#rostopic">rostopic</ulink> </para>
-</listitem>
-<listitem>
-<para><ulink url="#rosparam">rosparam</ulink> </para>
-</listitem>
-</itemizedlist>
+</listitem></itemizedlist>
 </para>
-</listitem>
-<listitem>
-<para><ulink url="#rqt_graph">rqt_graph</ulink> </para>
-</listitem>
-<listitem>
-<para><ulink url="#installation">Installation</ulink> </para>
-</listitem>
-<listitem>
-<para><ulink url="#running procedure">Running procedure</ulink> </para>
-</listitem>
-</itemizedlist>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md19">
+<title>Required packages</title>
+<para><itemizedlist>
+<listitem><para><bold>ROS</bold></para>
+</listitem><listitem><para><bold>ROSPlan Framework</bold></para>
+</listitem><listitem><para><bold>MoveIt Frameowrk</bold></para>
+</listitem></itemizedlist>
 </para>
-</listitem>
-<listitem>
-<para><ulink url="#usage">Usage</ulink> </para>
-</listitem>
-<listitem>
-<para><ulink url="#Working-hypothesis-and-environment">Working hypothesis and environment</ulink> <itemizedlist>
-<listitem>
-<para><ulink url="#System&apos;s features">System&apos;s features</ulink> </para>
-</listitem>
-<listitem>
-<para><ulink url="#System&apos;s limitations">System&apos;s limitations</ulink> </para>
-</listitem>
-<listitem>
-<para><ulink url="#Possible technical Improvements">Possible technical Improvements</ulink> </para>
-</listitem>
-</itemizedlist>
-</para>
-</listitem>
-<listitem>
-<para><ulink url="#roadmap">Roadmap</ulink> </para>
-</listitem>
-<listitem>
-<para><ulink url="#contributing">Contributing</ulink> </para>
-</listitem>
-<listitem>
-<para><ulink url="#license">License</ulink> </para>
-</listitem>
-<listitem>
-<para><ulink url="#contact">Contact</ulink> </para>
-</listitem>
-<listitem>
-<para><ulink url="#acknowledgments">Acknowledgments</ulink> </para>
-</listitem>
-</orderedlist>
-&lt;/details&gt;</para>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md17">
-<title>About The Project</title>
-<para>This project consists in building a simulation where our detectibot takes on the appereance of a real robot, roaming into a phisical environment (differentlwy from what occured in the first project ) containing hints.</para>
-<para>There are four different positions in the environment (x,y,z respectively) that contains hints: If the <emphasis>cluedo_link</emphasis> of the robot is reasonably close, this will trigger the oracle for the generation of a hint</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md20">
+<title>Assignment request</title>
+<para>This assignment improves the first one by adding a real robot model into a physically simulated world, the hint are now present in the environment, the environment can be navigated, and a robotic arm needs to be manipulated. The plan now is not carried out by a <bold>smach</bold> state machine, but with <bold>ROSPlan</bold> framework. The robotic arm is manipulated by <bold>MoveIt</bold>. The environment has some obstacle walls that the robot needs to avoid. Again the goal of the game, as for the first assignment, is to find a CONSISTENT true hypothesis.</para>
+<para>There are four different positions in the environment (x,y,z respectively) that contains hints: If the <emphasis>cluedo_link</emphasis> ( the end-effector ) of the robot is reasonably close, this will trigger the oracle for the generation of a hint</para>
 <para><blockquote><para><bold>REMARK</bold> x and y coordinates where known a priori as shown in the table below <linebreak/>
  </para>
 </blockquote></para>
@@ -155,9 +77,7 @@
 </entry></row>
 </table>
 </para>
-<para>Having differen values for z, it is needed that detectibot reaches both quotes with its cluedo_link</para>
-<para>Concerining the simulation environment, there are small walls around the robot aimed at impeding the movements of its mobile base</para>
-<para>Hence the robot moves from one «hint» coordinate to another one, while receiving hints. This holds until it has a complete and consistent hypothesis</para>
+<para>There are different values for z, meaning that the robot needs to be able to reach them with it&apos;s arm, precisely with its <emphasis>cluedo_link</emphasis>.</para>
 <para>Please consider that <bold>consistent hypothesis</bold> have been defined as COMPLETED but NOT INCONSISTENT</para>
 <para><blockquote><para><emphasis>REMARK</emphasis> A consistent hypothesis is defined as <emphasis>completed</emphasis> when there occurs one role for each class (i.e., one occourence of what, one occourence for who, one occourence for where ). </para>
 </blockquote>A straightforward example of such hypothesis is [ID2][12], whose definition is here below reported</para>
@@ -165,227 +85,103 @@
 <codeline><highlight class="normal">ID2_2:<sp/>[</highlight><highlight class="stringliteral">&apos;who&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;Col.Mustard&apos;</highlight><highlight class="normal">]</highlight></codeline>
 <codeline><highlight class="normal">ID2_3:<sp/>[</highlight><highlight class="stringliteral">&apos;what&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;Rope&apos;</highlight><highlight class="normal">]</highlight></codeline>
 </programlisting></para>
-<para><blockquote><para><emphasis>REMARK</emphasis> An hypothesis, is defined as <emphasis>inconsistent</emphasis> when there occurs more than one role for each class (i.e. 2 or more occourences of who, where, what) </para>
-</blockquote></para>
-<para>A clear example of such hypothesis is ID4 whose definition is here below reported</para>
-<para><programlisting filename=".txt"><codeline><highlight class="normal">ID4_1:<sp/>[</highlight><highlight class="stringliteral">&apos;where&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;Library&apos;</highlight><highlight class="normal">]</highlight></codeline>
-<codeline><highlight class="normal">ID4_2:<sp/>[</highlight><highlight class="stringliteral">&apos;who&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;Mrs.White&apos;</highlight><highlight class="normal">]</highlight></codeline>
-<codeline><highlight class="normal">ID4_3:<sp/>[</highlight><highlight class="stringliteral">&apos;what&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;LeadPipe&apos;</highlight><highlight class="normal">]</highlight></codeline>
-<codeline><highlight class="normal">ID4_4:<sp/>[</highlight><highlight class="stringliteral">&apos;where&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;Diningroom&apos;</highlight><highlight class="normal">]</highlight></codeline>
-</programlisting></para>
-<sect3 id="md__r_e_a_d_m_e_1autotoc_md18">
-<title>Assignment&apos;s prerequisites</title>
 <para>As in the first assignment:<itemizedlist>
 <listitem><para>only one ID source is the trustable one.</para>
 </listitem><listitem><para>Whenever a robot gets a complete hypothesis, it should go in the center of the arena</para>
 </listitem><listitem><para>Once the center has been reached, it should «tell» its solution (as in the first assignment).</para>
 </listitem><listitem><para>If the solution is the <bold>correct one</bold>, the game ends</para>
-</listitem><listitem><para>it is strictly required to use ROSPlan here, to plan the behaviour of your robot.</para>
-</listitem><listitem><para>create a pddl domain, problem and a set of actions</para>
-</listitem><listitem><para>the robot of the model has no limitations, meaning that it can be modelled in whatever fashion</para>
 </listitem></itemizedlist>
 </para>
-<para>(<ulink url="#top">back to top</ulink>)</para>
-</sect3>
-<sect3 id="md__r_e_a_d_m_e_1autotoc_md19">
-<title>Built With 🏗️</title>
-<para><itemizedlist>
-<listitem><para><ulink url="http://wiki.ros.org">ROS</ulink></para>
-</listitem><listitem><para><ulink url="https://github.com/KCL-Planning/ROSPlan">ROSPlan Framework</ulink></para>
-</listitem><listitem><para><ulink url="https://moveit.ros.org/">MoveIt Frameowrk</ulink></para>
-</listitem></itemizedlist>
-</para>
-<para>(<ulink url="#top">back to top</ulink>)</para>
-</sect3>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md20">
-<title>Getting Started</title>
-<para>Under the following sections, the software architecture is briefly introduced, along with the prerequisites and installation procedures. Then, a quick video demonstration showing the overall functioning is provided and system’s limitations are discussed</para>
-<sect3 id="md__r_e_a_d_m_e_1autotoc_md21">
-<title>Installation procedure</title>
-<para><blockquote><para>:warning: To avoid further issues, please use this docker image provided by our professors </para>
-</blockquote></para>
-<para><programlisting filename=".sh"><codeline><highlight class="normal">docker<sp/>run<sp/>-it<sp/>-p<sp/>6080:80<sp/>-p<sp/>5900:5900<sp/>--name<sp/>MyDockerContainer<sp/>carms84/exproblab</highlight></codeline>
-</programlisting></para>
-<para>Also remember to update and upgrade the container</para>
-<para><programlisting filename=".sh"><codeline><highlight class="normal">sudo<sp/>apt<sp/>get<sp/>update</highlight></codeline>
-<codeline><highlight class="normal">sudo<sp/>apt<sp/>get<sp/>upgrade</highlight></codeline>
-</programlisting></para>
-<para>Then run <computeroutput>catkin_make</computeroutput> on your workspace; in my case:</para>
-<para><itemizedlist>
-<listitem><para>Navigate to your ROS workspace <programlisting filename=".sh"><codeline><highlight class="normal">cd<sp/>/home/ros_ws/</highlight></codeline>
-</programlisting></para>
-</listitem><listitem><para>Run catkin <programlisting filename=".sh"><codeline><highlight class="normal">catkin_make</highlight></codeline>
-</programlisting></para>
-</listitem></itemizedlist>
-</para>
-<para>You can now download the repository inside the <computeroutput>src</computeroutput> folder</para>
-<para><programlisting filename=".sh"><codeline><highlight class="normal">cd<sp/>/home/ros_ws/src</highlight></codeline>
-<codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/HolyStone95/ExperimentalRoboticsAssignment2</highlight></codeline>
-</programlisting></para>
-<para>Also download <computeroutput>MoveIt 1.1.5</computeroutput> <programlisting filename=".sh"><codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/ros-planning/moveit.git</highlight></codeline>
-<codeline><highlight class="normal">cd<sp/>moveit</highlight></codeline>
-<codeline><highlight class="normal">git<sp/>checkout<sp/>2b881e5e3c4fd900d4d4310f4b12f9c4a63eb5dd</highlight></codeline>
-<codeline><highlight class="normal">cd<sp/>..</highlight></codeline>
-<codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/ros-planning/moveit_resources.git</highlight></codeline>
-<codeline><highlight class="normal">cd<sp/>moveit_resources</highlight></codeline>
-<codeline><highlight class="normal">git<sp/>checkout<sp/>f6a7d161e224b9909afaaf621822daddf61b6f52</highlight></codeline>
-<codeline><highlight class="normal">cd<sp/>..</highlight></codeline>
-<codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/ros-planning/srdfdom.git</highlight></codeline>
-<codeline><highlight class="normal">cd<sp/>srdfdom</highlight></codeline>
-<codeline><highlight class="normal">git<sp/>checkout<sp/>b1d67a14e45133928f9793e9ee143998219760fd</highlight></codeline>
-<codeline><highlight class="normal">cd<sp/>..</highlight></codeline>
-<codeline><highlight class="normal">apt-get<sp/>install<sp/>-y<sp/>ros-noetic-rosparam-shortcuts</highlight></codeline>
-<codeline><highlight class="normal">cd<sp/>..</highlight></codeline>
-<codeline><highlight class="normal">catkin_make</highlight></codeline>
-<codeline><highlight class="normal">catkin_make</highlight></codeline>
-<codeline><highlight class="normal">catkin_make</highlight></codeline>
-</programlisting></para>
-</sect3>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md22">
-<title>Workspace building e launch</title>
-<para>Navigate to you workspace</para>
-<para><programlisting filename=".sh"><codeline><highlight class="normal">cd<sp/>/home/ros_ws/</highlight></codeline>
-</programlisting></para>
-<para><itemizedlist>
-<listitem><para>clone the repository</para>
-</listitem></itemizedlist>
-</para>
-<para><programlisting filename=".sh"><codeline><highlight class="normal">https://github.com/HolyStone95/ExperimentalRoboticsAssignment2</highlight></codeline>
-</programlisting></para>
-<para><itemizedlist>
-<listitem><para>source your workspace by typing</para>
-</listitem></itemizedlist>
-</para>
-<para><programlisting filename=".sh"><codeline><highlight class="normal">source<sp/>devel/setup.bash</highlight></codeline>
-</programlisting></para>
-<para>(<ulink url="#top">back to top</ulink>)</para>
-<sect3 id="md__r_e_a_d_m_e_1autotoc_md23">
-<title>Running procedure</title>
-<para>To test the project, first of all:</para>
-<para><itemizedlist>
-<listitem><para>Open a shell and run:</para>
-</listitem></itemizedlist>
-</para>
-<para><programlisting filename=".sh"><codeline><highlight class="normal">roslaunch<sp/>erl_moveit_pkg<sp/>run_detectibot.launch<sp/>2&gt;/dev/null</highlight></codeline>
-</programlisting></para>
-<para><itemizedlist>
-<listitem><para>Open a second shell and run</para>
-</listitem></itemizedlist>
-</para>
-<para><programlisting filename=".sh"><codeline><highlight class="normal">roslaunch<sp/>erl_assignment_2<sp/>run_rosplan.launch</highlight></codeline>
-</programlisting></para>
-<para><itemizedlist>
-<listitem><para>Open a third shell and type:</para>
-</listitem></itemizedlist>
-</para>
-<para><programlisting filename=".sh"><codeline><highlight class="normal">rosrun<sp/>erl_assignment_2<sp/>main.py</highlight></codeline>
-</programlisting></para>
-</sect3>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md24">
-<title>Usage</title>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md21">
+<title>Software Architecture and Functioning</title>
 <para>The most relevant aspects of the project and a brief video tutorial on how to launch the simulation can be found here below</para>
 <para><ulink url="https://user-images.githubusercontent.com/61761835/187249845-1b03e627-d32e-4464-b7d3-0f172419d2f9.mp4">https://user-images.githubusercontent.com/61761835/187249845-1b03e627-d32e-4464-b7d3-0f172419d2f9.mp4</ulink></para>
 <para>(<ulink url="#top">back to top</ulink>)</para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md25">
-<title>ROS node description: An overview</title>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md22">
+<title>ROS nodes description</title>
 <para>Here there is the UML components diagram of the project</para>
 <para><image type="html" name="component_diagram.jpg" inline="yes"></image>
 </para>
-<para>Some remarks about the aformentioned components diagram:<itemizedlist>
-<listitem><para>The main node simply keeps replanning until the mistery gets solved</para>
-</listitem><listitem><para>The rosplan block represents a set of nodes provided by the Rosplan framework</para>
-</listitem><listitem><para>The component action_interface represents a moltitude of nodes, each implementing one pddl action</para>
-</listitem></itemizedlist>
-</para>
-<para>As shown in the above component diagram, this software architechture relies on the synergy of varius modules:</para>
+<para>As shown in the above component diagram, this software architecture relies on the synergy of various modules:</para>
 <para><itemizedlist>
-<listitem><para><ulink url="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/main/erl_assignment_2/scripts/cluedo_kb.py">cluedo_kb.py</ulink></para>
-</listitem><listitem><para><ulink url="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/main/erl_assignment_2/scripts/go_to_point.py">go_to_point.py</ulink></para>
-</listitem><listitem><para><ulink url="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/main/erl_assignment_2/scripts/main.py">main.py</ulink></para>
-</listitem><listitem><para><ulink url="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/main/erl_assignment_2/scripts/cluedo_kb.py">action_interface.cpp</ulink></para>
-</listitem><listitem><para><ulink url="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/main/erl_assignment_2/scripts/go_to_point.py">manipulation.cpp</ulink></para>
+<listitem><para><ref refid="cluedo__kb_8py" kindref="compound">cluedo_kb.py</ref></para>
+</listitem><listitem><para><ref refid="go__to__point_8py" kindref="compound">go_to_point.py</ref></para>
+</listitem><listitem><para><ref refid="main_8py" kindref="compound">main.py</ref></para>
+</listitem><listitem><para><ref refid="action__interface_8cpp" kindref="compound">action_interface.cpp</ref></para>
+</listitem><listitem><para><ref refid="manipulation_8cpp" kindref="compound">manipulation.cpp</ref></para>
 </listitem></itemizedlist>
 </para>
-<para>Here below we can find the nodes devoted for testing purposes</para>
-<para><itemizedlist>
-<listitem><para><ulink url="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/main/erl2/src/my_simulation.cpp">my_simulation.cpp</ulink></para>
-</listitem><listitem><para><ulink url="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/main/erl_assignment_2/scripts/test_nav.py">test_nav.py</ulink> <linebreak/>
-</para>
-</listitem></itemizedlist>
-</para>
-<sect3 id="md__r_e_a_d_m_e_1autotoc_md26">
-<title>ROS node description: the go_to_point.py node  🪢</title>
-<para>Let&apos;s start with the <computeroutput><ref refid="go__to__point_8py" kindref="compound">go_to_point.py</ref></computeroutput> node</para>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md23">
+<title>The go_to_point.py node</title>
 <para><image type="html" name="erl_assignment_go_to_point_py.jpg" inline="yes"></image>
  </para>
-<para>It implements a ROS service, whose purpose is that of piloting the robot toward a specific target by following a straight line. As it is shown by the component diagram here reported, it subscribes to the <computeroutput>/odom</computeroutput> topic for retrieving the current robot position and once the robot orientation among x and y coordinates has been computed with respect to the target position (obtained by means of the ros parameter server), it publishes on the <computeroutput>/cmd_vel</computeroutput> topic</para>
-<para>Concerning the ros parameters: <computeroutput>des_pos_x</computeroutput> and <computeroutput>des_pos_y</computeroutput> are used for keeping track of the target goal to be assigned to the robot in the <ref refid="go__to__point_8py" kindref="compound">go_to_point.py</ref> node</para>
-<para>Node interfaces: <programlisting filename=".Plain"><codeline><highlight class="normal">Node<sp/>[/go_to_point]</highlight></codeline>
-<codeline><highlight class="normal">Publications:<sp/></highlight></codeline>
+<para>It&apos;s a ROS service, used for navigation of the robot in the environment. It receives a desired position in form of planar coordinates and, given the fact that it can computes the position of the robot thanks to */odom* it publishes the necessary velocities in order to achieve the movement on */cmd_vel* topic. Node interfaces: <programlisting filename=".Plain"><codeline><highlight class="normal">Node<sp/>[/go_to_point]</highlight></codeline>
+<codeline><highlight class="normal">Publications:</highlight></codeline>
 <codeline><highlight class="normal"><sp/>*<sp/>/cmd_vel<sp/>[geometry_msgs/Twist]</highlight></codeline>
 <codeline><highlight class="normal"><sp/>*<sp/>/rosout<sp/>[rosgraph_msgs/Log]</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">Subscriptions:<sp/></highlight></codeline>
+<codeline><highlight class="normal">Subscriptions:</highlight></codeline>
 <codeline><highlight class="normal"><sp/>*<sp/>/clock<sp/>[rosgraph_msgs/Clock]</highlight></codeline>
 <codeline><highlight class="normal"><sp/>*<sp/>/odom<sp/>[nav_msgs/Odometry]</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">Services:<sp/></highlight></codeline>
+<codeline><highlight class="normal">Services:</highlight></codeline>
 <codeline><highlight class="normal"><sp/>*<sp/>/go_to_point</highlight></codeline>
 <codeline><highlight class="normal"><sp/>*<sp/>/go_to_point/get_loggers</highlight></codeline>
 <codeline><highlight class="normal"><sp/>*<sp/>/go_to_point/set_logger_level</highlight></codeline>
 </programlisting></para>
-</sect3>
-<sect3 id="md__r_e_a_d_m_e_1autotoc_md27">
-<title>ROS node description: the main.py node 🪢</title>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md24">
+<title>The main.py node</title>
 <para><image type="html" name="erl_assignment_2_main_py.jpg" inline="yes"></image>
  </para>
-<para>This node represents three core structures, even the &quot;brain&quot; of our achitechture. Being ROSPlan a framework that owns a variety of nodes which encapsulate planning, problem generation and plan execution, a set of clients have been initialised to, subsequently:</para>
+<para>As already said this node represents the main phaser of the project:</para>
 <para><itemizedlist>
-<listitem><para>generate a problem: a <ulink url="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/tree/main/erl_assignment_2/pddl">pddl problem</ulink> is published on a topic</para>
-</listitem><listitem><para>establish a plan: a planner is called for publishing the plan to a topic</para>
-</listitem><listitem><para>parse a plan: At this stage the PDDL plan is converted into ROS messages, ready to be executed</para>
-</listitem><listitem><para>dispatch a plan: for being then executed</para>
+<listitem><para>it generates a problem: a [pddl problem][115] is published on a topic</para>
+</listitem><listitem><para>establishes a plan: a planner is called for publishing the plan to a topic</para>
+</listitem><listitem><para>parses a plan: At this stage the PDDL plan is converted into ROS messages, ready to be executed</para>
+</listitem><listitem><para>dispatches a plan: for being executed</para>
 </listitem></itemizedlist>
 </para>
-<para>There is also the possibility to update the Knowledge base (being it the main responsible for the PDDL domain model amd current problem istance stroage)</para>
-<para>Indeed, if detectibot is not able to solve the mistery at the first round, it is possible to count on a &quot;replanning phase&quot;, after which it starts roaming around the environment for gathering hints held by the markers</para>
-<para>Node Interfaces: <programlisting filename=".Plain"></programlisting></para>
-</sect3>
-<sect3 id="md__r_e_a_d_m_e_1autotoc_md28">
-<title>ROS node description: the cluedo_kb.py node 🪢</title>
-<para>Concerning the <computeroutput><ref refid="cluedo__kb_8py" kindref="compound">cluedo_kb.py</ref></computeroutput> node:</para>
+<para>Node Interfaces: <programlisting filename=".Plain"><codeline><highlight class="normal">Node<sp/>[/main]</highlight></codeline>
+<codeline><highlight class="normal">Publications:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosout<sp/>[rosgraph_msgs/Log]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Subscriptions:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/clock<sp/>[rosgraph_msgs/Clock]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Services:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/main/get_loggers</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/main/set_logger_level</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md25">
+<title>The cluedo_kb.py node</title>
 <para><image type="html" name="erl_assignment_2_cluedo_kb_py.jpg" inline="yes"></image>
  </para>
-<para>cluedo_KB is a node that acts as a dedicated ontology for the problem under investigation; it provides a processing/reasoning system that provides the functionalities of:</para>
-<para><itemizedlist>
-<listitem><para>registering the clues</para>
-</listitem><listitem><para>building and processing hypotheses based on the added information</para>
-</listitem><listitem><para>finding possible solutions to the case</para>
-</listitem><listitem><para>rejecting hypotheses</para>
-</listitem></itemizedlist>
-</para>
+<para>This node represents the knowledge base of the robot, allowing for storing and processing of hypotheses, and interrogation of the oracle in order to check if the problem is being resolved.</para>
 <para><blockquote><para><emphasis><bold>REMARK</bold></emphasis> the KB listens in on the oracle&apos;s topic and as soon as the oracle transmits the clue, the KB adds the message to the ontology without the need for an explicit request </para>
 </blockquote></para>
-<para>Node interfaces: <programlisting filename=".Plain"></programlisting></para>
-</sect3>
-<sect3 id="md__r_e_a_d_m_e_1autotoc_md29">
-<title>ROS node description: the action_interface.cpp node  🪢</title>
-<para>Concerning the <computeroutput><ref refid="action__interface_8cpp" kindref="compound">action_interface.cpp</ref></computeroutput> node:</para>
-<para><image type="html" name="erl_assignment_2_action_interface_cpp_v2.jpg" inline="yes"></image>
+<para>Node interfaces: <programlisting filename=".Plain"><codeline><highlight class="normal">Node<sp/>[/cluedo_kb]</highlight></codeline>
+<codeline><highlight class="normal">Publications:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosout<sp/>[rosgraph_msgs/Log]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Subscriptions:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/oracle_hint<sp/>[erl2/ErlOracle]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Services:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/cluedo_kb/get_loggers</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/cluedo_kb/set_logger_level</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/get_id</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/mark_wrong_id</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md26">
+<title>The action_interface.cpp node</title>
+<para><image type="html" name="erl_assignment_2_action_interface_cpp.jpg" inline="yes"></image>
  </para>
 <para><ref refid="action__interface_8cpp" kindref="compound">action_interface.cpp</ref> implements all rosplan actions in a single ROS node, moreover:</para>
-<para><itemizedlist>
-<listitem><para>the same node can be run replicated for all actions specified in the pddl</para>
-</listitem><listitem><para>topics and services only get allocated when the action is called for the first time via the rosplan action dispatcher</para>
-</listitem><listitem><para>the node interacts with the navigation and manipulation systems to move the robot and the arm</para>
-</listitem><listitem><para>The node also interacts with the KB and the oracle for clue and hypothesis processing operations</para>
-</listitem></itemizedlist>
-</para>
-<para>Regarding the pddl, it is possible to see their logical implementation within the domain file, inside the <ulink url="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/tree/main/erl_assignment_2/pddl/detectibot_pddl">detectibot_pddl</ulink> folder. There you can find both the predicates and seven actions, namely:</para>
 <para><orderedlist>
 <listitem><para>leave_temple</para>
 </listitem><listitem><para>shift_gripper</para>
@@ -396,7 +192,6 @@
 </listitem><listitem><para>query_hypo</para>
 </listitem></orderedlist>
 </para>
-<para>here below it is possible to see the conntent of the soultion found. If you wamt to take a look at the file itself, just <ulink url="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/main/erl_assignment_2/pddl/detectibot_pddl/solution.txt">click here</ulink></para>
 <para><programlisting><codeline><highlight class="normal">;<sp/>States<sp/>evaluated:<sp/>54</highlight></codeline>
 <codeline><highlight class="normal">;<sp/>Cost:<sp/>14.013</highlight></codeline>
 <codeline><highlight class="normal">;<sp/>Time<sp/>0.00</highlight></codeline>
@@ -416,144 +211,242 @@
 <codeline><highlight class="normal">12.012:<sp/>(check_consistent_hypo<sp/>wp1)<sp/><sp/>[1.000]</highlight></codeline>
 <codeline><highlight class="normal">13.013:<sp/>(query_hypo<sp/>tp)<sp/><sp/>[1.000]</highlight></codeline>
 </programlisting></para>
-<para>Node interfaces: <programlisting filename=".Plain"></programlisting></para>
-</sect3>
-<sect3 id="md__r_e_a_d_m_e_1autotoc_md30">
-<title>ROS node description: the manipulation.cpp node 🪢</title>
+<para>Node interfaces: <programlisting filename=".Plain"><codeline><highlight class="normal">Node<sp/>[/rpi_leave_temple]</highlight></codeline>
+<codeline><highlight class="normal">Publications:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosout<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[rosgraph_msgs/Log]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosplan_knowledge_base/pddl_action_parameters<sp/><sp/>[rosplan_knowledge_msgs/DomainFormula]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosplan_plan_dispatcher/action_feedback<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[rosplan_dispatch_msgs/ActionFeedback]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Subscriptions:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/clock<sp/>[rosgraph_msgs/Clock]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosplan_plan_dispatcher/action_dispatch<sp/>[rosplan_dispatch_msgs/ActionDispatch]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Services:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rpi_leave_temple/get_loggers</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rpi_leave_temple/set_logger_level</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">--------------------------------------------------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">Node<sp/>[/rpi_shift_gripper]</highlight></codeline>
+<codeline><highlight class="normal">Publications:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosout<sp/>[rosgraph_msgs/Log]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosplan_knowledge_base/pddl_action_parameters<sp/><sp/>[rosplan_knowledge_msgs/DomainFormula]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosplan_plan_dispatcher/action_feedback<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[rosplan_dispatch_msgs/ActionFeedback]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Subscriptions:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/clock<sp/>[rosgraph_msgs/Clock]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosplan_plan_dispatcher/action_dispatch<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[rosplan_dispatch_msgs/ActionDispatch]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Services:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rpi_shift_gripper/get_loggers</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rpi_shift_gripper/set_logger_level</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">--------------------------------------------------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">Node<sp/>[/rpi_gather_hint]</highlight></codeline>
+<codeline><highlight class="normal">Publications:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosout<sp/>[rosgraph_msgs/Log]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosplan_knowledge_base/pddl_action_parameters<sp/><sp/>[rosplan_knowledge_msgs/DomainFormula]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosplan_plan_dispatcher/action_feedback<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[rosplan_dispatch_msgs/ActionFeedback]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Subscriptions:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/clock<sp/>[rosgraph_msgs/Clock]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosplan_plan_dispatcher/action_dispatch<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[rosplan_dispatch_msgs/ActionDispatch]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Services:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rpi_gather_hint/get_loggers</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rpi_gather_hint/set_logger_level</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">--------------------------------------------------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">Node<sp/>[/rpi_go_to_wp]</highlight></codeline>
+<codeline><highlight class="normal">Publications:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosout<sp/>[rosgraph_msgs/Log]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosplan_knowledge_base/pddl_action_parameters<sp/>[rosplan_knowledge_msgs/DomainFormula]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosplan_plan_dispatcher/action_feedback<sp/><sp/><sp/><sp/><sp/><sp/><sp/>[rosplan_dispatch_msgs/ActionFeedback]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Subscriptions:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/clock<sp/>[rosgraph_msgs/Clock]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosplan_plan_dispatcher/action_dispatch<sp/><sp/><sp/><sp/><sp/><sp/><sp/>[rosplan_dispatch_msgs/ActionDispatch]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Services:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rpi_go_to_wp/get_loggers</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rpi_go_to_wp/set_logger_level</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">--------------------------------------------------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">Node<sp/>[/rpi_reach_temple]</highlight></codeline>
+<codeline><highlight class="normal">Publications:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosout<sp/>[rosgraph_msgs/Log]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosplan_knowledge_base/pddl_action_parameters<sp/>[rosplan_knowledge_msgs/DomainFormula]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosplan_plan_dispatcher/action_feedback<sp/><sp/><sp/><sp/><sp/><sp/><sp/>[rosplan_dispatch_msgs/ActionFeedback]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Subscriptions:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/clock<sp/>[rosgraph_msgs/Clock]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosplan_plan_dispatcher/action_dispatch<sp/><sp/><sp/><sp/><sp/><sp/><sp/>[rosplan_dispatch_msgs/ActionDispatch]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Services:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rpi_reach_temple/get_loggers</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rpi_reach_temple/set_logger_level</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">--------------------------------------------------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">Node<sp/>[/rpi_check_consistent_hypo]</highlight></codeline>
+<codeline><highlight class="normal">Publications:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosout<sp/>[rosgraph_msgs/Log]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosplan_knowledge_base/pddl_action_parameters<sp/><sp/>[rosplan_knowledge_msgs/DomainFormula]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosplan_plan_dispatcher/action_feedback<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[rosplan_dispatch_msgs/ActionFeedback]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Subscriptions:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/clock<sp/>[rosgraph_msgs/Clock]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosplan_plan_dispatcher/action_dispatch<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[rosplan_dispatch_msgs/ActionDispatch]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Services:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rpi_check_consistent_hypo/get_loggers</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rpi_check_consistent_hypo/set_logger_level</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">--------------------------------------------------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">Node<sp/>[/rpi_query_hypo]</highlight></codeline>
+<codeline><highlight class="normal">Publications:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosout<sp/>[rosgraph_msgs/Log]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosplan_knowledge_base/pddl_action_parameters<sp/>[rosplan_knowledge_msgs/DomainFormula]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosplan_plan_dispatcher/action_feedback<sp/><sp/><sp/><sp/><sp/><sp/><sp/>[rosplan_dispatch_msgs/ActionFeedback]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Subscriptions:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/clock<sp/>[rosgraph_msgs/Clock]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosplan_plan_dispatcher/action_dispatch<sp/><sp/><sp/><sp/><sp/><sp/><sp/>[rosplan_dispatch_msgs/ActionDispatch]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Services:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rpi_query_hypo/get_loggers</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rpi_query_hypo/set_logger_level</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md27">
+<title>The manipulation.cpp node</title>
 <para>Concerning the <computeroutput>manipulation_cpp</computeroutput> node:</para>
 <para><image type="html" name="erl_assignment_2_manipulation_cpp.jpg" inline="yes"></image>
  </para>
-<para>This node is simply devoted to control the Detectibot&apos;s manipulator by directly interacting with the MoveIt! framework</para>
-<para>Node interfaces: <programlisting filename=".Plain"></programlisting></para>
-</sect3>
-<sect3 id="md__r_e_a_d_m_e_1autotoc_md31">
-<title>ROS node description: my_simulation.cpp node 🪢</title>
+<para>This node is simply devoted to control the robot manipulator arm by directly interacting with the MoveIt! framework</para>
+<para>Node interfaces: <programlisting filename=".Plain"><codeline><highlight class="normal">Node<sp/>[/manipulation]</highlight></codeline>
+<codeline><highlight class="normal">Publications:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/attached_collision_object<sp/>[moveit_msgs/AttachedCollisionObject]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/execute_trajectory/cancel<sp/>[actionlib_msgs/GoalID]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/execute_trajectory/goal<sp/>[moveit_msgs/ExecuteTrajectoryActionGoal]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/move_group/cancel<sp/>[actionlib_msgs/GoalID]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/move_group/goal<sp/>[moveit_msgs/MoveGroupActionGoal]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/pickup/cancel<sp/>[actionlib_msgs/GoalID]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/pickup/goal<sp/>[moveit_msgs/PickupActionGoal]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/place/cancel<sp/>[actionlib_msgs/GoalID]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/place/goal<sp/>[moveit_msgs/PlaceActionGoal]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosout<sp/>[rosgraph_msgs/Log]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/trajectory_execution_event<sp/>[std_msgs/String]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Subscriptions:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/clock<sp/>[rosgraph_msgs/Clock]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/execute_trajectory/feedback<sp/>[moveit_msgs/ExecuteTrajectoryActionFeedback]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/execute_trajectory/result<sp/>[moveit_msgs/ExecuteTrajectoryActionResult]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/execute_trajectory/status<sp/>[actionlib_msgs/GoalStatusArray]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/move_group/feedback<sp/>[moveit_msgs/MoveGroupActionFeedback]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/move_group/result<sp/>[moveit_msgs/MoveGroupActionResult]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/move_group/status<sp/>[actionlib_msgs/GoalStatusArray]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/pickup/feedback<sp/>[moveit_msgs/PickupActionFeedback]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/pickup/result<sp/>[moveit_msgs/PickupActionResult]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/pickup/status<sp/>[actionlib_msgs/GoalStatusArray]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/place/feedback<sp/>[moveit_msgs/PlaceActionFeedback]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/place/result<sp/>[moveit_msgs/PlaceActionResult]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/place/status<sp/>[actionlib_msgs/GoalStatusArray]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/tf<sp/>[tf2_msgs/TFMessage]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/tf_static<sp/>[tf2_msgs/TFMessage]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Services:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/manipulation</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/manipulation/get_loggers</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/manipulation/set_logger_level</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md28">
+<title>The my_simulation.cpp node</title>
 <para><image type="html" name="erl2_my_simulation_cpp.jpg" inline="yes"></image>
  </para>
-<para>This is the node provided by professor with some simplification in orderr to make the siumulation run faster and test wheter the detectibot would have carry out the investigation entirely.</para>
-<para>Node interfaces: <programlisting filename=".Plain"></programlisting></para>
-</sect3>
-<sect3 id="md__r_e_a_d_m_e_1autotoc_md32">
-<title>rqt_graph</title>
-<para>In the figure below, circles represent nodes and squares represent topic messages. The arrow instead, indicates the transmission of the message!</para>
+<para>This node is the one provided by the professor, that control the hints generation flow.</para>
+<para>Node interfaces: <programlisting filename=".Plain"><codeline><highlight class="normal">Node<sp/>[/my_simulation]</highlight></codeline>
+<codeline><highlight class="normal">Publications:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/oracle_hint<sp/>[erl2/ErlOracle]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/rosout<sp/>[rosgraph_msgs/Log]</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/visualization_marker<sp/>[visualization_msgs/MarkerArray]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Subscriptions:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/gazebo/link_states<sp/>[gazebo_msgs/LinkStates]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Services:</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/my_simulation/get_loggers</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/my_simulation/set_logger_level</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>/oracle_solution</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md29">
+<title>Rqt_graph</title>
 <para><image type="html" name="rosgraph_nodes_topics_all.png" inline="yes"></image>
 </para>
-</sect3>
-<sect3 id="md__r_e_a_d_m_e_1autotoc_md33">
-<title>UML temporal diagram</title>
-<para><image type="html" name="Diagrams_erl_img.jpg" inline="yes"></image>
-</para>
-</sect3>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md34">
-<title>Working hypothesis and environment</title>
-<para>The architecture is designed for providing a raw simplification of the Cluedo Game. Hints are set a-priori and the True hipothesis is randomly chosen before starting the game.</para>
-<para>Detectibot (the robot involved in the investigation), moves in a obstacle-free environment charachterised by a perfectly flat floor (without irregularities), within a square-shaped indoor environment</para>
-<para>Concerning the markers we can say that they are positioned in such a way that the arm can reach them</para>
-<para>All choices were made with the aim of making the system as modular and flexible as possible. Despite this, certain limitations make the system quite unrealistic but functional.</para>
-<sect3 id="md__r_e_a_d_m_e_1autotoc_md35">
-<title>System&apos;s features</title>
-<para>Most of them have been already discussed in the Software architecture’s section.</para>
-<para>The project implements the robot behaviour so that it can keep roaming around, looking for clues. This serves for solving the case.</para>
-<para>Indeed, while it navigates through the environment it tries to combine them in order to find a solution. This is where the reasoning &amp; AI module, represented by the <ulink url="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/main/erl_assignment_2/scripts/cluedo_kb.py">cluedo_kb.py</ulink>, comes imto play</para>
-<para>Concerning the architecture, it is centralised and designed in such a way that individual components can be replaced as long as they meet the same required interface</para>
-</sect3>
-<sect3 id="md__r_e_a_d_m_e_1autotoc_md36">
-<title>System&apos;s limitations</title>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md30">
+<title>UML temporal diagram</title>
+<para><blockquote><para>:warning: Due to the size of the original image, it is shown only a raw preview, opened with the standard pc&apos;s imahe viewer. If you want to download the original file, you can find it [here][111] </para>
+</blockquote></para>
+<para><image type="html" name="raw_preview.png" inline="yes"></image>
+</para>
+</sect2>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md31">
+<title>How to launch and additional documentation</title>
+<para>To test the project, first of all:</para>
+<para><itemizedlist>
+<listitem><para>Open a shell and run:</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">roslaunch<sp/>erl_moveit_pkg<sp/>run_detectibot.launch<sp/>2&gt;/dev/null</highlight></codeline>
+</programlisting></para>
+<para><itemizedlist>
+<listitem><para>Open a second shell and run</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">roslaunch<sp/>erl_assignment_2<sp/>run_rosplan.launch</highlight></codeline>
+</programlisting></para>
+<para><itemizedlist>
+<listitem><para>Open a third shell and type:</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">rosrun<sp/>erl_assignment_2<sp/>main.py</highlight></codeline>
+</programlisting></para>
+<para>Additional documentation of this project can be found opening in the browser the file *_build/html/index.html*</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md32">
+<title>System limitations</title>
 <para>Here below, some of the major system limitations are listed:</para>
 <para><itemizedlist>
-<listitem><para>the navigation module is not suitable for environments with obstacles as it needs to make a straight line between the starting point and the target.</para>
+<listitem><para>the robot model is not optimal, causing the robot oscillating during navigation.</para>
+</listitem><listitem><para>the navigation module is not suitable for environments with obstacles as it needs to make a straight line between the starting point and the target.</para>
 </listitem><listitem><para>since there is no unit that deals explicitly with the marker topology, changing such a topology requires the modification of several parts of the architecture including:<itemizedlist>
 <listitem><para>the main node that takes into account the topology for being able to do replanning</para>
 </listitem><listitem><para>the pddl models, in particular the problem file</para>
 </listitem><listitem><para>the oracle, represented by the <ref refid="simulation_8cpp" kindref="compound">simulation.cpp</ref> node, having hard-coded markers, must be modified to support a new topology</para>
 </listitem></itemizedlist>
 </para>
-</listitem><listitem><para>the architecture could also be executed in a distributed manner by dividing the components over various devices. However, this possibility was not considered during the design of the system. It is therefore necessary to identify possible criticalities in the communication protocol (i.e. to better manage service calls that fail based on the quality of the connection) and to treat them appropriately</para>
+</listitem><listitem><para>The architecture is a little heavy in my opinion, with some nodes that are to much centralized. The architecture is vulnerable to centralized crash problems due to the architecture not completely exploiting modularity potentials in its implementation. For example the main node called <emphasis>action_interface</emphasis> could be divided and split into different nodes enabling the program to still execute some actions even if another part crashes.</para>
 </listitem></itemizedlist>
 </para>
-</sect3>
-<sect3 id="md__r_e_a_d_m_e_1autotoc_md37">
-<title>Possible technical Improvements</title>
-<para>As for the system limitations, some of the most relevant potential techincal improvements:</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md33">
+<title>Possible Technical Improvements</title>
 <para><itemizedlist>
-<listitem><para>The current KB can be modified to implement the same functionalities on a different ontology system (i.e. Armor); the component can be extended for more accurate hypotheses processing or for providing, for instance, a ontology backup feature</para>
-</listitem><listitem><para>The current navigation system is rather poor; it should be replaced with a more elaborate navigation system. In particular, the new navigation system should make it possible to achieve a certain orientation as well as a final position.</para>
-</listitem><listitem><para>The manipulation could be replaced with a more advanced node that performs a finer (more precise) control on moveit</para>
-</listitem><listitem><para>The current robot model is quite unstable. It should be adjusted so that it does not oscillate during its movments</para>
-</listitem><listitem><para>the robot needs a lot of manoeuvring space to move; There should be the need of seeking an appropriate navigation algorithm to reduce the necessary manoeuvring space</para>
+<listitem><para>The current KB is being chosen because there was problems and limitations in using ARMOR due to the nature of the generation flow of ID, decided a priori. By modification of the ID generation flow and by creating an interface in order to initially filter the data, it is fair to say that the integration with ARMOR would be preferable.</para>
+</listitem><listitem><para>The navigation module used here is extremely rudimental and just enough to perform the necessary navigation required by this assignment, but a better navigation should be implemented, for example using a move base, much more solid, much more capable of obstacle avoidance and of reaching easily certain points in planar space. In addition to that the robot needs a lot of manouvering space to rotate; There should be the need of seeking an appropriate navigation algorithm to reduce the necessary manoeuvring space</para>
+</listitem><listitem><para>The current robot model is quite unstable. It should be adjusted so that it does not oscillate during its movements. This is due to the simplicity of its mobile base with respect to the shape of its robotic arm. A more robust and stable model should eliminate some of these issues.</para>
+</listitem><listitem><para>Possible improvements in the manipulation controls used by MoveIt for obtaining a better, more robust, more precise manipulation.</para>
 </listitem></itemizedlist>
 </para>
-</sect3>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md38">
-<title>Roadmap</title>
-<para><itemizedlist>
-<listitem><para>[x] Complete the introduction of the template</para>
-</listitem><listitem><para>[ ] Describe the software architechture<itemizedlist>
-<listitem><para>[x] Component diagram (<emphasis>not mandatory</emphasis>)</para>
-</listitem><listitem><para>[x] Temporal diagram + comments</para>
-</listitem><listitem><para>[x] States diagrams, whether applicable + comments</para>
-</listitem><listitem><para>[x] Create a list describing ROS messages and parameters</para>
-</listitem></itemizedlist>
-</para>
-</listitem><listitem><para>[x] Describe the installation steps and the running procedures<itemizedlist>
-<listitem><para>[x] Create a dedicated paragraph</para>
-</listitem><listitem><para>[x] Include all the steps to display the robot&apos;s behaviour</para>
-</listitem></itemizedlist>
-</para>
-</listitem><listitem><para>[ ] Show in the &quot;usage&quot; section the running code<itemizedlist>
-<listitem><para>[x] Create a small video tutorial of the launch</para>
-</listitem><listitem><para>[ ] Create a small animated gif of the terminal while running code</para>
-</listitem></itemizedlist>
-</para>
-</listitem><listitem><para>[x] Describe the Working hypothesis and environment<itemizedlist>
-<listitem><para>[x] Dedicated section for System&apos;s features</para>
-</listitem><listitem><para>[x] Dedicated section for System&apos;s limitations</para>
-</listitem><listitem><para>[x] Dedicated section for Possible technical improvements</para>
-</listitem></itemizedlist>
-</para>
-</listitem></itemizedlist>
-</para>
-<para>See the <ulink url="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/issues">open issues</ulink> for a full list of proposed features (and known issues).</para>
-<para>(<ulink url="#top">back to top</ulink>)</para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md39">
-<title>Contributing</title>
-<para>If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag &quot;enhancement&quot;</para>
-<para><orderedlist>
-<listitem><para>Fork the Project</para>
-</listitem><listitem><para>Create your Feature Branch (<computeroutput>git checkout -b feature/AmazingFeature</computeroutput>)</para>
-</listitem><listitem><para>Commit your Changes (<lsquo/>git commit -m &apos;Add some AmazingFeature<rsquo/><computeroutput>)</computeroutput></para>
-</listitem><listitem><para><computeroutput>Push to the Branch (</computeroutput>git push origin feature/AmazingFeature`)</para>
-</listitem><listitem><para>Open a Pull Request</para>
-</listitem></orderedlist>
-</para>
-<para>(<ulink url="#top">back to top</ulink>)</para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md40">
-<title>License</title>
-<para>Distributed under none License.</para>
-<para>(<ulink url="#top">back to top</ulink>)</para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md41">
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md34">
 <title>Contact</title>
 <para>Iacopo Pietrasanta - <ulink url="mailto:s4119821@studenti.unige.it">s4119821@studenti.unige.it</ulink></para>
 <para>Project Link: <ulink url="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2">https://github.com/HolyStone95/ExperimentalRoboticsAssignment2</ulink></para>
 <para>(<ulink url="#top">back to top</ulink>)</para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md42">
-<title>List of resources</title>
-<para><itemizedlist>
-<listitem><para><ulink url="http://wiki.ros.org/smach/Tutorials/Smach%20Viewer">Viewing state machine</ulink></para>
-</listitem><listitem><para><ulink url="http://wiki.ros.org/smach">Smach</ulink></para>
-</listitem><listitem><para><ulink url="https://github.com/EmaroLab/armor">Armor</ulink></para>
-</listitem><listitem><para><ulink url="https://protege.stanford.edu">Protègè</ulink></para>
-</listitem></itemizedlist>
-</para>
-<para>(<ulink url="#top">back to top</ulink>)</para>
-<para>[12]: &lt;param.yaml file&gt; </para>
-</sect2>
+</sect1>
     </detaileddescription>
   </compounddef>
 </doxygen>

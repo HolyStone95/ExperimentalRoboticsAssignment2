@@ -1,0 +1,138 @@
+\hypertarget{manipulation_8cpp}{}\doxysection{erl\+\_\+assignment\+\_\+2/src/manipulation.cpp File Reference}
+\label{manipulation_8cpp}\index{erl\_assignment\_2/src/manipulation.cpp@{erl\_assignment\_2/src/manipulation.cpp}}
+
+
+This node directly interacts with move\+IT for moving the arm.  
+
+
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+srvs/\+Set\+Bool.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$moveit/move\+\_\+group\+\_\+interface/move\+\_\+group\+\_\+interface.\+h$>$}\newline
+{\ttfamily \#include $<$moveit/planning\+\_\+scene\+\_\+interface/planning\+\_\+scene\+\_\+interface.\+h$>$}\newline
+Include dependency graph for manipulation.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{manipulation_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{manipulation_8cpp_a83251b24e5697bfa2a149273e4ca40b8}{move\+\_\+arm}} (bool gather\+\_\+hint)
+\begin{DoxyCompactList}\small\item\em move the robot in one pose \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{manipulation_8cpp_aefdb9958bc4650484824e4cbd42dcf65}{cbk\+\_\+manip}} (std\+\_\+srvs\+::\+Set\+Bool\+::\+Request \&req, std\+\_\+srvs\+::\+Set\+Bool\+::\+Response \&res)
+\begin{DoxyCompactList}\small\item\em manipulation Service callback implementatiomn \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{manipulation_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em main function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+moveit\+::planning\+\_\+interface\+::\+Move\+Group\+Interface $\ast$ \mbox{\hyperlink{manipulation_8cpp_a6bf48b64f1b894fc5781377399dd974d}{move\+\_\+group\+\_\+interface}}
+\begin{DoxyCompactList}\small\item\em our move group interface \end{DoxyCompactList}\item 
+ros\+::\+Service\+Server \mbox{\hyperlink{manipulation_8cpp_aa6507e80b3e06c0fe2c8fcd01a00323d}{srv\+\_\+manip}}
+\begin{DoxyCompactList}\small\item\em manupulation Service server \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This node directly interacts with move\+IT for moving the arm. 
+
+@ package erl\+\_\+assignment\+\_\+2
+
+\begin{DoxyAuthor}{Author}
+Iacopo Pietrasanta 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0
+\end{DoxyVersion}
+Subscribes to\+: ~\newline
+ /clock \mbox{[}rosgraph\+\_\+msgs/\+Clock\mbox{]} /execute\+\_\+trajectory/feedback \mbox{[}moveit\+\_\+msgs/\+Execute\+Trajectory\+Action\+Feedback\mbox{]} /execute\+\_\+trajectory/result \mbox{[}moveit\+\_\+msgs/\+Execute\+Trajectory\+Action\+Result\mbox{]} /execute\+\_\+trajectory/status \mbox{[}actionlib\+\_\+msgs/\+Goal\+Status\+Array\mbox{]} /move\+\_\+group/feedback \mbox{[}moveit\+\_\+msgs/\+Move\+Group\+Action\+Feedback\mbox{]} /move\+\_\+group/result \mbox{[}moveit\+\_\+msgs/\+Move\+Group\+Action\+Result\mbox{]} /move\+\_\+group/status \mbox{[}actionlib\+\_\+msgs/\+Goal\+Status\+Array\mbox{]} /pickup/feedback \mbox{[}moveit\+\_\+msgs/\+Pickup\+Action\+Feedback\mbox{]} /pickup/result \mbox{[}moveit\+\_\+msgs/\+Pickup\+Action\+Result\mbox{]} /pickup/status \mbox{[}actionlib\+\_\+msgs/\+Goal\+Status\+Array\mbox{]} /place/feedback \mbox{[}moveit\+\_\+msgs/\+Place\+Action\+Feedback\mbox{]} /place/result \mbox{[}moveit\+\_\+msgs/\+Place\+Action\+Result\mbox{]} /place/status \mbox{[}actionlib\+\_\+msgs/\+Goal\+Status\+Array\mbox{]} /tf \mbox{[}tf2\+\_\+msgs/\+T\+F\+Message\mbox{]} /tf\+\_\+static \mbox{[}tf2\+\_\+msgs/\+T\+F\+Message\mbox{]}
+
+Publishes to\+: ~\newline
+ /attached\+\_\+collision\+\_\+object \mbox{[}moveit\+\_\+msgs/\+Attached\+Collision\+Object\mbox{]} /execute\+\_\+trajectory/cancel \mbox{[}actionlib\+\_\+msgs/\+Goal\+ID\mbox{]} /execute\+\_\+trajectory/goal \mbox{[}moveit\+\_\+msgs/\+Execute\+Trajectory\+Action\+Goal\mbox{]} /move\+\_\+group/cancel \mbox{[}actionlib\+\_\+msgs/\+Goal\+ID\mbox{]} /move\+\_\+group/goal \mbox{[}moveit\+\_\+msgs/\+Move\+Group\+Action\+Goal\mbox{]} /pickup/cancel \mbox{[}actionlib\+\_\+msgs/\+Goal\+ID\mbox{]} /pickup/goal \mbox{[}moveit\+\_\+msgs/\+Pickup\+Action\+Goal\mbox{]} /place/cancel \mbox{[}actionlib\+\_\+msgs/\+Goal\+ID\mbox{]} /place/goal \mbox{[}moveit\+\_\+msgs/\+Place\+Action\+Goal\mbox{]} /rosout \mbox{[}rosgraph\+\_\+msgs/\+Log\mbox{]} /trajectory\+\_\+execution\+\_\+event \mbox{[}std\+\_\+msgs/\+String\mbox{]}
+
+Services\+: ~\newline
+ /manipulation
+
+Client Services\+: ~\newline
+ /go\+\_\+to\+\_\+point \mbox{[}std\+\_\+srvs/\+Set\+Bool\mbox{]} /manipulation \mbox{[}std\+\_\+srvs/\+Set\+Bool\mbox{]} /get\+\_\+id \mbox{[}erl\+\_\+assignment\+\_\+2\+\_\+msgs/\+Get\+Id\mbox{]} /oracle\+\_\+solution \mbox{[}erl2/\+Oracle\mbox{]} /mark\+\_\+wrong\+\_\+id \mbox{[}erl\+\_\+assignment\+\_\+2\+\_\+msgs/\+Mark\+Wrong\+Id\mbox{]} \mbox{]} \begin{DoxyVerb}Action Services: <BR>
+    None
+
+Description: <BR>
+    This node interfaces the robotic arm with the MoveIt nodes, allowing all
+    the manipulation necessary actions.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{manipulation_8cpp_aefdb9958bc4650484824e4cbd42dcf65}\label{manipulation_8cpp_aefdb9958bc4650484824e4cbd42dcf65}} 
+\index{manipulation.cpp@{manipulation.cpp}!cbk\_manip@{cbk\_manip}}
+\index{cbk\_manip@{cbk\_manip}!manipulation.cpp@{manipulation.cpp}}
+\doxysubsubsection{\texorpdfstring{cbk\_manip()}{cbk\_manip()}}
+{\footnotesize\ttfamily bool cbk\+\_\+manip (\begin{DoxyParamCaption}\item[{std\+\_\+srvs\+::\+Set\+Bool\+::\+Request \&}]{req,  }\item[{std\+\_\+srvs\+::\+Set\+Bool\+::\+Response \&}]{res }\end{DoxyParamCaption})}
+
+
+
+manipulation Service callback implementatiomn 
+
+This function represents the callback of the maipulaiton service, it calls the move\+\_\+arm function.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em req} & A request of type std\+\_\+srvs\+::\+Set\+Bool, enabling/disabling certain behaviours \\
+\hline
+\mbox{\texttt{ in}}  & {\em res} & A response of type std\+\_\+srvs\+::\+Set\+Bool, indicating a successfull run of triggered service\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{manipulation_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{manipulation_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{manipulation.cpp@{manipulation.cpp}!main@{main}}
+\index{main@{main}!manipulation.cpp@{manipulation.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+main function 
+
+before starting, move the robot in the init pose\mbox{\Hypertarget{manipulation_8cpp_a83251b24e5697bfa2a149273e4ca40b8}\label{manipulation_8cpp_a83251b24e5697bfa2a149273e4ca40b8}} 
+\index{manipulation.cpp@{manipulation.cpp}!move\_arm@{move\_arm}}
+\index{move\_arm@{move\_arm}!manipulation.cpp@{manipulation.cpp}}
+\doxysubsubsection{\texorpdfstring{move\_arm()}{move\_arm()}}
+{\footnotesize\ttfamily void move\+\_\+arm (\begin{DoxyParamCaption}\item[{bool}]{gather\+\_\+hint }\end{DoxyParamCaption})}
+
+
+
+move the robot in one pose 
+
+Depending on the request boolean value, this function moves the robot arm in two possible positions. Pose \char`\"{}home\char`\"{} represents an initial, rest position
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+manipulation Service server
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{manipulation_8cpp_a6bf48b64f1b894fc5781377399dd974d}\label{manipulation_8cpp_a6bf48b64f1b894fc5781377399dd974d}} 
+\index{manipulation.cpp@{manipulation.cpp}!move\_group\_interface@{move\_group\_interface}}
+\index{move\_group\_interface@{move\_group\_interface}!manipulation.cpp@{manipulation.cpp}}
+\doxysubsubsection{\texorpdfstring{move\_group\_interface}{move\_group\_interface}}
+{\footnotesize\ttfamily moveit\+::planning\+\_\+interface\+::\+Move\+Group\+Interface$\ast$ move\+\_\+group\+\_\+interface}
+
+
+
+our move group interface 
+
+\mbox{\Hypertarget{manipulation_8cpp_aa6507e80b3e06c0fe2c8fcd01a00323d}\label{manipulation_8cpp_aa6507e80b3e06c0fe2c8fcd01a00323d}} 
+\index{manipulation.cpp@{manipulation.cpp}!srv\_manip@{srv\_manip}}
+\index{srv\_manip@{srv\_manip}!manipulation.cpp@{manipulation.cpp}}
+\doxysubsubsection{\texorpdfstring{srv\_manip}{srv\_manip}}
+{\footnotesize\ttfamily ros\+::\+Service\+Server srv\+\_\+manip}
+
+
+
+manupulation Service server 
+

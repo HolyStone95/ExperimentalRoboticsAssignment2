@@ -1,0 +1,45 @@
+see \href{https://myst-parser.readthedocs.io/en/latest/syntax/roles-and-directives.html}{\texttt{ this}}\hypertarget{md_documents_markdown-vs-rest_autotoc_md14}{}\doxysection{To\+C tree}\label{md_documents_markdown-vs-rest_autotoc_md14}
+in re\+ST\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.. toctree::}
+\DoxyCodeLine{    :maxdepth: 1}
+\DoxyCodeLine{    :caption: ToC title}
+\DoxyCodeLine{    :titlesonly:}
+\DoxyCodeLine{    :glob:}
+\DoxyCodeLine{    :hidden:}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    ...}
+\DoxyCodeLine{    link text <./path/link.format>}
+\DoxyCodeLine{    ...}
+\end{DoxyCode}
+
+
+in M\+D-\/\+My\+ST\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\(\backslash\)```\{toctree\}}
+\DoxyCodeLine{-\/-\/-\/}
+\DoxyCodeLine{maxdepth: 2}
+\DoxyCodeLine{caption: ToC title}
+\DoxyCodeLine{titlesonly:}
+\DoxyCodeLine{glob: }
+\DoxyCodeLine{hidden: }
+\DoxyCodeLine{-\/-\/-\/}
+\DoxyCodeLine{}
+\DoxyCodeLine{link text <./path/link.format>}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\# reST codeblocks}
+\end{DoxyCode}
+
+
+.. code-\/block\+:: \+:caption\+: a code block caption
+
+import rospy \hypertarget{md_documents_markdown-vs-rest_autotoc_md15}{}\doxysection{...}\label{md_documents_markdown-vs-rest_autotoc_md15}
+\`{}\`{}\`{} 

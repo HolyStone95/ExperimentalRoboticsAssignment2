@@ -42,7 +42,7 @@
 <codeline lineno="5"><highlight class="normal">35%<sp/>of<sp/>the<sp/>ground<sp/>temporal<sp/>actions<sp/>in<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>problem<sp/>are<sp/>compression-safe</highlight></codeline>
 <codeline lineno="6"><highlight class="normal">Initial<sp/>heuristic<sp/>=<sp/>16.000</highlight></codeline>
 <codeline lineno="7"><highlight class="normal">b<sp/>(15.000<sp/>|<sp/>4.003)b<sp/>(13.000<sp/>|<sp/>5.004)b<sp/>(11.000<sp/>|<sp/>7.006)b<sp/>(9.000<sp/>|<sp/>8.007)b<sp/>(8.000<sp/>|<sp/>10.009)b<sp/>(7.000<sp/>|<sp/>10.009)b<sp/>(5.000<sp/>|<sp/>11.010)b<sp/>(3.000<sp/>|<sp/>12.011)b<sp/>(2.000<sp/>|<sp/>13.012)b<sp/>(1.000<sp/>|<sp/>13.012);;;;<sp/>Solution<sp/>Found</highlight></codeline>
-<codeline lineno="8"><highlight class="normal">;<sp/>States<sp/>evaluated:<sp/>54</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">;<sp/>States<sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a69a35210e77921f300a1e4c32482b338" kindref="member">evaluated</ref>:<sp/>54</highlight></codeline>
 <codeline lineno="9"><highlight class="normal">;<sp/>Cost:<sp/>14.013</highlight></codeline>
 <codeline lineno="10"><highlight class="normal">;<sp/>Time<sp/>0.00</highlight></codeline>
 <codeline lineno="11"><highlight class="normal">0.000:<sp/>(leave_temple<sp/>tp<sp/>wp1)<sp/><sp/>[1.000]</highlight></codeline>

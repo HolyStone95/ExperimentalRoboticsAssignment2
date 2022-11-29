@@ -374,6 +374,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="erl2/src/my_simulation.cpp" line="75" column="5" bodyfile="erl2/src/my_simulation.cpp" bodystart="75" bodyend="184"/>
+        <references refid="_r_e_a_d_m_e_8md_8txt_1ae10361ee1d2cef2e26939d73bb6dca84" compoundref="_r_e_a_d_m_e_8md_8txt" startline="441">markers</references>
         <references refid="my__simulation_8cpp_1a36b0204cd96e3dc326a2adfa3d1dceda" compoundref="my__simulation_8cpp" startline="14">markx</references>
         <references refid="my__simulation_8cpp_1a0bc4146f286fe42bd5e8fa1e53826447" compoundref="my__simulation_8cpp" startline="15">marky</references>
         <references refid="my__simulation_8cpp_1a8d90002e6a9c50028f184b22c380efc4" compoundref="my__simulation_8cpp" startline="16">markz</references>
@@ -473,7 +474,7 @@
 <codeline lineno="81"><highlight class="normal"><ref refid="my__simulation_8cpp_1a32812fe000700d7aa8988d74e59471c7" kindref="member">oracle_pub</ref><sp/>=<sp/>nh.advertise&lt;erl2::ErlOracle&gt;(<sp/></highlight><highlight class="stringliteral">&quot;/oracle_hint&quot;</highlight><highlight class="normal">,<sp/>0<sp/>);</highlight></codeline>
 <codeline lineno="82"><highlight class="normal">ros::ServiceServer<sp/><ref refid="_oracle_8rst_8txt_1a9107981f4bf5ab9f24785a661dddb14a" kindref="member">service</ref>=<sp/>nh.advertiseService(</highlight><highlight class="stringliteral">&quot;/oracle_solution&quot;</highlight><highlight class="normal">,<sp/><ref refid="my__simulation_8cpp_1ae1a3f65d934a3c4a938e85d5071dfaa5" kindref="member">oracleService</ref>);</highlight></codeline>
 <codeline lineno="83"><highlight class="normal">ros::Subscriber<sp/>sub<sp/>=<sp/>nh.subscribe(</highlight><highlight class="stringliteral">&quot;/gazebo/link_states&quot;</highlight><highlight class="normal">,<sp/>10,<sp/><ref refid="my__simulation_8cpp_1a876a1245db85a2bb87c08ae086f1eafa" kindref="member">oracleCallback</ref>);</highlight></codeline>
-<codeline lineno="84"><highlight class="normal">visualization_msgs::MarkerArray<sp/>markers;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">visualization_msgs::MarkerArray<sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1ae10361ee1d2cef2e26939d73bb6dca84" kindref="member">markers</ref>;</highlight></codeline>
 <codeline lineno="85"><highlight class="normal">srand<sp/>(time(NULL));</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>zpos[2]<sp/>=<sp/>{0.75,<sp/>1.25};</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>RandIndex;</highlight></codeline>
@@ -503,7 +504,7 @@
 <codeline lineno="111"><highlight class="normal">marker.color.r<sp/>=<sp/>0.0;</highlight></codeline>
 <codeline lineno="112"><highlight class="normal">marker.color.g<sp/>=<sp/>1.0;</highlight></codeline>
 <codeline lineno="113"><highlight class="normal">marker.color.b<sp/>=<sp/>0.0;</highlight></codeline>
-<codeline lineno="114"><highlight class="normal">markers.markers.push_back(marker);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><ref refid="_r_e_a_d_m_e_8md_8txt_1ae10361ee1d2cef2e26939d73bb6dca84" kindref="member">markers</ref>.markers.push_back(marker);</highlight></codeline>
 <codeline lineno="115"><highlight class="normal"></highlight></codeline>
 <codeline lineno="116"><highlight class="normal">marker.id<sp/>=<sp/>1;</highlight></codeline>
 <codeline lineno="117"><highlight class="normal">marker.pose.position.x<sp/>=<sp/>2.75;</highlight></codeline>
@@ -513,7 +514,7 @@
 <codeline lineno="121"><highlight class="normal">RandIndex<sp/>=<sp/>rand()<sp/>%<sp/>2;</highlight></codeline>
 <codeline lineno="122"><highlight class="normal">marker.pose.position.z<sp/>=<sp/>zpos[RandIndex];</highlight></codeline>
 <codeline lineno="123"><highlight class="normal"><ref refid="my__simulation_8cpp_1a8d90002e6a9c50028f184b22c380efc4" kindref="member">markz</ref>[1]=marker.pose.position.z;</highlight></codeline>
-<codeline lineno="124"><highlight class="normal">markers.markers.push_back(marker);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><ref refid="_r_e_a_d_m_e_8md_8txt_1ae10361ee1d2cef2e26939d73bb6dca84" kindref="member">markers</ref>.markers.push_back(marker);</highlight></codeline>
 <codeline lineno="125"><highlight class="normal"></highlight></codeline>
 <codeline lineno="126"><highlight class="normal">marker.id<sp/>=<sp/>2;</highlight></codeline>
 <codeline lineno="127"><highlight class="normal">marker.pose.position.x<sp/>=<sp/>0.0;</highlight></codeline>
@@ -523,7 +524,7 @@
 <codeline lineno="131"><highlight class="normal">RandIndex<sp/>=<sp/>rand()<sp/>%<sp/>2;</highlight></codeline>
 <codeline lineno="132"><highlight class="normal">marker.pose.position.z<sp/>=<sp/>zpos[RandIndex];</highlight></codeline>
 <codeline lineno="133"><highlight class="normal"><ref refid="my__simulation_8cpp_1a8d90002e6a9c50028f184b22c380efc4" kindref="member">markz</ref>[2]=marker.pose.position.z;</highlight></codeline>
-<codeline lineno="134"><highlight class="normal">markers.markers.push_back(marker);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><ref refid="_r_e_a_d_m_e_8md_8txt_1ae10361ee1d2cef2e26939d73bb6dca84" kindref="member">markers</ref>.markers.push_back(marker);</highlight></codeline>
 <codeline lineno="135"><highlight class="normal"></highlight></codeline>
 <codeline lineno="136"><highlight class="normal">marker.id<sp/>=<sp/>3;</highlight></codeline>
 <codeline lineno="137"><highlight class="normal">marker.pose.position.x<sp/>=<sp/>0.0;</highlight></codeline>
@@ -533,7 +534,7 @@
 <codeline lineno="141"><highlight class="normal">RandIndex<sp/>=<sp/>rand()<sp/>%<sp/>2;</highlight></codeline>
 <codeline lineno="142"><highlight class="normal">marker.pose.position.z<sp/>=<sp/>zpos[RandIndex];</highlight></codeline>
 <codeline lineno="143"><highlight class="normal"><ref refid="my__simulation_8cpp_1a8d90002e6a9c50028f184b22c380efc4" kindref="member">markz</ref>[3]=marker.pose.position.z;</highlight></codeline>
-<codeline lineno="144"><highlight class="normal">markers.markers.push_back(marker);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><ref refid="_r_e_a_d_m_e_8md_8txt_1ae10361ee1d2cef2e26939d73bb6dca84" kindref="member">markers</ref>.markers.push_back(marker);</highlight></codeline>
 <codeline lineno="145"><highlight class="normal"></highlight></codeline>
 <codeline lineno="146"><highlight class="normal">ROS_INFO_STREAM(<sp/></highlight><highlight class="stringliteral">&quot;entering<sp/>cycle...&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
 <codeline lineno="147"><highlight class="normal"></highlight></codeline>
@@ -566,7 +567,7 @@
 <codeline lineno="174"><highlight class="normal"></highlight></codeline>
 <codeline lineno="175"><highlight class="normal"></highlight></codeline>
 <codeline lineno="176"><highlight class="normal"></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(ros::ok()){</highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>vis_pub.publish(markers);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>vis_pub.publish(<ref refid="_r_e_a_d_m_e_8md_8txt_1ae10361ee1d2cef2e26939d73bb6dca84" kindref="member">markers</ref>);</highlight></codeline>
 <codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>ros::spinOnce();</highlight></codeline>
 <codeline lineno="179"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="180"><highlight class="normal"></highlight></codeline>

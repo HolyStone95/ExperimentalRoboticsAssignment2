@@ -1,0 +1,447 @@
+This package contains the source code implemented during the second assignment of the Experimental Robotics Laboratory, course of the first semester of the second year of Robotics Engineering Master Degree course of University of Genoa, Italy.\hypertarget{md__r_e_a_d_m_e_autotoc_md18}{}\doxysection{Index}\label{md__r_e_a_d_m_e_autotoc_md18}
+
+\begin{DoxyItemize}
+\item Index\+:
+\begin{DoxyItemize}
+\item \href{\#required-packages}{\texttt{ Required packages}}
+\item \href{\#assignment-request}{\texttt{ Assignment request}}
+\item \href{\#software-architecture-and-functioning}{\texttt{ Software Architecture and Functioning}}
+\item \href{\#ros-nodes-description}{\texttt{ R\+OS nodes description}}
+\begin{DoxyItemize}
+\item \href{\#the-go_to_point.py-node}{\texttt{ The go\+\_\+to\+\_\+point.\+py node}}
+\item \href{\#the-main.py-node}{\texttt{ The main.\+py node}}
+\item \href{\#the-cluedo_kb.py-node}{\texttt{ The cluedo\+\_\+kb.\+py node}}
+\item \href{\#the-action_interface.cpp-node}{\texttt{ The action\+\_\+interface.\+cpp node}}
+\item \href{\#the-manipulation.cpp-node}{\texttt{ The manipulation.\+cpp node}}
+\item \href{\#the-my_simulation.cpp-node}{\texttt{ The my\+\_\+simulation.\+cpp node}}
+\item \href{\#rqt_graph}{\texttt{ Rqt\+\_\+graph}}
+\item \href{\#uml-temporal-diagram}{\texttt{ U\+ML temporal diagram}}
+\end{DoxyItemize}
+\item \href{\#how-to-launch-and-additional-documentation}{\texttt{ How to launch and additional documentation}}
+\item \href{\#system-limitations}{\texttt{ System limitations}}
+\item \href{\#possible-technical-improvements}{\texttt{ Possible Technical Improvements}}
+\item \href{\#contact}{\texttt{ Contact}}
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md19}{}\doxysection{Required packages}\label{md__r_e_a_d_m_e_autotoc_md19}
+
+\begin{DoxyItemize}
+\item {\bfseries{R\+OS}}
+\item {\bfseries{R\+O\+S\+Plan Framework}}
+\item {\bfseries{Move\+It Frameowrk}}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md20}{}\doxysection{Assignment request}\label{md__r_e_a_d_m_e_autotoc_md20}
+This assignment improves the first one by adding a real robot model into a physically simulated world, the hint are now present in the environment, the environment can be navigated, and a robotic arm needs to be manipulated. The plan now is not carried out by a {\bfseries{smach}} state machine, but with {\bfseries{R\+O\+S\+Plan}} framework. The robotic arm is manipulated by {\bfseries{Move\+It}}. The environment has some obstacle walls that the robot needs to avoid. Again the goal of the game, as for the first assignment, is to find a C\+O\+N\+S\+I\+S\+T\+E\+NT true hypothesis.
+
+There are four different positions in the environment (x,y,z respectively) that contains hints\+: If the {\itshape cluedo\+\_\+link} ( the end-\/effector ) of the robot is reasonably close, this will trigger the oracle for the generation of a hint
+
+\begin{quote}
+{\bfseries{R\+E\+M\+A\+RK}} x and y coordinates where known a priori as shown in the table below ~\newline
+ \end{quote}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ room }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ x,y coordinates }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ z coordinate  }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ room }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ x,y coordinates }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ z coordinate  }\\\cline{1-3}
+\endhead
+First\+Marker\+Position &( -\/3,0 ) &0.\+75 v 1.\+25  \\\cline{1-3}
+Second\+Marker\+Position &( +3,0 ) &0.\+75 v 1.\+25  \\\cline{1-3}
+Third\+Marker\+Position &( 0,-\/3 ) &0.\+75 v 1.\+25  \\\cline{1-3}
+Fourth\+Marker\+Position &( 0, +3 ) &0.\+75 v 1.\+25  \\\cline{1-3}
+\end{longtabu}
+
+
+There are different values for z, meaning that the robot needs to be able to reach them with it\textquotesingle{}s arm, precisely with its {\itshape cluedo\+\_\+link}.
+
+Please consider that {\bfseries{consistent hypothesis}} have been defined as C\+O\+M\+P\+L\+E\+T\+ED but N\+OT I\+N\+C\+O\+N\+S\+I\+S\+T\+E\+NT
+
+\begin{quote}
+{\itshape R\+E\+M\+A\+RK} A consistent hypothesis is defined as {\itshape completed} when there occurs one role for each class (i.\+e., one occourence of what, one occourence for who, one occourence for where ). \end{quote}
+A straightforward example of such hypothesis is \mbox{[}I\+D2\mbox{]}\mbox{[}12\mbox{]}, whose definition is here below reported
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_r_e_a_d_m_e_8md_8txt_ae27feca68614f969d5e4611a2b711f9a}{ID2\_1}}: [\textcolor{stringliteral}{'where'}, \textcolor{stringliteral}{'Study'}]}
+\DoxyCodeLine{\mbox{\hyperlink{_r_e_a_d_m_e_8md_8txt_a1b5e28d187da6d80c0becf9403e8fbf6}{ID2\_2}}: [\textcolor{stringliteral}{'who'}, \textcolor{stringliteral}{'Col.Mustard'}]}
+\DoxyCodeLine{\mbox{\hyperlink{_r_e_a_d_m_e_8md_8txt_af6c62bec069640249021c824952ef2c7}{ID2\_3}}: [\textcolor{stringliteral}{'what'}, \textcolor{stringliteral}{'Rope'}]}
+\end{DoxyCode}
+
+
+As in the first assignment\+:
+\begin{DoxyItemize}
+\item only one ID source is the trustable one.
+\item Whenever a robot gets a complete hypothesis, it should go in the center of the arena
+\item Once the center has been reached, it should «tell» its solution (as in the first assignment).
+\item If the solution is the {\bfseries{correct one}}, the game ends
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md21}{}\doxysection{Software Architecture and Functioning}\label{md__r_e_a_d_m_e_autotoc_md21}
+The most relevant aspects of the project and a brief video tutorial on how to launch the simulation can be found here below
+
+\href{https://user-images.githubusercontent.com/61761835/187249845-1b03e627-d32e-4464-b7d3-0f172419d2f9.mp4}{\texttt{ https\+://user-\/images.\+githubusercontent.\+com/61761835/187249845-\/1b03e627-\/d32e-\/4464-\/b7d3-\/0f172419d2f9.\+mp4}}
+
+(\href{\#top}{\texttt{ back to top}})\hypertarget{md__r_e_a_d_m_e_autotoc_md22}{}\doxysection{R\+O\+S nodes description}\label{md__r_e_a_d_m_e_autotoc_md22}
+Here there is the U\+ML components diagram of the project
+
+
+
+As shown in the above component diagram, this software architecture relies on the synergy of various modules\+:
+
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{cluedo__kb_8py}{cluedo\+\_\+kb.\+py}}
+\item \mbox{\hyperlink{go__to__point_8py}{go\+\_\+to\+\_\+point.\+py}}
+\item \mbox{\hyperlink{main_8py}{main.\+py}}
+\item \mbox{\hyperlink{action__interface_8cpp}{action\+\_\+interface.\+cpp}}
+\item \mbox{\hyperlink{manipulation_8cpp}{manipulation.\+cpp}}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md23}{}\doxysubsection{The go\+\_\+to\+\_\+point.\+py node}\label{md__r_e_a_d_m_e_autotoc_md23}
+ 
+
+It\textquotesingle{}s a R\+OS service, used for navigation of the robot in the environment. It receives a desired position in form of planar coordinates and, given the fact that it can computes the position of the robot thanks to $\ast$/odom$\ast$ it publishes the necessary velocities in order to achieve the movement on $\ast$/cmd\+\_\+vel$\ast$ topic. Node interfaces\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Node [/go\_to\_point]}
+\DoxyCodeLine{Publications:}
+\DoxyCodeLine{ * /cmd\_vel [geometry\_msgs/Twist]}
+\DoxyCodeLine{ * /rosout [rosgraph\_msgs/Log]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Subscriptions:}
+\DoxyCodeLine{ * /clock [rosgraph\_msgs/Clock]}
+\DoxyCodeLine{ * /odom [nav\_msgs/Odometry]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Services:}
+\DoxyCodeLine{ * /go\_to\_point}
+\DoxyCodeLine{ * /go\_to\_point/get\_loggers}
+\DoxyCodeLine{ * /go\_to\_point/set\_logger\_level}
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md24}{}\doxysubsection{The main.\+py node}\label{md__r_e_a_d_m_e_autotoc_md24}
+ 
+
+As already said this node represents the main phaser of the project\+:
+
+
+\begin{DoxyItemize}
+\item it generates a problem\+: a \mbox{[}pddl problem\mbox{]}\mbox{[}115\mbox{]} is published on a topic
+\item establishes a plan\+: a planner is called for publishing the plan to a topic
+\item parses a plan\+: At this stage the P\+D\+DL plan is converted into R\+OS messages, ready to be executed
+\item dispatches a plan\+: for being executed
+\end{DoxyItemize}
+
+Node Interfaces\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Node [/main]}
+\DoxyCodeLine{Publications:}
+\DoxyCodeLine{ * /rosout [rosgraph\_msgs/Log]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Subscriptions:}
+\DoxyCodeLine{ * /clock [rosgraph\_msgs/Clock]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Services:}
+\DoxyCodeLine{ * /main/get\_loggers}
+\DoxyCodeLine{ * /main/set\_logger\_level}
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md25}{}\doxysubsection{The cluedo\+\_\+kb.\+py node}\label{md__r_e_a_d_m_e_autotoc_md25}
+ 
+
+This node represents the knowledge base of the robot, allowing for storing and processing of hypotheses, and interrogation of the oracle in order to check if the problem is being resolved.
+
+\begin{quote}
+{\itshape {\bfseries{R\+E\+M\+A\+RK}}} the KB listens in on the oracle\textquotesingle{}s topic and as soon as the oracle transmits the clue, the KB adds the message to the ontology without the need for an explicit request \end{quote}
+
+
+Node interfaces\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Node [/cluedo\_kb]}
+\DoxyCodeLine{Publications:}
+\DoxyCodeLine{ * /rosout [rosgraph\_msgs/Log]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Subscriptions:}
+\DoxyCodeLine{ * /oracle\_hint [erl2/ErlOracle]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Services:}
+\DoxyCodeLine{ * /cluedo\_kb/get\_loggers}
+\DoxyCodeLine{ * /cluedo\_kb/set\_logger\_level}
+\DoxyCodeLine{ * /get\_id}
+\DoxyCodeLine{ * /mark\_wrong\_id}
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md26}{}\doxysubsection{The action\+\_\+interface.\+cpp node}\label{md__r_e_a_d_m_e_autotoc_md26}
+ 
+
+\mbox{\hyperlink{action__interface_8cpp}{action\+\_\+interface.\+cpp}} implements all rosplan actions in a single R\+OS node, moreover\+:
+
+
+\begin{DoxyEnumerate}
+\item leave\+\_\+temple
+\item shift\+\_\+gripper
+\item gather\+\_\+hint
+\item go\+\_\+to\+\_\+wp
+\item reach\+\_\+temple
+\item check\+\_\+consistent\+\_\+hypo
+\item query\+\_\+hypo
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{; States evaluated: 54}
+\DoxyCodeLine{; Cost: 14.013}
+\DoxyCodeLine{; Time 0.00}
+\DoxyCodeLine{0.000: (leave\_temple tp wp1)  [1.000]}
+\DoxyCodeLine{1.001: (shift\_gripper wp1)  [1.000]}
+\DoxyCodeLine{2.002: (gather\_hint wp1)  [1.000]}
+\DoxyCodeLine{3.003: (go\_to\_wp wp1 wp2)  [1.000]}
+\DoxyCodeLine{4.004: (shift\_gripper wp2)  [1.000]}
+\DoxyCodeLine{5.005: (gather\_hint wp2)  [1.000]}
+\DoxyCodeLine{6.006: (go\_to\_wp wp2 wp3)  [1.000]}
+\DoxyCodeLine{7.007: (shift\_gripper wp3)  [1.000]}
+\DoxyCodeLine{8.008: (gather\_hint wp3)  [1.000]}
+\DoxyCodeLine{9.009: (go\_to\_wp wp3 wp4)  [1.000]}
+\DoxyCodeLine{10.010: (shift\_gripper wp4)  [1.000]}
+\DoxyCodeLine{11.011: (gather\_hint wp4)  [1.000]}
+\DoxyCodeLine{12.012: (reach\_temple wp4 tp)  [1.000]}
+\DoxyCodeLine{12.012: (check\_consistent\_hypo wp1)  [1.000]}
+\DoxyCodeLine{13.013: (query\_hypo tp)  [1.000]}
+\end{DoxyCode}
+
+
+Node interfaces\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Node [/rpi\_leave\_temple]}
+\DoxyCodeLine{Publications:}
+\DoxyCodeLine{ * /rosout                                         [rosgraph\_msgs/Log]}
+\DoxyCodeLine{ * /rosplan\_knowledge\_base/pddl\_action\_parameters  [rosplan\_knowledge\_msgs/DomainFormula]}
+\DoxyCodeLine{ * /rosplan\_plan\_dispatcher/action\_feedback        [rosplan\_dispatch\_msgs/ActionFeedback]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Subscriptions:}
+\DoxyCodeLine{ * /clock [rosgraph\_msgs/Clock]}
+\DoxyCodeLine{ * /rosplan\_plan\_dispatcher/action\_dispatch [rosplan\_dispatch\_msgs/ActionDispatch]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Services:}
+\DoxyCodeLine{ * /rpi\_leave\_temple/get\_loggers}
+\DoxyCodeLine{ * /rpi\_leave\_temple/set\_logger\_level}
+\DoxyCodeLine{}
+\DoxyCodeLine{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
+\DoxyCodeLine{Node [/rpi\_shift\_gripper]}
+\DoxyCodeLine{Publications:}
+\DoxyCodeLine{ * /rosout [rosgraph\_msgs/Log]}
+\DoxyCodeLine{ * /rosplan\_knowledge\_base/pddl\_action\_parameters  [rosplan\_knowledge\_msgs/DomainFormula]}
+\DoxyCodeLine{ * /rosplan\_plan\_dispatcher/action\_feedback        [rosplan\_dispatch\_msgs/ActionFeedback]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Subscriptions:}
+\DoxyCodeLine{ * /clock [rosgraph\_msgs/Clock]}
+\DoxyCodeLine{ * /rosplan\_plan\_dispatcher/action\_dispatch        [rosplan\_dispatch\_msgs/ActionDispatch]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Services:}
+\DoxyCodeLine{ * /rpi\_shift\_gripper/get\_loggers}
+\DoxyCodeLine{ * /rpi\_shift\_gripper/set\_logger\_level}
+\DoxyCodeLine{}
+\DoxyCodeLine{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
+\DoxyCodeLine{Node [/rpi\_gather\_hint]}
+\DoxyCodeLine{Publications:}
+\DoxyCodeLine{ * /rosout [rosgraph\_msgs/Log]}
+\DoxyCodeLine{ * /rosplan\_knowledge\_base/pddl\_action\_parameters  [rosplan\_knowledge\_msgs/DomainFormula]}
+\DoxyCodeLine{ * /rosplan\_plan\_dispatcher/action\_feedback        [rosplan\_dispatch\_msgs/ActionFeedback]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Subscriptions:}
+\DoxyCodeLine{ * /clock [rosgraph\_msgs/Clock]}
+\DoxyCodeLine{ * /rosplan\_plan\_dispatcher/action\_dispatch        [rosplan\_dispatch\_msgs/ActionDispatch]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Services:}
+\DoxyCodeLine{ * /rpi\_gather\_hint/get\_loggers}
+\DoxyCodeLine{ * /rpi\_gather\_hint/set\_logger\_level}
+\DoxyCodeLine{}
+\DoxyCodeLine{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
+\DoxyCodeLine{Node [/rpi\_go\_to\_wp]}
+\DoxyCodeLine{Publications:}
+\DoxyCodeLine{ * /rosout [rosgraph\_msgs/Log]}
+\DoxyCodeLine{ * /rosplan\_knowledge\_base/pddl\_action\_parameters [rosplan\_knowledge\_msgs/DomainFormula]}
+\DoxyCodeLine{ * /rosplan\_plan\_dispatcher/action\_feedback       [rosplan\_dispatch\_msgs/ActionFeedback]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Subscriptions:}
+\DoxyCodeLine{ * /clock [rosgraph\_msgs/Clock]}
+\DoxyCodeLine{ * /rosplan\_plan\_dispatcher/action\_dispatch       [rosplan\_dispatch\_msgs/ActionDispatch]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Services:}
+\DoxyCodeLine{ * /rpi\_go\_to\_wp/get\_loggers}
+\DoxyCodeLine{ * /rpi\_go\_to\_wp/set\_logger\_level}
+\DoxyCodeLine{}
+\DoxyCodeLine{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
+\DoxyCodeLine{Node [/rpi\_reach\_temple]}
+\DoxyCodeLine{Publications:}
+\DoxyCodeLine{ * /rosout [rosgraph\_msgs/Log]}
+\DoxyCodeLine{ * /rosplan\_knowledge\_base/pddl\_action\_parameters [rosplan\_knowledge\_msgs/DomainFormula]}
+\DoxyCodeLine{ * /rosplan\_plan\_dispatcher/action\_feedback       [rosplan\_dispatch\_msgs/ActionFeedback]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Subscriptions:}
+\DoxyCodeLine{ * /clock [rosgraph\_msgs/Clock]}
+\DoxyCodeLine{ * /rosplan\_plan\_dispatcher/action\_dispatch       [rosplan\_dispatch\_msgs/ActionDispatch]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Services:}
+\DoxyCodeLine{ * /rpi\_reach\_temple/get\_loggers}
+\DoxyCodeLine{ * /rpi\_reach\_temple/set\_logger\_level}
+\DoxyCodeLine{}
+\DoxyCodeLine{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
+\DoxyCodeLine{Node [/rpi\_check\_consistent\_hypo]}
+\DoxyCodeLine{Publications:}
+\DoxyCodeLine{ * /rosout [rosgraph\_msgs/Log]}
+\DoxyCodeLine{ * /rosplan\_knowledge\_base/pddl\_action\_parameters  [rosplan\_knowledge\_msgs/DomainFormula]}
+\DoxyCodeLine{ * /rosplan\_plan\_dispatcher/action\_feedback        [rosplan\_dispatch\_msgs/ActionFeedback]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Subscriptions:}
+\DoxyCodeLine{ * /clock [rosgraph\_msgs/Clock]}
+\DoxyCodeLine{ * /rosplan\_plan\_dispatcher/action\_dispatch        [rosplan\_dispatch\_msgs/ActionDispatch]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Services:}
+\DoxyCodeLine{ * /rpi\_check\_consistent\_hypo/get\_loggers}
+\DoxyCodeLine{ * /rpi\_check\_consistent\_hypo/set\_logger\_level}
+\DoxyCodeLine{}
+\DoxyCodeLine{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
+\DoxyCodeLine{Node [/rpi\_query\_hypo]}
+\DoxyCodeLine{Publications:}
+\DoxyCodeLine{ * /rosout [rosgraph\_msgs/Log]}
+\DoxyCodeLine{ * /rosplan\_knowledge\_base/pddl\_action\_parameters [rosplan\_knowledge\_msgs/DomainFormula]}
+\DoxyCodeLine{ * /rosplan\_plan\_dispatcher/action\_feedback       [rosplan\_dispatch\_msgs/ActionFeedback]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Subscriptions:}
+\DoxyCodeLine{ * /clock [rosgraph\_msgs/Clock]}
+\DoxyCodeLine{ * /rosplan\_plan\_dispatcher/action\_dispatch       [rosplan\_dispatch\_msgs/ActionDispatch]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Services:}
+\DoxyCodeLine{ * /rpi\_query\_hypo/get\_loggers}
+\DoxyCodeLine{ * /rpi\_query\_hypo/set\_logger\_level}
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md27}{}\doxysubsection{The manipulation.\+cpp node}\label{md__r_e_a_d_m_e_autotoc_md27}
+Concerning the {\ttfamily manipulation\+\_\+cpp} node\+:
+
+ 
+
+This node is simply devoted to control the robot manipulator arm by directly interacting with the Move\+It! framework
+
+Node interfaces\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Node [/manipulation]}
+\DoxyCodeLine{Publications:}
+\DoxyCodeLine{ * /attached\_collision\_object [moveit\_msgs/AttachedCollisionObject]}
+\DoxyCodeLine{ * /execute\_trajectory/cancel [actionlib\_msgs/GoalID]}
+\DoxyCodeLine{ * /execute\_trajectory/goal [moveit\_msgs/ExecuteTrajectoryActionGoal]}
+\DoxyCodeLine{ * /move\_group/cancel [actionlib\_msgs/GoalID]}
+\DoxyCodeLine{ * /move\_group/goal [moveit\_msgs/MoveGroupActionGoal]}
+\DoxyCodeLine{ * /pickup/cancel [actionlib\_msgs/GoalID]}
+\DoxyCodeLine{ * /pickup/goal [moveit\_msgs/PickupActionGoal]}
+\DoxyCodeLine{ * /place/cancel [actionlib\_msgs/GoalID]}
+\DoxyCodeLine{ * /place/goal [moveit\_msgs/PlaceActionGoal]}
+\DoxyCodeLine{ * /rosout [rosgraph\_msgs/Log]}
+\DoxyCodeLine{ * /trajectory\_execution\_event [std\_msgs/String]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Subscriptions:}
+\DoxyCodeLine{ * /clock [rosgraph\_msgs/Clock]}
+\DoxyCodeLine{ * /execute\_trajectory/feedback [moveit\_msgs/ExecuteTrajectoryActionFeedback]}
+\DoxyCodeLine{ * /execute\_trajectory/result [moveit\_msgs/ExecuteTrajectoryActionResult]}
+\DoxyCodeLine{ * /execute\_trajectory/status [actionlib\_msgs/GoalStatusArray]}
+\DoxyCodeLine{ * /move\_group/feedback [moveit\_msgs/MoveGroupActionFeedback]}
+\DoxyCodeLine{ * /move\_group/result [moveit\_msgs/MoveGroupActionResult]}
+\DoxyCodeLine{ * /move\_group/status [actionlib\_msgs/GoalStatusArray]}
+\DoxyCodeLine{ * /pickup/feedback [moveit\_msgs/PickupActionFeedback]}
+\DoxyCodeLine{ * /pickup/result [moveit\_msgs/PickupActionResult]}
+\DoxyCodeLine{ * /pickup/status [actionlib\_msgs/GoalStatusArray]}
+\DoxyCodeLine{ * /place/feedback [moveit\_msgs/PlaceActionFeedback]}
+\DoxyCodeLine{ * /place/result [moveit\_msgs/PlaceActionResult]}
+\DoxyCodeLine{ * /place/status [actionlib\_msgs/GoalStatusArray]}
+\DoxyCodeLine{ * /tf [tf2\_msgs/TFMessage]}
+\DoxyCodeLine{ * /tf\_static [tf2\_msgs/TFMessage]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Services:}
+\DoxyCodeLine{ * /manipulation}
+\DoxyCodeLine{ * /manipulation/get\_loggers}
+\DoxyCodeLine{ * /manipulation/set\_logger\_level}
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md28}{}\doxysubsection{The my\+\_\+simulation.\+cpp node}\label{md__r_e_a_d_m_e_autotoc_md28}
+ 
+
+This node is the one provided by the professor, that control the hints generation flow.
+
+Node interfaces\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Node [/my\_simulation]}
+\DoxyCodeLine{Publications:}
+\DoxyCodeLine{ * /oracle\_hint [erl2/ErlOracle]}
+\DoxyCodeLine{ * /rosout [rosgraph\_msgs/Log]}
+\DoxyCodeLine{ * /visualization\_marker [visualization\_msgs/MarkerArray]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Subscriptions:}
+\DoxyCodeLine{ * /gazebo/link\_states [gazebo\_msgs/LinkStates]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Services:}
+\DoxyCodeLine{ * /my\_simulation/get\_loggers}
+\DoxyCodeLine{ * /my\_simulation/set\_logger\_level}
+\DoxyCodeLine{ * /oracle\_solution}
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md29}{}\doxysubsection{Rqt\+\_\+graph}\label{md__r_e_a_d_m_e_autotoc_md29}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md30}{}\doxysubsection{U\+M\+L temporal diagram}\label{md__r_e_a_d_m_e_autotoc_md30}
+\begin{quote}
+\+:warning\+: Due to the size of the original image, it is shown only a raw preview, opened with the standard pc\textquotesingle{}s imahe viewer. If you want to download the original file, you can find it \mbox{[}here\mbox{]}\mbox{[}111\mbox{]} \end{quote}
+
+
+\hypertarget{md__r_e_a_d_m_e_autotoc_md31}{}\doxysection{How to launch and additional documentation}\label{md__r_e_a_d_m_e_autotoc_md31}
+To test the project, first of all\+:
+
+
+\begin{DoxyItemize}
+\item Open a shell and run\+:
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch erl\_moveit\_pkg run\_detectibot.launch 2>/dev/null}
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item Open a second shell and run
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch erl\_assignment\_2 run\_rosplan.launch}
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item Open a third shell and type\+:
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{rosrun erl\_assignment\_2 main.py}
+\end{DoxyCode}
+
+
+Additional documentation of this project can be found opening in the browser the file $\ast$\+\_\+build/html/index.html$\ast$\hypertarget{md__r_e_a_d_m_e_autotoc_md32}{}\doxysection{System limitations}\label{md__r_e_a_d_m_e_autotoc_md32}
+Here below, some of the major system limitations are listed\+:
+
+
+\begin{DoxyItemize}
+\item the robot model is not optimal, causing the robot oscillating during navigation.
+\item the navigation module is not suitable for environments with obstacles as it needs to make a straight line between the starting point and the target.
+\item since there is no unit that deals explicitly with the marker topology, changing such a topology requires the modification of several parts of the architecture including\+:
+\begin{DoxyItemize}
+\item the main node that takes into account the topology for being able to do replanning
+\item the pddl models, in particular the problem file
+\item the oracle, represented by the \mbox{\hyperlink{simulation_8cpp}{simulation.\+cpp}} node, having hard-\/coded markers, must be modified to support a new topology
+\end{DoxyItemize}
+\item The architecture is a little heavy in my opinion, with some nodes that are to much centralized. The architecture is vulnerable to centralized crash problems due to the architecture not completely exploiting modularity potentials in its implementation. For example the main node called {\itshape action\+\_\+interface} could be divided and split into different nodes enabling the program to still execute some actions even if another part crashes.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md33}{}\doxysection{Possible Technical Improvements}\label{md__r_e_a_d_m_e_autotoc_md33}
+
+\begin{DoxyItemize}
+\item The current KB is being chosen because there was problems and limitations in using A\+R\+M\+OR due to the nature of the generation flow of ID, decided a priori. By modification of the ID generation flow and by creating an interface in order to initially filter the data, it is fair to say that the integration with A\+R\+M\+OR would be preferable.
+\item The navigation module used here is extremely rudimental and just enough to perform the necessary navigation required by this assignment, but a better navigation should be implemented, for example using a move base, much more solid, much more capable of obstacle avoidance and of reaching easily certain points in planar space. In addition to that the robot needs a lot of manouvering space to rotate; There should be the need of seeking an appropriate navigation algorithm to reduce the necessary manoeuvring space
+\item The current robot model is quite unstable. It should be adjusted so that it does not oscillate during its movements. This is due to the simplicity of its mobile base with respect to the shape of its robotic arm. A more robust and stable model should eliminate some of these issues.
+\item Possible improvements in the manipulation controls used by Move\+It for obtaining a better, more robust, more precise manipulation.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md34}{}\doxysection{Contact}\label{md__r_e_a_d_m_e_autotoc_md34}
+Iacopo Pietrasanta -\/ \href{mailto:s4119821@studenti.unige.it}{\texttt{ s4119821@studenti.\+unige.\+it}}
+
+Project Link\+: \href{https://github.com/HolyStone95/ExperimentalRoboticsAssignment2}{\texttt{ https\+://github.\+com/\+Holy\+Stone95/\+Experimental\+Robotics\+Assignment2}}
+
+(\href{\#top}{\texttt{ back to top}})

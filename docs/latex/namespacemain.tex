@@ -1,0 +1,162 @@
+\hypertarget{namespacemain}{}\doxysection{main Namespace Reference}
+\label{namespacemain}\index{main@{main}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacemain_a558d73008c7d1848ed77970cbb746a29}{replan\+\_\+setup\+\_\+kb}} ()
+\item 
+def \mbox{\hyperlink{namespacemain_aa56d29f08d0961469cf62ac9f403c6d6}{set\+\_\+pred}} (predicate, params, value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacemain_a5fcf6b7ac1e63accb6462b8e22ffc14c}{cl\+\_\+update\+\_\+kb}} = None
+\item 
+int \mbox{\hyperlink{namespacemain_a3e764de4074bfb739d1998abced55ac1}{A\+D\+D\+\_\+\+K\+N\+O\+W\+L\+E\+D\+GE}} = 0
+\item 
+int \mbox{\hyperlink{namespacemain_a0bd46d27f049dfbb09392e957ec34568}{D\+E\+L\+\_\+\+K\+N\+O\+W\+L\+E\+D\+GE}} = 2
+\item 
+int \mbox{\hyperlink{namespacemain_ac1dd3a22818fca415816d8a84cba1a2b}{K\+B\+\_\+\+K\+T\+Y\+P\+E\+\_\+\+F\+L\+U\+E\+NT}} = 2
+\item 
+int \mbox{\hyperlink{namespacemain_a5764eb307553af2ba7efd4eccf089952}{K\+B\+\_\+\+K\+T\+Y\+P\+E\+\_\+\+P\+R\+E\+D\+I\+C\+A\+TE}} = 1
+\item 
+\mbox{\hyperlink{namespacemain_ad46251f88aa93898add539a906984b11}{em}} = Empty( )
+\item 
+\mbox{\hyperlink{namespacemain_a79880777c8390987e5399bf8a2bf1e2a}{dis}} = Dispatch\+Service\+Response( )
+\item 
+\mbox{\hyperlink{namespacemain_aa64e399b790a8c0a824ef968ff9d2bf2}{cl\+\_\+problem\+\_\+interface}} = rospy.\+Service\+Proxy( \char`\"{}/rosplan\+\_\+problem\+\_\+interface/problem\+\_\+generation\+\_\+server\char`\"{}, Empty )
+\item 
+\mbox{\hyperlink{namespacemain_a9a220dda4d4806f0613a8a629018b237}{cl\+\_\+planner\+\_\+interface}} = rospy.\+Service\+Proxy( \char`\"{}/rosplan\+\_\+planner\+\_\+interface/planning\+\_\+server\char`\"{}, Empty )
+\item 
+\mbox{\hyperlink{namespacemain_af42266504582dd8a2b308d1b4b29ef5d}{cl\+\_\+parsing\+\_\+interface}} = rospy.\+Service\+Proxy( \char`\"{}/rosplan\+\_\+parsing\+\_\+interface/parse\+\_\+plan\char`\"{}, Empty )
+\item 
+\mbox{\hyperlink{namespacemain_a362c7575c2d0679a88a44c15fbed9cc2}{cl\+\_\+plan\+\_\+dispatcher}} = rospy.\+Service\+Proxy( \char`\"{}/rosplan\+\_\+plan\+\_\+dispatcher/dispatch\+\_\+plan\char`\"{}, Dispatch\+Service )
+\item 
+bool \mbox{\hyperlink{namespacemain_a8b5092cbbc941aa75e1117b09b762777}{solved}} = False
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}.. module:: main
+:platform: Unix
+:synopsis: Core python module, interfacing with Rosplan
+
+.. moduleauthor:: Iacopo Pietrasanta iacopo.pietrasanta@gmail.com
+
+This node represents the upper layer of execution of the entire simulation:
+It initializes the ROS_plan plan, it executes and based on the outcome either
+replan or concludes the game.
+
+Subscribes to:
+/clock [rosgraph_msgs/Clock]
+
+Publishes to:
+/rosout [rosgraph_msgs/Log]
+
+Service :
+None\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacemain_a558d73008c7d1848ed77970cbb746a29}\label{namespacemain_a558d73008c7d1848ed77970cbb746a29}} 
+\index{main@{main}!replan\_setup\_kb@{replan\_setup\_kb}}
+\index{replan\_setup\_kb@{replan\_setup\_kb}!main@{main}}
+\doxysubsubsection{\texorpdfstring{replan\_setup\_kb()}{replan\_setup\_kb()}}
+{\footnotesize\ttfamily def main.\+replan\+\_\+setup\+\_\+kb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Description of the replan_setup_kb function
+
+This function allows to "reset" the ontology predicates' values,
+by setting all the wayoints as "  yet to be visited ", all the
+hints as " yet to be gathered " and the consistent hypothesis
+as "yet to be collected ".\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacemain_aa56d29f08d0961469cf62ac9f403c6d6}\label{namespacemain_aa56d29f08d0961469cf62ac9f403c6d6}} 
+\index{main@{main}!set\_pred@{set\_pred}}
+\index{set\_pred@{set\_pred}!main@{main}}
+\doxysubsubsection{\texorpdfstring{set\_pred()}{set\_pred()}}
+{\footnotesize\ttfamily def main.\+set\+\_\+pred (\begin{DoxyParamCaption}\item[{}]{predicate,  }\item[{}]{params,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Description of the set_pred function
+
+This function allows to set the predicates and
+populate a request accordingly
+
+Note:
+
+    params: [ ... , [key, value], ... ]
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacemain_a3e764de4074bfb739d1998abced55ac1}\label{namespacemain_a3e764de4074bfb739d1998abced55ac1}} 
+\index{main@{main}!ADD\_KNOWLEDGE@{ADD\_KNOWLEDGE}}
+\index{ADD\_KNOWLEDGE@{ADD\_KNOWLEDGE}!main@{main}}
+\doxysubsubsection{\texorpdfstring{ADD\_KNOWLEDGE}{ADD\_KNOWLEDGE}}
+{\footnotesize\ttfamily int main.\+A\+D\+D\+\_\+\+K\+N\+O\+W\+L\+E\+D\+GE = 0}
+
+\mbox{\Hypertarget{namespacemain_af42266504582dd8a2b308d1b4b29ef5d}\label{namespacemain_af42266504582dd8a2b308d1b4b29ef5d}} 
+\index{main@{main}!cl\_parsing\_interface@{cl\_parsing\_interface}}
+\index{cl\_parsing\_interface@{cl\_parsing\_interface}!main@{main}}
+\doxysubsubsection{\texorpdfstring{cl\_parsing\_interface}{cl\_parsing\_interface}}
+{\footnotesize\ttfamily main.\+cl\+\_\+parsing\+\_\+interface = rospy.\+Service\+Proxy( \char`\"{}/rosplan\+\_\+parsing\+\_\+interface/parse\+\_\+plan\char`\"{}, Empty )}
+
+\mbox{\Hypertarget{namespacemain_a362c7575c2d0679a88a44c15fbed9cc2}\label{namespacemain_a362c7575c2d0679a88a44c15fbed9cc2}} 
+\index{main@{main}!cl\_plan\_dispatcher@{cl\_plan\_dispatcher}}
+\index{cl\_plan\_dispatcher@{cl\_plan\_dispatcher}!main@{main}}
+\doxysubsubsection{\texorpdfstring{cl\_plan\_dispatcher}{cl\_plan\_dispatcher}}
+{\footnotesize\ttfamily main.\+cl\+\_\+plan\+\_\+dispatcher = rospy.\+Service\+Proxy( \char`\"{}/rosplan\+\_\+plan\+\_\+dispatcher/dispatch\+\_\+plan\char`\"{}, Dispatch\+Service )}
+
+\mbox{\Hypertarget{namespacemain_a9a220dda4d4806f0613a8a629018b237}\label{namespacemain_a9a220dda4d4806f0613a8a629018b237}} 
+\index{main@{main}!cl\_planner\_interface@{cl\_planner\_interface}}
+\index{cl\_planner\_interface@{cl\_planner\_interface}!main@{main}}
+\doxysubsubsection{\texorpdfstring{cl\_planner\_interface}{cl\_planner\_interface}}
+{\footnotesize\ttfamily main.\+cl\+\_\+planner\+\_\+interface = rospy.\+Service\+Proxy( \char`\"{}/rosplan\+\_\+planner\+\_\+interface/planning\+\_\+server\char`\"{}, Empty )}
+
+\mbox{\Hypertarget{namespacemain_aa64e399b790a8c0a824ef968ff9d2bf2}\label{namespacemain_aa64e399b790a8c0a824ef968ff9d2bf2}} 
+\index{main@{main}!cl\_problem\_interface@{cl\_problem\_interface}}
+\index{cl\_problem\_interface@{cl\_problem\_interface}!main@{main}}
+\doxysubsubsection{\texorpdfstring{cl\_problem\_interface}{cl\_problem\_interface}}
+{\footnotesize\ttfamily main.\+cl\+\_\+problem\+\_\+interface = rospy.\+Service\+Proxy( \char`\"{}/rosplan\+\_\+problem\+\_\+interface/problem\+\_\+generation\+\_\+server\char`\"{}, Empty )}
+
+\mbox{\Hypertarget{namespacemain_a5fcf6b7ac1e63accb6462b8e22ffc14c}\label{namespacemain_a5fcf6b7ac1e63accb6462b8e22ffc14c}} 
+\index{main@{main}!cl\_update\_kb@{cl\_update\_kb}}
+\index{cl\_update\_kb@{cl\_update\_kb}!main@{main}}
+\doxysubsubsection{\texorpdfstring{cl\_update\_kb}{cl\_update\_kb}}
+{\footnotesize\ttfamily main.\+cl\+\_\+update\+\_\+kb = None}
+
+\mbox{\Hypertarget{namespacemain_a0bd46d27f049dfbb09392e957ec34568}\label{namespacemain_a0bd46d27f049dfbb09392e957ec34568}} 
+\index{main@{main}!DEL\_KNOWLEDGE@{DEL\_KNOWLEDGE}}
+\index{DEL\_KNOWLEDGE@{DEL\_KNOWLEDGE}!main@{main}}
+\doxysubsubsection{\texorpdfstring{DEL\_KNOWLEDGE}{DEL\_KNOWLEDGE}}
+{\footnotesize\ttfamily int main.\+D\+E\+L\+\_\+\+K\+N\+O\+W\+L\+E\+D\+GE = 2}
+
+\mbox{\Hypertarget{namespacemain_a79880777c8390987e5399bf8a2bf1e2a}\label{namespacemain_a79880777c8390987e5399bf8a2bf1e2a}} 
+\index{main@{main}!dis@{dis}}
+\index{dis@{dis}!main@{main}}
+\doxysubsubsection{\texorpdfstring{dis}{dis}}
+{\footnotesize\ttfamily main.\+dis = Dispatch\+Service\+Response( )}
+
+\mbox{\Hypertarget{namespacemain_ad46251f88aa93898add539a906984b11}\label{namespacemain_ad46251f88aa93898add539a906984b11}} 
+\index{main@{main}!em@{em}}
+\index{em@{em}!main@{main}}
+\doxysubsubsection{\texorpdfstring{em}{em}}
+{\footnotesize\ttfamily main.\+em = Empty( )}
+
+\mbox{\Hypertarget{namespacemain_ac1dd3a22818fca415816d8a84cba1a2b}\label{namespacemain_ac1dd3a22818fca415816d8a84cba1a2b}} 
+\index{main@{main}!KB\_KTYPE\_FLUENT@{KB\_KTYPE\_FLUENT}}
+\index{KB\_KTYPE\_FLUENT@{KB\_KTYPE\_FLUENT}!main@{main}}
+\doxysubsubsection{\texorpdfstring{KB\_KTYPE\_FLUENT}{KB\_KTYPE\_FLUENT}}
+{\footnotesize\ttfamily int main.\+K\+B\+\_\+\+K\+T\+Y\+P\+E\+\_\+\+F\+L\+U\+E\+NT = 2}
+
+\mbox{\Hypertarget{namespacemain_a5764eb307553af2ba7efd4eccf089952}\label{namespacemain_a5764eb307553af2ba7efd4eccf089952}} 
+\index{main@{main}!KB\_KTYPE\_PREDICATE@{KB\_KTYPE\_PREDICATE}}
+\index{KB\_KTYPE\_PREDICATE@{KB\_KTYPE\_PREDICATE}!main@{main}}
+\doxysubsubsection{\texorpdfstring{KB\_KTYPE\_PREDICATE}{KB\_KTYPE\_PREDICATE}}
+{\footnotesize\ttfamily int main.\+K\+B\+\_\+\+K\+T\+Y\+P\+E\+\_\+\+P\+R\+E\+D\+I\+C\+A\+TE = 1}
+
+\mbox{\Hypertarget{namespacemain_a8b5092cbbc941aa75e1117b09b762777}\label{namespacemain_a8b5092cbbc941aa75e1117b09b762777}} 
+\index{main@{main}!solved@{solved}}
+\index{solved@{solved}!main@{main}}
+\doxysubsubsection{\texorpdfstring{solved}{solved}}
+{\footnotesize\ttfamily tuple main.\+solved = False}
+

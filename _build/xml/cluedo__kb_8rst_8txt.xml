@@ -42,7 +42,7 @@
 <codeline lineno="5"><highlight class="normal">How<sp/>to<sp/>store<sp/>a<sp/>hint<sp/></highlight></codeline>
 <codeline lineno="6"><highlight class="normal">--------------------</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal">This<sp/>node<sp/>reads<sp/>automatically<sp/>the<sp/>hint<sp/>(mesage<sp/>``erl2/ErlOracle``)<sp/>by<sp/>subscribing<sp/>to<sp/>the<sp/>topic<sp/>``/oracle_hint``<sp/>provided<sp/>by<sp/>the<sp/>Oracle<sp/>node<sp/>(namely<sp/>*simulation.cpp*).<sp/>Here</highlight><highlight class="stringliteral">&apos;s<sp/>the<sp/>message<sp/>prototype:</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">This<sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a2786fb226b75ca8caa2bbbdeb05e9982" kindref="member">node</ref><sp/>reads<sp/>automatically<sp/>the<sp/>hint<sp/>(mesage<sp/>``erl2/ErlOracle``)<sp/>by<sp/>subscribing<sp/>to<sp/>the<sp/>topic<sp/>``/oracle_hint``<sp/>provided<sp/>by<sp/>the<sp/>Oracle<sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a2786fb226b75ca8caa2bbbdeb05e9982" kindref="member">node</ref><sp/>(namely<sp/>*simulation.cpp*).<sp/>Here</highlight><highlight class="stringliteral">&apos;s<sp/>the<sp/>message<sp/>prototype:</highlight></codeline>
 <codeline lineno="9"><highlight class="stringliteral"></highlight></codeline>
 <codeline lineno="10"><highlight class="stringliteral">..<sp/>code-block::</highlight></codeline>
 <codeline lineno="11"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
