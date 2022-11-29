@@ -94,7 +94,7 @@ As shown in the above component diagram, this software architecture relies on th
 
 
 <p align="center">
-<img src="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/main/media/component_diagrams/v1/erl_assignment_go_to_point_py.jpg" width= 500 height=500>
+<img src="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/master/media/component_diagrams/v1/erl_assignment_go_to_point_py.jpg" width= 500 height=500>
 </p>
 
 It's a ROS service, used for navigation of the robot in the environment. It receives a desired position in form of planar coordinates and, given the fact that it can computes the position of the robot thanks to */odom* it publishes the necessary velocities in order to achieve the movement on */cmd_vel* topic.
@@ -118,7 +118,7 @@ Services:
 ### The main.py node
 
 <p align="center">
-<img src="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/main/media/component_diagrams/v1/erl_assignment_2_main_py.jpg" width= 500 height=500>
+<img src="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/master/media/component_diagrams/v1/erl_assignment_2_main_py.jpg" width= 500 height=500>
 </p>
 
 As already said this node represents the main phaser of the project:
@@ -147,7 +147,7 @@ Services:
 Concerning the `cluedo_kb.py` node:
 
 <p align="center">
-<img src="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/main/media/component_diagrams/v1/erl_assignment_2_cluedo_kb_py.jpg" width= 500 height=500>
+<img src="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/master/media/component_diagrams/v1/erl_assignment_2_cluedo_kb_py.jpg" width= 500 height=500>
 </p>
 
 This node represents the knowledge base of the robot, allowing for storing and processing of hypotheses, and interrogation of the oracle in order to check if the problem is being resolved.
@@ -175,7 +175,7 @@ Services:
 Concerning the `action_interface.cpp` node:
 
 <p align="center">
-<img src="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/main/media/component_diagrams/v3/erl_assignment_2_action_interface_cpp.jpg" width= 500 height=500>
+<img src="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/master/media/component_diagrams/v3/erl_assignment_2_action_interface_cpp.jpg" width= 500 height=500>
 </p>
 
 action_interface.cpp implements all rosplan actions in a single ROS node, moreover:
@@ -323,7 +323,7 @@ Services:
 Concerning the `manipulation_cpp` node:
 
 <p align="center">
-<img src="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/main/media/component_diagrams/v1/erl_assignment_2_manipulation_cpp.jpg" width= 500 height=500>
+<img src="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/master/media/component_diagrams/v1/erl_assignment_2_manipulation_cpp.jpg" width= 500 height=500>
 </p>
 
 This node is simply devoted to control the robot manipulator arm by directly interacting with the MoveIt! framework
@@ -370,7 +370,7 @@ Services:
 ### The my_simulation.cpp node
 
 <p align="center">
-<img src="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/main/media/component_diagrams/v1/erl2_my_simulation_cpp.jpg" width= 500 height=500>
+<img src="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/master/media/component_diagrams/v1/erl2_my_simulation_cpp.jpg" width= 500 height=500>
 </p>
 
 This node is the one provided by the professor, that control the hints generation flow.
@@ -395,13 +395,13 @@ Services:
 
 ### Rqt_graph
 
-<img src= "https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/main/media/rqt/rosgraph_nodes_topics_all.png" />
+<img src= "https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/master/media/rqt/rosgraph_nodes_topics_all.png" />
 
 ### UML temporal diagram
 
 > :warning: Due to the size of the original image, it is shown only a raw preview, opened with the standard pc's imahe viewer. If you want to download the original file, you can find it [here][111]
 
-<img src= "https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/main/media/miscellaneous/raw_preview.png" />
+<img src= "https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/master/media/miscellaneous/raw_preview.png" />
 
 ## How to launch and additional documentation
 
