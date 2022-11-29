@@ -8,7 +8,7 @@ This package contains the source code implemented during the second assignment o
   - [Required packages](#required-packages)
   - [Assignment request](#assignment-request)
   - [Software Architecture and Functioning](#software-architecture-and-functioning)
-  - [ROS node description: An overview](#ros-node-description:-an-overview)
+  - [ROS nodes description](#ros-nodes-description)
     - [The go_to_point.py node](#the-go_to_point.py-node)
     - [The main.py node](#the-main.py-node)
     - [The cluedo_kb.py node](#the-cluedo_kb.py-node)
@@ -72,7 +72,7 @@ https://user-images.githubusercontent.com/61761835/187249845-1b03e627-d32e-4464-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## ROS node description: An overview
+## ROS nodes description
 
 Here there is the UML components diagram of the project
 
