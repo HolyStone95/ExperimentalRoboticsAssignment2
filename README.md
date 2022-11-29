@@ -1,6 +1,6 @@
-# Experimental Robotics Laboratory - second assignment package er_assignment_1
+# Experimental Robotics Laboratory - second assignment
 
-This package contains the source code implemented during the first assignment of the Experimental Robotics Laboratory, course of the first semester of the second year of Robotics Engineering Master Degree course of University of Genoa, Italy.
+This package contains the source code implemented during the second assignment of the Experimental Robotics Laboratory, course of the first semester of the second year of Robotics Engineering Master Degree course of University of Genoa, Italy.
 
 ## Index
 
@@ -144,8 +144,6 @@ Services:
 ```
 ### The cluedo_kb.py node
 
-Concerning the `cluedo_kb.py` node:
-
 <p align="center">
 <img src="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/master/media/component_diagrams/v1/erl_assignment_2_cluedo_kb_py.jpg" width= 500 height=500>
 </p>
@@ -171,8 +169,6 @@ Services:
 ```
 
 ### The action_interface.cpp node
-
-Concerning the `action_interface.cpp` node:
 
 <p align="center">
 <img src="https://github.com/HolyStone95/ExperimentalRoboticsAssignment2/blob/master/media/component_diagrams/v3/erl_assignment_2_action_interface_cpp.jpg" width= 500 height=500>
@@ -447,8 +443,6 @@ Here below, some of the major system limitations are listed:
 - The architecture is a little heavy in my opinion, with some nodes that are to much centralized. The architecture is vulnerable to centralized crash problems due to the architecture not completely exploiting modularity potentials in its implementation. For example the main node called *action_interface* could be divided and split into different nodes enabling the program to still execute some actions even if another part crashes.
 
 ## Possible Technical Improvements
-
-As for the system limitations, some of the most relevant potential techincal improvements:
 
 - The current KB is being chosen because there was problems and limitations in using ARMOR due to the nature of the generation flow of ID, decided a priori. By modification of the ID generation flow and by creating an interface in order to initially filter the data, it is fair to say that the integration with ARMOR would be preferable.
 
