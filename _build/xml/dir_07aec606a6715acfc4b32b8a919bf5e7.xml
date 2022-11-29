@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_07aec606a6715acfc4b32b8a919bf5e7" kind="dir">
+    <compoundname>erl2/src</compoundname>
+    <innerfile refid="my__simulation_8cpp">my_simulation.cpp</innerfile>
+    <innerfile refid="simulation_8cpp">simulation.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erl2/src/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="manipulation_8cpp" kind="file" language="C++">
+    <compoundname>manipulation.cpp</compoundname>
+    <includes local="yes">ros/ros.h</includes>
+    <includes local="yes">std_srvs/SetBool.h</includes>
+    <includes local="no">moveit/move_group_interface/move_group_interface.h</includes>
+    <includes local="no">moveit/planning_scene_interface/planning_scene_interface.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>moveit/move_group_interface/move_group_interface.h</label>
+      </node>
+      <node id="1">
+        <label>erl_assignment_2/src/manipulation.cpp</label>
+        <link refid="manipulation_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std_srvs/SetBool.h</label>
+      </node>
+      <node id="2">
+        <label>ros/ros.h</label>
+      </node>
+      <node id="5">
+        <label>moveit/planning_scene_interface/planning_scene_interface.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="manipulation_8cpp_1a6bf48b64f1b894fc5781377399dd974d" prot="public" static="no" mutable="no">
+        <type>moveit::planning_interface::MoveGroupInterface *</type>
+        <definition>moveit::planning_interface::MoveGroupInterface* move_group_interface</definition>
+        <argsstring></argsstring>
+        <name>move_group_interface</name>
+        <briefdescription>
+<para>our move group interface </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/src/manipulation.cpp" line="71" column="48" bodyfile="erl_assignment_2/src/manipulation.cpp" bodystart="71" bodyend="-1"/>
+        <referencedby refid="manipulation_8cpp_1a83251b24e5697bfa2a149273e4ca40b8" compoundref="manipulation_8cpp" startline="99" endline="116">move_arm</referencedby>
+        <referencedby refid="manipulation_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="manipulation_8cpp" startline="150" endline="178">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="manipulation_8cpp_1aa6507e80b3e06c0fe2c8fcd01a00323d" prot="public" static="no" mutable="no">
+        <type>ros::ServiceServer</type>
+        <definition>ros::ServiceServer srv_manip</definition>
+        <argsstring></argsstring>
+        <name>srv_manip</name>
+        <briefdescription>
+<para>manupulation Service server </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/src/manipulation.cpp" line="76" column="20" bodyfile="erl_assignment_2/src/manipulation.cpp" bodystart="76" bodyend="-1"/>
+        <referencedby refid="manipulation_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="manipulation_8cpp" startline="150" endline="178">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="manipulation_8cpp_1a83251b24e5697bfa2a149273e4ca40b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void move_arm</definition>
+        <argsstring>(bool gather_hint)</argsstring>
+        <name>move_arm</name>
+        <param>
+          <type>bool</type>
+          <declname>gather_hint</declname>
+        </param>
+        <briefdescription>
+<para>move the robot in one pose </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function allows the robot to move its arm in a certain Pose, depending on whether gather_hint gets true or false</para>
+<para><simplesect kind="note"><para>The &quot;home&quot; Pose, refers to the partially extended, initial Pose of the detectiBot&apos;s arm. Otherwise, the &quot;gather_hint&quot; refers to the pose needed for gathering the hint, nearby the marker</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">gather_hint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Boolean variable needed for distinguishing between two differet detectibot&apos;s arm Poses</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>manipulation Service server</para>
+        </inbodydescription>
+        <location file="erl_assignment_2/src/manipulation.cpp" line="99" column="6" bodyfile="erl_assignment_2/src/manipulation.cpp" bodystart="99" bodyend="116"/>
+        <references refid="manipulation_8cpp_1a6bf48b64f1b894fc5781377399dd974d" compoundref="manipulation_8cpp" startline="71">move_group_interface</references>
+        <referencedby refid="manipulation_8cpp_1aefdb9958bc4650484824e4cbd42dcf65" compoundref="manipulation_8cpp" startline="140" endline="146">cbk_manip</referencedby>
+        <referencedby refid="manipulation_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="manipulation_8cpp" startline="150" endline="178">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="manipulation_8cpp_1aefdb9958bc4650484824e4cbd42dcf65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cbk_manip</definition>
+        <argsstring>(std_srvs::SetBool::Request &amp;req, std_srvs::SetBool::Response &amp;res)</argsstring>
+        <name>cbk_manip</name>
+        <param>
+          <type>std_srvs::SetBool::Request &amp;</type>
+          <declname>req</declname>
+        </param>
+        <param>
+          <type>std_srvs::SetBool::Response &amp;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+<para>manipulation Service callback implementatiomn </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function represents the callback of the maipulaiton service</para>
+<para><simplesect kind="note"><para>It employs the move_arm funciton for letting Detectibot move its arm between the initial arm pose (namely &quot;home&quot;) or allowing for the hint collection</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A request of type std_srvs::SetBool, enabling/disabling certain behaviours </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A response of type std_srvs::SetBool, indicating a successfull run of triggered service</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/src/manipulation.cpp" line="140" column="6" bodyfile="erl_assignment_2/src/manipulation.cpp" bodystart="140" bodyend="146"/>
+        <references refid="manipulation_8cpp_1a83251b24e5697bfa2a149273e4ca40b8" compoundref="manipulation_8cpp" startline="99" endline="116">move_arm</references>
+        <referencedby refid="manipulation_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="manipulation_8cpp" startline="150" endline="178">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="manipulation_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>main function </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>before starting, move the robot in the init pose</para>
+        </inbodydescription>
+        <location file="erl_assignment_2/src/manipulation.cpp" line="150" column="5" bodyfile="erl_assignment_2/src/manipulation.cpp" bodystart="150" bodyend="178"/>
+        <references refid="manipulation_8cpp_1aefdb9958bc4650484824e4cbd42dcf65" compoundref="manipulation_8cpp" startline="140" endline="146">cbk_manip</references>
+        <references refid="manipulation_8cpp_1a83251b24e5697bfa2a149273e4ca40b8" compoundref="manipulation_8cpp" startline="99" endline="116">move_arm</references>
+        <references refid="manipulation_8cpp_1a6bf48b64f1b894fc5781377399dd974d" compoundref="manipulation_8cpp" startline="71">move_group_interface</references>
+        <references refid="manipulation_8cpp_1aa6507e80b3e06c0fe2c8fcd01a00323d" compoundref="manipulation_8cpp" startline="76">srv_manip</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This node directly interacts with moveIT for moving the arm. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>@ package erl_assignment_2</para>
+<para><simplesect kind="author"><para>Iacopo Pietrasanta </para>
+</simplesect>
+<simplesect kind="version"><para>1.0.0</para>
+</simplesect>
+Subscribes to: <linebreak/>
+ /clock [rosgraph_msgs/Clock] /execute_trajectory/feedback [moveit_msgs/ExecuteTrajectoryActionFeedback] /execute_trajectory/result [moveit_msgs/ExecuteTrajectoryActionResult] /execute_trajectory/status [actionlib_msgs/GoalStatusArray] /move_group/feedback [moveit_msgs/MoveGroupActionFeedback] /move_group/result [moveit_msgs/MoveGroupActionResult] /move_group/status [actionlib_msgs/GoalStatusArray] /pickup/feedback [moveit_msgs/PickupActionFeedback] /pickup/result [moveit_msgs/PickupActionResult] /pickup/status [actionlib_msgs/GoalStatusArray] /place/feedback [moveit_msgs/PlaceActionFeedback] /place/result [moveit_msgs/PlaceActionResult] /place/status [actionlib_msgs/GoalStatusArray] /tf [tf2_msgs/TFMessage] /tf_static [tf2_msgs/TFMessage]</para>
+<para>Publishes to: <linebreak/>
+ /attached_collision_object [moveit_msgs/AttachedCollisionObject] /execute_trajectory/cancel [actionlib_msgs/GoalID] /execute_trajectory/goal [moveit_msgs/ExecuteTrajectoryActionGoal] /move_group/cancel [actionlib_msgs/GoalID] /move_group/goal [moveit_msgs/MoveGroupActionGoal] /pickup/cancel [actionlib_msgs/GoalID] /pickup/goal [moveit_msgs/PickupActionGoal] /place/cancel [actionlib_msgs/GoalID] /place/goal [moveit_msgs/PlaceActionGoal] /rosout [rosgraph_msgs/Log] /trajectory_execution_event [std_msgs/String]</para>
+<para>Services: <linebreak/>
+ /manipulation</para>
+<para>Client Services: <linebreak/>
+ /go_to_point [std_srvs/SetBool] /manipulation [std_srvs/SetBool] /get_id [erl_assignment_2_msgs/GetId] /oracle_solution [erl2/Oracle] /mark_wrong_id [erl_assignment_2_msgs/MarkWrongId] ] <verbatim>Action Services: &lt;BR&gt;
+    None
+
+Description: &lt;BR&gt;
+    This node implements the /manipulation service and provides 
+    all the functionalitites needed for  controlling the manupulator itself 
+</verbatim> </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="61"><highlight class="preprocessor">#include<sp/>&quot;ros/ros.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;std_srvs/SetBool.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;moveit/move_group_interface/move_group_interface.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;moveit/planning_scene_interface/planning_scene_interface.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="manipulation_8cpp_1a6bf48b64f1b894fc5781377399dd974d" refkind="member"><highlight class="normal">moveit::planning_interface::MoveGroupInterface<sp/>*<ref refid="manipulation_8cpp_1a6bf48b64f1b894fc5781377399dd974d" kindref="member">move_group_interface</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="manipulation_8cpp_1aa6507e80b3e06c0fe2c8fcd01a00323d" refkind="member"><highlight class="normal">ros::ServiceServer<sp/><ref refid="manipulation_8cpp_1aa6507e80b3e06c0fe2c8fcd01a00323d" kindref="member">srv_manip</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="manipulation_8cpp_1a83251b24e5697bfa2a149273e4ca40b8" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="manipulation_8cpp_1a83251b24e5697bfa2a149273e4ca40b8" kindref="member">move_arm</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>gather_hint)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(gather_hint)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>gather_hint</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="manipulation_8cpp_1a6bf48b64f1b894fc5781377399dd974d" kindref="member">move_group_interface</ref>-&gt;setNamedTarget(<sp/></highlight><highlight class="stringliteral">&quot;gather_hint&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>home</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="manipulation_8cpp_1a6bf48b64f1b894fc5781377399dd974d" kindref="member">move_group_interface</ref>-&gt;setNamedTarget(<sp/></highlight><highlight class="stringliteral">&quot;home&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="manipulation_8cpp_1a6bf48b64f1b894fc5781377399dd974d" kindref="member">move_group_interface</ref>-&gt;move(<sp/>);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="manipulation_8cpp_1aefdb9958bc4650484824e4cbd42dcf65" refkind="member"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="manipulation_8cpp_1aefdb9958bc4650484824e4cbd42dcf65" kindref="member">cbk_manip</ref>(std_srvs::SetBool::Request&amp;<sp/>req,<sp/>std_srvs::SetBool::Response&amp;<sp/>res)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="manipulation_8cpp_1a83251b24e5697bfa2a149273e4ca40b8" kindref="member">move_arm</ref>(req.data);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>res.success<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="manipulation_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="manipulation_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[])</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>ros::init(argc,<sp/>argv,<sp/></highlight><highlight class="stringliteral">&quot;manipulation&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>ros::NodeHandle<sp/>nh;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>ros::AsyncSpinner<sp/>spinner(2);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>spinner.start(<sp/>);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>define<sp/>the<sp/>robot<sp/>pkanning<sp/>group<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>PLANNING_GROUP<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;arm&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>moveit::planning_interface::MoveGroupInterface<sp/>move_group_interfacei(<sp/>PLANNING_GROUP<sp/>);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="manipulation_8cpp_1a6bf48b64f1b894fc5781377399dd974d" kindref="member">move_group_interface</ref><sp/>=<sp/>&amp;move_group_interfacei;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>planning<sp/>time<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="manipulation_8cpp_1a6bf48b64f1b894fc5781377399dd974d" kindref="member">move_group_interface</ref>-&gt;setPlanningTime(10.0);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="manipulation_8cpp_1a83251b24e5697bfa2a149273e4ca40b8" kindref="member">move_arm</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>srv<sp/>for<sp/>/manipulation<sp/>service<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="manipulation_8cpp_1aa6507e80b3e06c0fe2c8fcd01a00323d" kindref="member">srv_manip</ref><sp/>=<sp/>nh.advertiseService(</highlight><highlight class="stringliteral">&quot;/manipulation&quot;</highlight><highlight class="normal">,<sp/><ref refid="manipulation_8cpp_1aefdb9958bc4650484824e4cbd42dcf65" kindref="member">cbk_manip</ref>);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>ros::waitForShutdown(<sp/>);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="erl_assignment_2/src/manipulation.cpp"/>
+  </compounddef>
+</doxygen>

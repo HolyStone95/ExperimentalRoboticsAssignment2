@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="md_documents_interfaces-docs-goto-point" kind="page">
+    <compoundname>md_documents_interfaces-docs-goto-point</compoundname>
+    <title>Interfaces Documentation – node &lt;em&gt;go_to_point.py&lt;/em&gt;</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="md_documents_interfaces-docs-goto-point_1autotoc_md3">
+<title>geometry_msgs/Twist</title>
+<para><programlisting><codeline><highlight class="normal">Vector3<sp/><sp/>linear</highlight></codeline>
+<codeline><highlight class="normal">Vector3<sp/><sp/>angular</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md_documents_interfaces-docs-goto-point_1autotoc_md4">
+<title>geometry_msgs/Vector3</title>
+<para><programlisting><codeline><highlight class="normal">float64<sp/>x</highlight></codeline>
+<codeline><highlight class="normal">float64<sp/>y</highlight></codeline>
+<codeline><highlight class="normal">float64<sp/>z</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md_documents_interfaces-docs-goto-point_1autotoc_md5">
+<title>nav_msgs/Odometry</title>
+<para><programlisting><codeline><highlight class="normal">Header<sp/>header</highlight></codeline>
+<codeline><highlight class="normal">string<sp/>child_frame_id</highlight></codeline>
+<codeline><highlight class="normal">geometry_msgs/PoseWithCovariance<sp/>pose</highlight></codeline>
+<codeline><highlight class="normal">geometry_msgs/TwistWithCovariance<sp/>twist</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md_documents_interfaces-docs-goto-point_1autotoc_md6">
+<title>std_msgs/Header</title>
+<para><programlisting><codeline><highlight class="normal">#<sp/>Standard<sp/>metadata<sp/>for<sp/>higher-level<sp/>stamped<sp/>data<sp/>types.</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>This<sp/>is<sp/>generally<sp/>used<sp/>to<sp/>communicate<sp/>timestamped<sp/>data<sp/></highlight></codeline>
+<codeline><highlight class="normal">#<sp/>in<sp/>a<sp/>particular<sp/>coordinate<sp/>frame.</highlight></codeline>
+<codeline><highlight class="normal">#<sp/></highlight></codeline>
+<codeline><highlight class="normal">#<sp/>sequence<sp/>ID:<sp/>consecutively<sp/>increasing<sp/>ID<sp/></highlight></codeline>
+<codeline><highlight class="normal">uint32<sp/>seq</highlight></codeline>
+<codeline><highlight class="normal">#Two-integer<sp/>timestamp<sp/>that<sp/>is<sp/>expressed<sp/>as:</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>*<sp/>stamp.sec:<sp/>seconds<sp/>(stamp_secs)<sp/>since<sp/>epoch<sp/>(in<sp/>Python<sp/>the<sp/>variable<sp/>is<sp/>called<sp/>&apos;secs&apos;)</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>*<sp/>stamp.nsec:<sp/>nanoseconds<sp/>since<sp/>stamp_secs<sp/>(in<sp/>Python<sp/>the<sp/>variable<sp/>is<sp/>called<sp/>&apos;nsecs&apos;)</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>time-handling<sp/>sugar<sp/>is<sp/>provided<sp/>by<sp/>the<sp/>client<sp/>library</highlight></codeline>
+<codeline><highlight class="normal">time<sp/>stamp</highlight></codeline>
+<codeline><highlight class="normal">#Frame<sp/>this<sp/>data<sp/>is<sp/>associated<sp/>with</highlight></codeline>
+<codeline><highlight class="normal">string<sp/>frame_id</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md_documents_interfaces-docs-goto-point_1autotoc_md7">
+<title>geometry_msgs/PoseWithCovariance</title>
+<para><programlisting><codeline><highlight class="normal">#<sp/>This<sp/>represents<sp/>a<sp/>pose<sp/>in<sp/>free<sp/>space<sp/>with<sp/>uncertainty.</highlight></codeline>
+<codeline><highlight class="normal">Pose<sp/>pose</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Row-major<sp/>representation<sp/>of<sp/>the<sp/>6x6<sp/>covariance<sp/>matrix</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>The<sp/>orientation<sp/>parameters<sp/>use<sp/>a<sp/>fixed-axis<sp/>representation.</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>In<sp/>order,<sp/>the<sp/>parameters<sp/>are:</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>(x,<sp/>y,<sp/>z,<sp/>rotation<sp/>about<sp/>X<sp/>axis,<sp/>rotation<sp/>about<sp/>Y<sp/>axis,<sp/>rotation<sp/>about<sp/>Z<sp/>axis)</highlight></codeline>
+<codeline><highlight class="normal">float64[36]<sp/>covariance</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md_documents_interfaces-docs-goto-point_1autotoc_md8">
+<title>geometry_msgs/Pose</title>
+<para><programlisting><codeline><highlight class="normal">Point<sp/>position</highlight></codeline>
+<codeline><highlight class="normal">Quaternion<sp/>orientation</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md_documents_interfaces-docs-goto-point_1autotoc_md9">
+<title>geometry_msgs/Point</title>
+<para><programlisting><codeline><highlight class="normal">#<sp/>This<sp/>contains<sp/>the<sp/>position<sp/>of<sp/>a<sp/>point<sp/>in<sp/>free<sp/>space</highlight></codeline>
+<codeline><highlight class="normal">float64<sp/>x</highlight></codeline>
+<codeline><highlight class="normal">float64<sp/>y</highlight></codeline>
+<codeline><highlight class="normal">float64<sp/>z</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md_documents_interfaces-docs-goto-point_1autotoc_md10">
+<title>geometry_msgs/Quaternion</title>
+<para><programlisting><codeline><highlight class="normal">float64<sp/>x</highlight></codeline>
+<codeline><highlight class="normal">float64<sp/>y</highlight></codeline>
+<codeline><highlight class="normal">float64<sp/>z</highlight></codeline>
+<codeline><highlight class="normal">float64<sp/>w</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md_documents_interfaces-docs-goto-point_1autotoc_md11">
+<title>geometry_msgs/TwistWithCovariance Message</title>
+<para><programlisting><codeline><highlight class="normal">#<sp/>This<sp/>expresses<sp/>velocity<sp/>in<sp/>free<sp/>space<sp/>with<sp/>uncertainty.</highlight></codeline>
+<codeline><highlight class="normal">Twist<sp/>twist</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Row-major<sp/>representation<sp/>of<sp/>the<sp/>6x6<sp/>covariance<sp/>matrix</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>The<sp/>orientation<sp/>parameters<sp/>use<sp/>a<sp/>fixed-axis<sp/>representation.</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>In<sp/>order,<sp/>the<sp/>parameters<sp/>are:</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>(x,<sp/>y,<sp/>z,<sp/>rotation<sp/>about<sp/>X<sp/>axis,<sp/>rotation<sp/>about<sp/>Y<sp/>axis,<sp/>rotation<sp/>about<sp/>Z<sp/>axis)</highlight></codeline>
+<codeline><highlight class="normal">float64[36]<sp/>covariance</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md_documents_interfaces-docs-goto-point_1autotoc_md12">
+<title>std_srvs/SetBool</title>
+<para>see also <ulink url="http://docs.ros.org/en/api/std_srvs/html/index-msg.html">std_srvs package</ulink></para>
+<para><programlisting><codeline><highlight class="normal">bool<sp/>data<sp/>#<sp/>e.g.<sp/>for<sp/>hardware<sp/>enabling<sp/>/<sp/>disabling</highlight></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">bool<sp/>success<sp/><sp/><sp/>#<sp/>indicate<sp/>successful<sp/>run<sp/>of<sp/>triggered<sp/>service</highlight></codeline>
+<codeline><highlight class="normal">string<sp/>message<sp/>#<sp/>informational,<sp/>e.g.<sp/>for<sp/>error<sp/>messages</highlight></codeline>
+</programlisting> </para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

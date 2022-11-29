@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>main &mdash; ExperimentalRoboticsAssignment2 v1.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> ExperimentalRoboticsAssignment2
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Code documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../code_documentation/index.html">Code Documentation for ExperimentalRoboticsAssignment2</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Other Documents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../documents/index.html">Other Documentation for ExperimentalRoboticsAssignment2</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ExperimentalRoboticsAssignment2</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Module code</a> &raquo;</li>
+      <li>main</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for main</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/bin/bash</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">.. module:: main</span>
+<span class="sd">	:platform: Unix</span>
+<span class="sd">	:synopsis: Core python module, interfacing with Rosplan</span>
+
+<span class="sd">.. moduleauthor:: Iacopo Pietrasanta iacopo.pietrasanta@gmail.com</span>
+
+<span class="sd">ROS node representing the core of the overall architechture. Initially,</span>
+<span class="sd">it updates the RosPlan Knowledge Base. Secondly, it generates the plan</span>
+<span class="sd">with RosPlan. Thirdly, it waits that it gets completed.  Then, if the plam</span>
+<span class="sd">does not end up in a final solution, it repeats the aformentioned steps.</span>
+
+<span class="sd">Subscribes to:</span>
+<span class="sd">	/clock [rosgraph_msgs/Clock]</span>
+
+<span class="sd">Publishes to:</span>
+<span class="sd">	/rosout [rosgraph_msgs/Log]</span>
+
+<span class="sd">Service :</span>
+<span class="sd">	None</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="kn">import</span> <span class="nn">rospy</span>
+<span class="kn">from</span> <span class="nn">std_srvs.srv</span> <span class="kn">import</span> <span class="n">Empty</span><span class="p">,</span> <span class="n">EmptyRequest</span><span class="p">,</span> <span class="n">EmptyResponse</span>
+<span class="kn">from</span> <span class="nn">rosplan_dispatch_msgs.srv</span> <span class="kn">import</span> <span class="n">DispatchService</span><span class="p">,</span> <span class="n">DispatchServiceRequest</span><span class="p">,</span> <span class="n">DispatchServiceResponse</span>
+<span class="kn">from</span> <span class="nn">rosplan_knowledge_msgs.srv</span> <span class="kn">import</span> <span class="n">KnowledgeUpdateService</span><span class="p">,</span> <span class="n">KnowledgeUpdateServiceRequest</span><span class="p">,</span> <span class="n">KnowledgeUpdateServiceResponse</span>
+<span class="kn">from</span> <span class="nn">diagnostic_msgs.msg</span> <span class="kn">import</span> <span class="n">KeyValue</span>
+
+<span class="n">cl_update_kb</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="sd">&quot;&quot;&quot;None: Variable needed for updating the Knowledge base </span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">ADD_KNOWLEDGE</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">DEL_KNOWLEDGE</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="n">KB_KTYPE_FLUENT</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">KB_KTYPE_PREDICATE</span> <span class="o">=</span> <span class="mi">1</span>
+
+<div class="viewcode-block" id="replan_setup_kb"><a class="viewcode-back" href="../code_documentation/main.html#main.replan_setup_kb">[docs]</a><span class="k">def</span> <span class="nf">replan_setup_kb</span><span class="p">(</span> <span class="p">):</span>
+	<span class="sd">&#39;&#39;&#39; Description of the replan_setup_kb function</span>
+<span class="sd">	</span>
+<span class="sd">	This function allows to &quot;reset&quot; the ontology predicates&#39; values,</span>
+<span class="sd">	by setting all the wayoints as &quot;  yet to be visited &quot;, all the </span>
+<span class="sd">	hints as &quot; yet to be gathered &quot; and the consistent hypothesis</span>
+<span class="sd">	as &quot;yet to be collected &quot;.</span>
+<span class="sd">	</span>
+<span class="sd">	</span>
+<span class="sd">	&#39;&#39;&#39;</span>
+	<span class="n">set_pred</span><span class="p">(</span> <span class="s2">&quot;has_been_at&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="s2">&quot;wp&quot;</span><span class="p">,</span> <span class="s2">&quot;wp1&quot;</span><span class="p">]],</span> <span class="bp">False</span> <span class="p">)</span>
+	<span class="n">set_pred</span><span class="p">(</span> <span class="s2">&quot;has_been_at&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="s2">&quot;wp&quot;</span><span class="p">,</span> <span class="s2">&quot;wp2&quot;</span><span class="p">]],</span> <span class="bp">False</span> <span class="p">)</span>
+	<span class="n">set_pred</span><span class="p">(</span> <span class="s2">&quot;has_been_at&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="s2">&quot;wp&quot;</span><span class="p">,</span> <span class="s2">&quot;wp3&quot;</span><span class="p">]],</span> <span class="bp">False</span> <span class="p">)</span>
+	<span class="n">set_pred</span><span class="p">(</span> <span class="s2">&quot;has_been_at&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="s2">&quot;wp&quot;</span><span class="p">,</span> <span class="s2">&quot;wp4&quot;</span><span class="p">]],</span> <span class="bp">False</span> <span class="p">)</span>
+	
+	<span class="n">set_pred</span><span class="p">(</span> <span class="s2">&quot;not_has_been_at&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="s2">&quot;wp&quot;</span><span class="p">,</span> <span class="s2">&quot;wp1&quot;</span><span class="p">]],</span> <span class="bp">True</span> <span class="p">)</span>
+	<span class="n">set_pred</span><span class="p">(</span> <span class="s2">&quot;not_has_been_at&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="s2">&quot;wp&quot;</span><span class="p">,</span> <span class="s2">&quot;wp2&quot;</span><span class="p">]],</span> <span class="bp">True</span> <span class="p">)</span>
+	<span class="n">set_pred</span><span class="p">(</span> <span class="s2">&quot;not_has_been_at&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="s2">&quot;wp&quot;</span><span class="p">,</span> <span class="s2">&quot;wp3&quot;</span><span class="p">]],</span> <span class="bp">True</span> <span class="p">)</span>
+	<span class="n">set_pred</span><span class="p">(</span> <span class="s2">&quot;not_has_been_at&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="s2">&quot;wp&quot;</span><span class="p">,</span> <span class="s2">&quot;wp4&quot;</span><span class="p">]],</span> <span class="bp">True</span> <span class="p">)</span>
+	
+	<span class="n">set_pred</span><span class="p">(</span> <span class="s2">&quot;gathered_hint&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="s2">&quot;wp&quot;</span><span class="p">,</span> <span class="s2">&quot;wp1&quot;</span><span class="p">]],</span> <span class="bp">False</span> <span class="p">)</span>
+	<span class="n">set_pred</span><span class="p">(</span> <span class="s2">&quot;gathered_hint&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="s2">&quot;wp&quot;</span><span class="p">,</span> <span class="s2">&quot;wp2&quot;</span><span class="p">]],</span> <span class="bp">False</span> <span class="p">)</span>
+	<span class="n">set_pred</span><span class="p">(</span> <span class="s2">&quot;gathered_hint&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="s2">&quot;wp&quot;</span><span class="p">,</span> <span class="s2">&quot;wp3&quot;</span><span class="p">]],</span> <span class="bp">False</span> <span class="p">)</span>
+	<span class="n">set_pred</span><span class="p">(</span> <span class="s2">&quot;gathered_hint&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="s2">&quot;wp&quot;</span><span class="p">,</span> <span class="s2">&quot;wp4&quot;</span><span class="p">]],</span> <span class="bp">False</span> <span class="p">)</span>
+	
+	<span class="n">set_pred</span><span class="p">(</span> <span class="s2">&quot;not_gathered_hint&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="s2">&quot;wp&quot;</span><span class="p">,</span> <span class="s2">&quot;wp1&quot;</span><span class="p">]],</span> <span class="bp">True</span> <span class="p">)</span>
+	<span class="n">set_pred</span><span class="p">(</span> <span class="s2">&quot;not_gathered_hint&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="s2">&quot;wp&quot;</span><span class="p">,</span> <span class="s2">&quot;wp2&quot;</span><span class="p">]],</span> <span class="bp">True</span> <span class="p">)</span>
+	<span class="n">set_pred</span><span class="p">(</span> <span class="s2">&quot;not_gathered_hint&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="s2">&quot;wp&quot;</span><span class="p">,</span> <span class="s2">&quot;wp3&quot;</span><span class="p">]],</span> <span class="bp">True</span> <span class="p">)</span>
+	<span class="n">set_pred</span><span class="p">(</span> <span class="s2">&quot;not_gathered_hint&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="s2">&quot;wp&quot;</span><span class="p">,</span> <span class="s2">&quot;wp4&quot;</span><span class="p">]],</span> <span class="bp">True</span> <span class="p">)</span>
+	
+	<span class="n">set_pred</span><span class="p">(</span> <span class="s2">&quot;consistent_hypo&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="bp">False</span> <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="set_pred"><a class="viewcode-back" href="../code_documentation/main.html#main.set_pred">[docs]</a><span class="k">def</span> <span class="nf">set_pred</span><span class="p">(</span> <span class="n">predicate</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">value</span> <span class="p">):</span>
+	<span class="sd">&#39;&#39;&#39;Description of the set_pred function</span>
+
+<span class="sd">	This function allows to set the predicates and</span>
+<span class="sd">	populate a request accordingly </span>
+
+<span class="sd">	Note:</span>
+
+<span class="sd">		params: [ ... , [key, value], ... ]</span>
+<span class="sd">	&#39;&#39;&#39;</span>
+	
+	<span class="n">req</span> <span class="o">=</span> <span class="n">KnowledgeUpdateServiceRequest</span><span class="p">(</span> <span class="p">)</span>
+	
+	<span class="n">req</span><span class="o">.</span><span class="n">knowledge</span><span class="o">.</span><span class="n">attribute_name</span> <span class="o">=</span> <span class="n">predicate</span>
+	<span class="n">req</span><span class="o">.</span><span class="n">knowledge</span><span class="o">.</span><span class="n">knowledge_type</span> <span class="o">=</span> <span class="n">KB_KTYPE_PREDICATE</span>
+	
+	<span class="k">if</span> <span class="n">value</span><span class="p">:</span>
+		<span class="n">req</span><span class="o">.</span><span class="n">update_type</span> <span class="o">=</span> <span class="n">ADD_KNOWLEDGE</span>
+	<span class="k">else</span><span class="p">:</span>
+		<span class="n">req</span><span class="o">.</span><span class="n">update_type</span> <span class="o">=</span> <span class="n">DEL_KNOWLEDGE</span>
+	
+	<span class="k">for</span> <span class="n">ls</span> <span class="ow">in</span> <span class="n">params</span><span class="p">:</span>
+		<span class="n">kv</span> <span class="o">=</span> <span class="n">KeyValue</span><span class="p">(</span> <span class="p">)</span>
+		<span class="n">kv</span><span class="o">.</span><span class="n">key</span> <span class="o">=</span> <span class="n">ls</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+		<span class="n">kv</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">ls</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+		<span class="n">req</span><span class="o">.</span><span class="n">knowledge</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">kv</span><span class="p">)</span>
+	
+	<span class="n">cl_update_kb</span><span class="p">(</span><span class="n">req</span><span class="p">)</span></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+	<span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span> <span class="s2">&quot;main&quot;</span> <span class="p">)</span>
+	
+	<span class="n">em</span> <span class="o">=</span> <span class="n">Empty</span><span class="p">(</span> <span class="p">)</span>
+	<span class="n">dis</span> <span class="o">=</span> <span class="n">DispatchServiceResponse</span><span class="p">(</span> <span class="p">)</span>
+	
+	<span class="c1"># kb updater</span>
+	<span class="n">cl_update_kb</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceProxy</span><span class="p">(</span> <span class="s2">&quot;/rosplan_knowledge_base/update&quot;</span><span class="p">,</span> <span class="n">KnowledgeUpdateService</span> <span class="p">)</span>
+	
+	<span class="c1"># planning triggers</span>
+	<span class="n">cl_problem_interface</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceProxy</span><span class="p">(</span> <span class="s2">&quot;/rosplan_problem_interface/problem_generation_server&quot;</span><span class="p">,</span> <span class="n">Empty</span> <span class="p">)</span>
+	<span class="n">cl_planner_interface</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceProxy</span><span class="p">(</span> <span class="s2">&quot;/rosplan_planner_interface/planning_server&quot;</span><span class="p">,</span> <span class="n">Empty</span> <span class="p">)</span>
+	<span class="n">cl_parsing_interface</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceProxy</span><span class="p">(</span> <span class="s2">&quot;/rosplan_parsing_interface/parse_plan&quot;</span><span class="p">,</span> <span class="n">Empty</span> <span class="p">)</span>
+	<span class="n">cl_plan_dispatcher</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceProxy</span><span class="p">(</span> <span class="s2">&quot;/rosplan_plan_dispatcher/dispatch_plan&quot;</span><span class="p">,</span> <span class="n">DispatchService</span> <span class="p">)</span>
+	
+	<span class="n">solved</span> <span class="o">=</span> <span class="bp">False</span>
+	<span class="sd">&quot;&quot;&quot;Bool: Variable used as flag to notice whenever the mistery gets solved </span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	
+	<span class="k">while</span> <span class="ow">not</span> <span class="n">solved</span><span class="p">:</span>
+		<span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span> <span class="s2">&quot;replanning...&quot;</span> <span class="p">)</span>
+		<span class="n">cl_problem_interface</span><span class="p">(</span> <span class="p">)</span>
+		<span class="n">cl_planner_interface</span><span class="p">(</span> <span class="p">)</span>
+		<span class="n">cl_parsing_interface</span><span class="p">(</span> <span class="p">)</span>
+		
+		<span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span> <span class="s2">&quot;dispatching plan...&quot;</span> <span class="p">)</span>
+		<span class="n">dis</span> <span class="o">=</span> <span class="n">cl_plan_dispatcher</span><span class="p">(</span> <span class="p">)</span>
+		
+		<span class="n">solved</span> <span class="o">=</span> <span class="p">(</span><span class="n">dis</span><span class="o">.</span><span class="n">success</span> <span class="ow">and</span> <span class="n">dis</span><span class="o">.</span><span class="n">goal_achieved</span><span class="p">)</span>
+		<span class="k">if</span> <span class="n">solved</span><span class="p">:</span>
+			<span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span> <span class="s2">&quot;mystery solved.&quot;</span> <span class="p">)</span>
+		<span class="k">else</span><span class="p">:</span>
+			<span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span> <span class="s2">&quot;still not solved&quot;</span> <span class="p">)</span>
+			<span class="n">replan_setup_kb</span><span class="p">(</span> <span class="p">)</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Iacopo Pietrasanta.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

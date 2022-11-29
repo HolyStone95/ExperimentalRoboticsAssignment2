@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+  <compound refid="class_k_c_l__rosplan_1_1action__interface__class" kind="class"><name>KCL_rosplan::action_interface_class</name>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1ad068891618f1664ad175cfc159094595" kind="variable"><name>nh</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1a6acbccaccf744b135b0748275202afba" kind="variable"><name>init_node</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1ad14d158016a87ec934502428c2d1d433" kind="variable"><name>action_name</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1acb45bcd09ebdc4924db9461d1347ab8d" kind="variable"><name>cl_nav</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1aba70a580c5fee7b9f028497e33e34bda" kind="variable"><name>cl_manip</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1a42e318fb636e4548cf28563a938e9065" kind="variable"><name>cl_get_id</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1acbaf1bee6385e9045c596ae7086d3040" kind="variable"><name>cl_mark</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1a02da37e1c3bb176c3f09a562ae553301" kind="variable"><name>cl_solution</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1a12264d3782e783c9f938d7741fa15af8" kind="variable"><name>wps</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1afd577106fac9210ebf3d646b3fa278cd" kind="function"><name>action_interface_class</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1a95031d82d5d29999785684a7633ccddd" kind="function"><name>concreteCallback</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1a2af139a1c70bcef5dd5bbe2241b40f09" kind="function"><name>setup_node</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1a5e0ca921b7190a7eb69805f9c3aae9a5" kind="function"><name>exec_action</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1a37e916143bff2e842afc3dceb6da692e" kind="function"><name>leave_temple_setup</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1a326c547a150a16f42739a162e8d6d7e1" kind="function"><name>leave_temple_action</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1abb6ade799c69dee192521d97e5219c75" kind="function"><name>go_to_wp_setup</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1aeed667f1cd4164217e86c8012e4dedbe" kind="function"><name>go_to_wp_action</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1adf3ff4b2fbd3bec5dc52b2596e7361c0" kind="function"><name>shift_gripper_setup</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1a078eef1e588742d598555ff3bc3e5944" kind="function"><name>shift_gripper_action</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1a4f47b988cb397c7eab47a954aca80e57" kind="function"><name>gather_hint_setup</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1a312f6a27d3f5e652d6d7cf101f79a01e" kind="function"><name>gather_hint_action</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1a50c53d86b82e10e2b920bad8c0f697a5" kind="function"><name>reach_temple_setup</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1adba2c9c01fd73133d1e2a0e0fd9b992a" kind="function"><name>reach_temple_action</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1a45258636dac508ff314caaf79c8d1e13" kind="function"><name>check_consistent_hypo_setup</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1a7bb0e9eebb0f905f947bb1513919e5c2" kind="function"><name>check_consistent_hypo_action</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1a5087a1854c5e1c54d7be896ba6d7209c" kind="function"><name>query_hypo_setup</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1aed41605d09fcd4d22c86495ed37c466c" kind="function"><name>query_hypo_action</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1aab6590616018a9a01eda609701e74459" kind="function"><name>action_to_string</name></member>
+    <member refid="class_k_c_l__rosplan_1_1action__interface__class_1a38fbf2132c258e2db53d8528c8b3d283" kind="function"><name>navigate_to</name></member>
+  </compound>
+  <compound refid="namespacecluedo__kb" kind="namespace"><name>cluedo_kb</name>
+    <member refid="namespacecluedo__kb_1a0fb9cc01990ff96751d9a8df8f473ad2" kind="variable"><name>record_where</name></member>
+    <member refid="namespacecluedo__kb_1a727404718e0777bf45e91fa9458e1f18" kind="variable"><name>record_what</name></member>
+    <member refid="namespacecluedo__kb_1a0e82193f2d59570204a37c310bc95e7b" kind="variable"><name>record_who</name></member>
+    <member refid="namespacecluedo__kb_1af2159774e7dc8e59e293d9057d60e690" kind="variable"><name>is_active</name></member>
+    <member refid="namespacecluedo__kb_1a5be4e3b61f6bdb880099c78cf658f5dc" kind="variable"><name>is_complete</name></member>
+    <member refid="namespacecluedo__kb_1a8636f58ddb22c3c70904f8e30a4dcc5e" kind="variable"><name>kb</name></member>
+    <member refid="namespacecluedo__kb_1a335d9858030dee0238a6f2fc67a05023" kind="variable"><name>kb_consistent</name></member>
+    <member refid="namespacecluedo__kb_1a1c63dfe724e4e24b2985ef2adb3bbfbb" kind="variable"><name>srv_get_id</name></member>
+    <member refid="namespacecluedo__kb_1ac2ce9f31fe1875079d6cdbaa539122f6" kind="function"><name>print_kb_content</name></member>
+    <member refid="namespacecluedo__kb_1a1d7f88bfe0321a672bdef29136ac817f" kind="function"><name>add_hint</name></member>
+    <member refid="namespacecluedo__kb_1a5b22ff3cf204215f52ecb6c13d8a806d" kind="function"><name>add_hint_to_list</name></member>
+    <member refid="namespacecluedo__kb_1a8f44cecf16139c1d94cbf2a2bfc193cb" kind="function"><name>is_valid_hint</name></member>
+    <member refid="namespacecluedo__kb_1a9c5cbd279b89f36f5f84c0e2dd63fca8" kind="function"><name>get_id</name></member>
+    <member refid="namespacecluedo__kb_1afe9cb44eb6b95930542c455410ad70fe" kind="function"><name>mark_wrong_id</name></member>
+    <member refid="namespacecluedo__kb_1ae00019d2c2ba8a48f8255f575cc3fd8a" kind="function"><name>shut_msg</name></member>
+  </compound>
+  <compound refid="namespaceconf" kind="namespace"><name>conf</name>
+    <member refid="namespaceconf_1a45653c983098153b78e33600e39230eb" kind="variable"><name>project</name></member>
+    <member refid="namespaceconf_1a33fa97cf51dcb25970fbf53f10159589" kind="variable"><name>copyright</name></member>
+    <member refid="namespaceconf_1a637c239d256432248aa8d9f3ab0b8c52" kind="variable"><name>author</name></member>
+    <member refid="namespaceconf_1a325dc746d8bf05c54d26351c35a21d90" kind="variable"><name>release</name></member>
+    <member refid="namespaceconf_1ae475e080536acb271a0a0efe56c3ba42" kind="variable"><name>extensions</name></member>
+    <member refid="namespaceconf_1ae850ae634911b713e036b43894fdd525" kind="variable"><name>templates_path</name></member>
+    <member refid="namespaceconf_1a7ad48fb6f3e9b129c02346ea0d3527c1" kind="variable"><name>exclude_patterns</name></member>
+    <member refid="namespaceconf_1a94c3a9e097903ba149e86d3037ca3b7a" kind="variable"><name>autodoc_mock_imports</name></member>
+    <member refid="namespaceconf_1a6c3bfcc1a44546c1c75ce20f55bd0fd6" kind="variable"><name>html_theme</name></member>
+    <member refid="namespaceconf_1af4fb5d8851ccaade135c2668dd3ced41" kind="variable"><name>html_static_path</name></member>
+    <member refid="namespaceconf_1a6fcd7e5236f355b1e1a55f9d95988810" kind="variable"><name>master_doc</name></member>
+    <member refid="namespaceconf_1a8f403b478ab86c8b7663d82045f21741" kind="variable"><name>source_suffix</name></member>
+    <member refid="namespaceconf_1a3117edf4443d9b8c70a9f0f44294ba79" kind="variable"><name>highlight_language</name></member>
+    <member refid="namespaceconf_1a332f430461432dc465213f884a1e4967" kind="variable"><name>shell</name></member>
+    <member refid="namespaceconf_1acb47d2c0c2904fa7d36b63142533f383" kind="variable"><name>breathe_projects</name></member>
+    <member refid="namespaceconf_1a6eba2d2c7ae923054b1c49e686ec89b9" kind="variable"><name>breathe_default_project</name></member>
+    <member refid="namespaceconf_1a54585428ce84441199d9dfd7087e2243" kind="variable"><name>breathe_default_members</name></member>
+    <member refid="namespaceconf_1a05f7acd354f09362b4fa8f2abdfa1b54" kind="variable"><name>myst_enable_extensions</name></member>
+  </compound>
+  <compound refid="namespacego__to__point" kind="namespace"><name>go_to_point</name>
+    <member refid="namespacego__to__point_1a066c7e6058980504669f48713eacff1a" kind="variable"><name>active_</name></member>
+    <member refid="namespacego__to__point_1a500520cbcd448f46bf7447a431f61d53" kind="variable"><name>position_</name></member>
+    <member refid="namespacego__to__point_1ae444f19eb2019982432760ace036ce03" kind="variable"><name>yaw_</name></member>
+    <member refid="namespacego__to__point_1aa2d0ef255bcf5d5faf9ca2764730fb17" kind="variable"><name>state_</name></member>
+    <member refid="namespacego__to__point_1a03b48b610dbd224a38eb226c1b2ba23d" kind="variable"><name>desired_position_</name></member>
+    <member refid="namespacego__to__point_1a328c9a3bb9322f150f2e67371cd73306" kind="variable"><name>x</name></member>
+    <member refid="namespacego__to__point_1ac372e1a492f9aa66d29f365cc1c57d8c" kind="variable"><name>y</name></member>
+    <member refid="namespacego__to__point_1a2fd68a76b8583598a4bceccdeae5d73b" kind="variable"><name>z</name></member>
+    <member refid="namespacego__to__point_1a67f95834f0959feb3facd17bc7fa2b38" kind="variable"><name>yaw_precision_</name></member>
+    <member refid="namespacego__to__point_1af74ccf49164d0478ca8343e2031d5813" kind="variable"><name>yaw_precision_2_</name></member>
+    <member refid="namespacego__to__point_1a6a1e4eb20ebd4fce0fc56b0ebfd7a8d5" kind="variable"><name>dist_precision_</name></member>
+    <member refid="namespacego__to__point_1a524106fc7667a0927951dfd89d52d6a7" kind="variable"><name>kp_a</name></member>
+    <member refid="namespacego__to__point_1a7bc498652ca66932e704e738b50c297b" kind="variable"><name>kp_d</name></member>
+    <member refid="namespacego__to__point_1acb4e14986fafe5cb73bb8ad0c178869d" kind="variable"><name>ub_a</name></member>
+    <member refid="namespacego__to__point_1afecad4058844db05d8321199e25b4498" kind="variable"><name>lb_a</name></member>
+    <member refid="namespacego__to__point_1a16c473b9e717200c483d18e66b48152a" kind="variable"><name>ub_d</name></member>
+    <member refid="namespacego__to__point_1a3caa5a6c1e8d7b4854f62a9e35dfad6f" kind="variable"><name>pub</name></member>
+    <member refid="namespacego__to__point_1a1ace7fa0371345e7a7501959f0e004e0" kind="function"><name>go_to_point_switch</name></member>
+    <member refid="namespacego__to__point_1a36304a9f313b0579f7fc69fa01695524" kind="function"><name>clbk_odom</name></member>
+    <member refid="namespacego__to__point_1a31ee48e5cae36821049b572a96b7c8be" kind="function"><name>change_state</name></member>
+    <member refid="namespacego__to__point_1ac688bb56fa84763ea2edefc30cae032a" kind="function"><name>normalize_angle</name></member>
+    <member refid="namespacego__to__point_1a9c3011a3065fcbefcc1c5ad8c9979669" kind="function"><name>fix_yaw</name></member>
+    <member refid="namespacego__to__point_1ac8579665c0fbf665f734476554fac37d" kind="function"><name>go_straight_ahead</name></member>
+    <member refid="namespacego__to__point_1a9bb3c726bc638ed49519d74277fce5a4" kind="function"><name>done</name></member>
+    <member refid="namespacego__to__point_1aa8c9e45da31814a8cd403b354dbd6ba4" kind="function"><name>go_to_point</name></member>
+    <member refid="namespacego__to__point_1ab92bd6db1ec323a4d795ed6cb40aebe1" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="namespace_k_c_l__rosplan" kind="namespace"><name>KCL_rosplan</name>
+  </compound>
+  <compound refid="namespacemain" kind="namespace"><name>main</name>
+    <member refid="namespacemain_1a5fcf6b7ac1e63accb6462b8e22ffc14c" kind="variable"><name>cl_update_kb</name></member>
+    <member refid="namespacemain_1a3e764de4074bfb739d1998abced55ac1" kind="variable"><name>ADD_KNOWLEDGE</name></member>
+    <member refid="namespacemain_1a0bd46d27f049dfbb09392e957ec34568" kind="variable"><name>DEL_KNOWLEDGE</name></member>
+    <member refid="namespacemain_1ac1dd3a22818fca415816d8a84cba1a2b" kind="variable"><name>KB_KTYPE_FLUENT</name></member>
+    <member refid="namespacemain_1a5764eb307553af2ba7efd4eccf089952" kind="variable"><name>KB_KTYPE_PREDICATE</name></member>
+    <member refid="namespacemain_1ad46251f88aa93898add539a906984b11" kind="variable"><name>em</name></member>
+    <member refid="namespacemain_1a79880777c8390987e5399bf8a2bf1e2a" kind="variable"><name>dis</name></member>
+    <member refid="namespacemain_1aa64e399b790a8c0a824ef968ff9d2bf2" kind="variable"><name>cl_problem_interface</name></member>
+    <member refid="namespacemain_1a9a220dda4d4806f0613a8a629018b237" kind="variable"><name>cl_planner_interface</name></member>
+    <member refid="namespacemain_1af42266504582dd8a2b308d1b4b29ef5d" kind="variable"><name>cl_parsing_interface</name></member>
+    <member refid="namespacemain_1a362c7575c2d0679a88a44c15fbed9cc2" kind="variable"><name>cl_plan_dispatcher</name></member>
+    <member refid="namespacemain_1a8b5092cbbc941aa75e1117b09b762777" kind="variable"><name>solved</name></member>
+    <member refid="namespacemain_1a558d73008c7d1848ed77970cbb746a29" kind="function"><name>replan_setup_kb</name></member>
+    <member refid="namespacemain_1aa56d29f08d0961469cf62ac9f403c6d6" kind="function"><name>set_pred</name></member>
+  </compound>
+  <compound refid="namespacestd__srvs_1_1srv" kind="namespace"><name>std_srvs::srv</name>
+  </compound>
+  <compound refid="namespacetest__nav" kind="namespace"><name>test_nav</name>
+    <member refid="namespacetest__nav_1ad7a7a5497756f243ff996ed6ccf5118e" kind="variable"><name>cl</name></member>
+    <member refid="namespacetest__nav_1ac8dba86057ac1bb880a7199da7fd62bb" kind="variable"><name>r</name></member>
+    <member refid="namespacetest__nav_1a06341778072dc1f7e1e38044d3a05a15" kind="function"><name>reach_pos</name></member>
+  </compound>
+  <compound refid="action__interface_8rst_8txt" kind="file"><name>action_interface.rst.txt</name>
+  </compound>
+  <compound refid="cluedo__kb_8rst_8txt" kind="file"><name>cluedo_kb.rst.txt</name>
+    <member refid="cluedo__kb_8rst_8txt_1a8d2121454b5e4877448ee7554505c162" kind="variable"><name>done</name></member>
+    <member refid="cluedo__kb_8rst_8txt_1ad2ffc6b36811c7cdf7d7f8591260704f" kind="variable"><name>response</name></member>
+  </compound>
+  <compound refid="go__to__point_8rst_8txt" kind="file"><name>go_to_point.rst.txt</name>
+  </compound>
+  <compound refid="code__documentation_2index_8md_8txt" kind="file"><name>index.md.txt</name>
+  </compound>
+  <compound refid="documents_2index_8md_8txt" kind="file"><name>index.md.txt</name>
+  </compound>
+  <compound refid="_oracle_8rst_8txt" kind="file"><name>Oracle.rst.txt</name>
+    <member refid="_oracle_8rst_8txt_1a9082c3d01dfdff845db35ba873e06318" kind="variable"><name>contain</name></member>
+    <member refid="_oracle_8rst_8txt_1a1ad3cdea492e406da7a9b2a26eda4783" kind="variable"><name>mystery</name></member>
+    <member refid="_oracle_8rst_8txt_1a9107981f4bf5ab9f24785a661dddb14a" kind="variable"><name>service</name></member>
+    <member refid="_oracle_8rst_8txt_1a7aaa8766803123d5cd0be6497569795f" kind="variable"><name>where</name></member>
+    <member refid="_oracle_8rst_8txt_1ace87468ba086db5aa9b64bcdaaa9c142" kind="variable"><name>particular</name></member>
+    <member refid="_oracle_8rst_8txt_1ad813c08dc0807c51674c4a77b732a8c8" kind="variable"><name>is</name></member>
+  </compound>
+  <compound refid="interfaces-docs-goto-point_8md_8txt" kind="file"><name>interfaces-docs-goto-point.md.txt</name>
+  </compound>
+  <compound refid="markdown-vs-rest_8md_8txt" kind="file"><name>markdown-vs-rest.md.txt</name>
+  </compound>
+  <compound refid="run-the-project_8md_8txt" kind="file"><name>run-the-project.md.txt</name>
+  </compound>
+  <compound refid="__build_2html_2__sources_2erl2_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+  </compound>
+  <compound refid="__build_2html_2__sources_2erl__assignment__2_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+  </compound>
+  <compound refid="__build_2html_2__sources_2erl__assignment__2__msgs_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+  </compound>
+  <compound refid="__build_2html_2__sources_2erl__moveit__pkg_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+    <member refid="__build_2html_2__sources_2erl__moveit__pkg_2_c_make_lists_8txt_1a49dc3793aeb2c8092741520d6352500e" kind="function"><name>cmake_minimum_required</name></member>
+  </compound>
+  <compound refid="erl2_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+  </compound>
+  <compound refid="erl__assignment__2_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+  </compound>
+  <compound refid="erl__assignment__2__msgs_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+  </compound>
+  <compound refid="erl__moveit__pkg_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+    <member refid="erl__moveit__pkg_2_c_make_lists_8txt_1a49dc3793aeb2c8092741520d6352500e" kind="function"><name>cmake_minimum_required</name></member>
+  </compound>
+  <compound refid="erl2_2_r_e_a_d_m_e_8md_8txt" kind="file"><name>README.md.txt</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md_8txt" kind="file"><name>README.md.txt</name>
+  </compound>
+  <compound refid="__build_2html_2__sources_2erl__assignment__2_2pddl_2detectibot__pddl_2solution_8txt" kind="file"><name>solution.txt</name>
+    <member refid="__build_2html_2__sources_2erl__assignment__2_2pddl_2detectibot__pddl_2solution_8txt_1a9bc6fd77a51cf5ed077132bd42c3abcc" kind="variable"><name>literals</name></member>
+    <member refid="__build_2html_2__sources_2erl__assignment__2_2pddl_2detectibot__pddl_2solution_8txt_1a0fe54b7d3b0b4981b00a577753feb775" kind="variable"><name>found</name></member>
+  </compound>
+  <compound refid="erl__assignment__2_2pddl_2detectibot__pddl_2solution_8txt" kind="file"><name>solution.txt</name>
+    <member refid="erl__assignment__2_2pddl_2detectibot__pddl_2solution_8txt_1a9bc6fd77a51cf5ed077132bd42c3abcc" kind="variable"><name>literals</name></member>
+    <member refid="erl__assignment__2_2pddl_2detectibot__pddl_2solution_8txt_1a0fe54b7d3b0b4981b00a577753feb775" kind="variable"><name>found</name></member>
+  </compound>
+  <compound refid="index_8rst_8txt" kind="file"><name>index.rst.txt</name>
+    <member refid="index_8rst_8txt_1ae5bb300954830ede9da67440dcb4b2b5" kind="variable"><name>file</name></member>
+    <member refid="index_8rst_8txt_1aef3f652165d0d9f09dbe82f3ac90933a" kind="variable"><name>Jul</name></member>
+  </compound>
+  <compound refid="code__documentation_2index_8md" kind="file"><name>index.md</name>
+  </compound>
+  <compound refid="documents_2index_8md" kind="file"><name>index.md</name>
+  </compound>
+  <compound refid="conf_8py" kind="file"><name>conf.py</name>
+  </compound>
+  <compound refid="interfaces-docs-goto-point_8md" kind="file"><name>interfaces-docs-goto-point.md</name>
+  </compound>
+  <compound refid="markdown-vs-rest_8md" kind="file"><name>markdown-vs-rest.md</name>
+  </compound>
+  <compound refid="run-the-project_8md" kind="file"><name>run-the-project.md</name>
+  </compound>
+  <compound refid="my__simulation_8cpp" kind="file"><name>my_simulation.cpp</name>
+    <member refid="my__simulation_8cpp_1a32812fe000700d7aa8988d74e59471c7" kind="variable"><name>oracle_pub</name></member>
+    <member refid="my__simulation_8cpp_1a36b0204cd96e3dc326a2adfa3d1dceda" kind="variable"><name>markx</name></member>
+    <member refid="my__simulation_8cpp_1a0bc4146f286fe42bd5e8fa1e53826447" kind="variable"><name>marky</name></member>
+    <member refid="my__simulation_8cpp_1a8d90002e6a9c50028f184b22c380efc4" kind="variable"><name>markz</name></member>
+    <member refid="my__simulation_8cpp_1a412ed4d68a81f370cdcd20e3019db982" kind="variable"><name>lastmarkx</name></member>
+    <member refid="my__simulation_8cpp_1a174c0dfc727a92493b03f7b0573f4f3e" kind="variable"><name>lastmarky</name></member>
+    <member refid="my__simulation_8cpp_1a0049a8a39c319bf1470f36c9e0f75abd" kind="variable"><name>key</name></member>
+    <member refid="my__simulation_8cpp_1a68fa6a0c7a1208892294604263e23d92" kind="variable"><name>person</name></member>
+    <member refid="my__simulation_8cpp_1a4368e40a20e72e62974037baf19dba80" kind="variable"><name>object</name></member>
+    <member refid="my__simulation_8cpp_1a5e5bd50ead53d20df3f8ede527f47ce7" kind="variable"><name>place</name></member>
+    <member refid="my__simulation_8cpp_1a37d4a0b625b8b9583adf9362f5aae971" kind="variable"><name>uIDs</name></member>
+    <member refid="my__simulation_8cpp_1a90c5d03e068ddae91702223f47eff712" kind="variable"><name>winID</name></member>
+    <member refid="my__simulation_8cpp_1ac8241cdb5162da1999f5377e7e209201" kind="variable"><name>oracle_msgs</name></member>
+    <member refid="my__simulation_8cpp_1a7e333af55a708cf53de07126dcd3006b" kind="function"><name>distfromtarget</name></member>
+    <member refid="my__simulation_8cpp_1ae1a3f65d934a3c4a938e85d5071dfaa5" kind="function"><name>oracleService</name></member>
+    <member refid="my__simulation_8cpp_1a876a1245db85a2bb87c08ae086f1eafa" kind="function"><name>oracleCallback</name></member>
+    <member refid="my__simulation_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="simulation_8cpp" kind="file"><name>simulation.cpp</name>
+    <member refid="simulation_8cpp_1a32812fe000700d7aa8988d74e59471c7" kind="variable"><name>oracle_pub</name></member>
+    <member refid="simulation_8cpp_1a36b0204cd96e3dc326a2adfa3d1dceda" kind="variable"><name>markx</name></member>
+    <member refid="simulation_8cpp_1a0bc4146f286fe42bd5e8fa1e53826447" kind="variable"><name>marky</name></member>
+    <member refid="simulation_8cpp_1a8d90002e6a9c50028f184b22c380efc4" kind="variable"><name>markz</name></member>
+    <member refid="simulation_8cpp_1a412ed4d68a81f370cdcd20e3019db982" kind="variable"><name>lastmarkx</name></member>
+    <member refid="simulation_8cpp_1a174c0dfc727a92493b03f7b0573f4f3e" kind="variable"><name>lastmarky</name></member>
+    <member refid="simulation_8cpp_1a0049a8a39c319bf1470f36c9e0f75abd" kind="variable"><name>key</name></member>
+    <member refid="simulation_8cpp_1a68fa6a0c7a1208892294604263e23d92" kind="variable"><name>person</name></member>
+    <member refid="simulation_8cpp_1a4368e40a20e72e62974037baf19dba80" kind="variable"><name>object</name></member>
+    <member refid="simulation_8cpp_1a5e5bd50ead53d20df3f8ede527f47ce7" kind="variable"><name>place</name></member>
+    <member refid="simulation_8cpp_1a37d4a0b625b8b9583adf9362f5aae971" kind="variable"><name>uIDs</name></member>
+    <member refid="simulation_8cpp_1a90c5d03e068ddae91702223f47eff712" kind="variable"><name>winID</name></member>
+    <member refid="simulation_8cpp_1ac8241cdb5162da1999f5377e7e209201" kind="variable"><name>oracle_msgs</name></member>
+    <member refid="simulation_8cpp_1a7e333af55a708cf53de07126dcd3006b" kind="function"><name>distfromtarget</name></member>
+    <member refid="simulation_8cpp_1ae1a3f65d934a3c4a938e85d5071dfaa5" kind="function"><name>oracleService</name></member>
+    <member refid="simulation_8cpp_1a876a1245db85a2bb87c08ae086f1eafa" kind="function"><name>oracleCallback</name></member>
+    <member refid="simulation_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="cluedo__kb_8py" kind="file"><name>cluedo_kb.py</name>
+  </compound>
+  <compound refid="go__to__point_8py" kind="file"><name>go_to_point.py</name>
+  </compound>
+  <compound refid="main_8py" kind="file"><name>main.py</name>
+  </compound>
+  <compound refid="test__nav_8py" kind="file"><name>test_nav.py</name>
+  </compound>
+  <compound refid="action__interface_8cpp" kind="file"><name>action_interface.cpp</name>
+    <member refid="action__interface_8cpp_1afe4664cca95c5e9b93e4a25874bc871d" kind="define"><name>LEAVE_TEMPLE</name></member>
+    <member refid="action__interface_8cpp_1afbc16abf7fcce6f53cf8977d76c78ece" kind="define"><name>GO_TO_WP</name></member>
+    <member refid="action__interface_8cpp_1a905f67ab58312915d0c5d40847c80c0c" kind="define"><name>SHIFT_GRIPPER</name></member>
+    <member refid="action__interface_8cpp_1aa69a2751821fe07e1faea957e42c9180" kind="define"><name>GATHER_HINT</name></member>
+    <member refid="action__interface_8cpp_1ab348801e93c20ce28d21d673571cbeb5" kind="define"><name>REACH_TEMPLE</name></member>
+    <member refid="action__interface_8cpp_1a7413401b40b075490286cc2d28fa6dee" kind="define"><name>CHECK_CONSISTENT_HYPO</name></member>
+    <member refid="action__interface_8cpp_1a6f47e7b691fe6f78786eb95f849f33ea" kind="define"><name>QUERY_HYPO</name></member>
+    <member refid="action__interface_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="manipulation_8cpp" kind="file"><name>manipulation.cpp</name>
+    <member refid="manipulation_8cpp_1a6bf48b64f1b894fc5781377399dd974d" kind="variable"><name>move_group_interface</name></member>
+    <member refid="manipulation_8cpp_1aa6507e80b3e06c0fe2c8fcd01a00323d" kind="variable"><name>srv_manip</name></member>
+    <member refid="manipulation_8cpp_1a83251b24e5697bfa2a149273e4ca40b8" kind="function"><name>move_arm</name></member>
+    <member refid="manipulation_8cpp_1aefdb9958bc4650484824e4cbd42dcf65" kind="function"><name>cbk_manip</name></member>
+    <member refid="manipulation_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="md_code_documentation_index" kind="page"><name>md_code_documentation_index</name>
+  </compound>
+  <compound refid="md_documents_index" kind="page"><name>md_documents_index</name>
+  </compound>
+  <compound refid="md_documents_interfaces-docs-goto-point" kind="page"><name>md_documents_interfaces-docs-goto-point</name>
+  </compound>
+  <compound refid="md_documents_markdown-vs-rest" kind="page"><name>md_documents_markdown-vs-rest</name>
+  </compound>
+  <compound refid="md_documents_run-the-project" kind="page"><name>md_documents_run-the-project</name>
+  </compound>
+  <compound refid="md__r_e_a_d_m_e" kind="page"><name>md_README</name>
+  </compound>
+  <compound refid="dir_45b9293d3daaa82c00b5908f14ebb805" kind="dir"><name>_build</name>
+  </compound>
+  <compound refid="dir_02bdb4005edb5055ba0ef39c3e2b4a3d" kind="dir"><name>_build/html/_sources</name>
+  </compound>
+  <compound refid="dir_19d2a84171ad5410f35a5a0a65c9e77a" kind="dir"><name>_build/html/_sources/code_documentation</name>
+  </compound>
+  <compound refid="dir_dc965ea0807d6e8790d6607c44bea479" kind="dir"><name>code_documentation</name>
+  </compound>
+  <compound refid="dir_d2989f31502a29e933d4502cb5d40a99" kind="dir"><name>erl_assignment_2/pddl/detectibot_pddl</name>
+  </compound>
+  <compound refid="dir_4c38237d9b4fa0c1d1887cf4d4f363ec" kind="dir"><name>_build/html/_sources/erl_assignment_2/pddl/detectibot_pddl</name>
+  </compound>
+  <compound refid="dir_8dd08f2658aa08180a5d08d0b206f839" kind="dir"><name>documents</name>
+  </compound>
+  <compound refid="dir_38e8b9ed5b7b9416573615062e91436d" kind="dir"><name>_build/html/_sources/documents</name>
+  </compound>
+  <compound refid="dir_8856e980821a611535096e59d7a85e0c" kind="dir"><name>erl2</name>
+  </compound>
+  <compound refid="dir_09f276876714b9b6bcda51e45892d10b" kind="dir"><name>_build/html/_sources/erl2</name>
+  </compound>
+  <compound refid="dir_b930f76dc92bdcca0a0f99df67331e55" kind="dir"><name>erl_assignment_2</name>
+  </compound>
+  <compound refid="dir_7684bd246eff0ed87f8fd9e8ddb2ccaa" kind="dir"><name>_build/html/_sources/erl_assignment_2</name>
+  </compound>
+  <compound refid="dir_4890977724b27fbf3fc711a5ddc05eb5" kind="dir"><name>_build/html/_sources/erl_assignment_2_msgs</name>
+  </compound>
+  <compound refid="dir_eefb14575556cea8c8edda92b08ebe6f" kind="dir"><name>erl_assignment_2_msgs</name>
+  </compound>
+  <compound refid="dir_45ec1bfde743b2654ea33aa86d3495a4" kind="dir"><name>erl_moveit_pkg</name>
+  </compound>
+  <compound refid="dir_e96af6232cfc1eb3b875f3cac2b8bc58" kind="dir"><name>_build/html/_sources/erl_moveit_pkg</name>
+  </compound>
+  <compound refid="dir_63358181ce567149a79d24bdd45b3e93" kind="dir"><name>_build/html</name>
+  </compound>
+  <compound refid="dir_ffbedad2841d703e2d166fd609a893cf" kind="dir"><name>erl_assignment_2/pddl</name>
+  </compound>
+  <compound refid="dir_9d7ac93d5eedbcfa49bb62b56a3c0003" kind="dir"><name>_build/html/_sources/erl_assignment_2/pddl</name>
+  </compound>
+  <compound refid="dir_e5f6a432fdab201ad870d7689d2a031e" kind="dir"><name>erl_assignment_2/scripts</name>
+  </compound>
+  <compound refid="dir_07aec606a6715acfc4b32b8a919bf5e7" kind="dir"><name>erl2/src</name>
+  </compound>
+  <compound refid="dir_31508095010e70e9f76cbbf3db9bce1e" kind="dir"><name>erl_assignment_2/src</name>
+  </compound>
+</doxygenindex>

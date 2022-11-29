@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="md_erl2__r_e_a_d_m_e" kind="page">
+    <compoundname>md_erl2_README</compoundname>
+    <title>Repository for the 2nd assignment of the Experimental Robotics Laboratory course</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>You can start from this package for the implementation of the 2nd assignment of the course. You find here the simulation environment and the oracle node. Please refer to the class slides for more info! </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

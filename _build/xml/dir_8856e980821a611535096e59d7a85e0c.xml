@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_8856e980821a611535096e59d7a85e0c" kind="dir">
+    <compoundname>erl2</compoundname>
+    <innerdir refid="dir_07aec606a6715acfc4b32b8a919bf5e7">erl2/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erl2/"/>
+  </compounddef>
+</doxygen>

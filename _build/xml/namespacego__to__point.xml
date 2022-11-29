@@ -1,0 +1,520 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacego__to__point" kind="namespace" language="Python">
+    <compoundname>go_to_point</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacego__to__point_1a066c7e6058980504669f48713eacff1a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool go_to_point.active_</definition>
+        <argsstring></argsstring>
+        <name>active_</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="35" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1a500520cbcd448f46bf7447a431f61d53" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>go_to_point.position_</definition>
+        <argsstring></argsstring>
+        <name>position_</name>
+        <initializer>=  Point()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="40" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1ae444f19eb2019982432760ace036ce03" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int go_to_point.yaw_</definition>
+        <argsstring></argsstring>
+        <name>yaw_</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="44" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1aa2d0ef255bcf5d5faf9ca2764730fb17" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int go_to_point.state_</definition>
+        <argsstring></argsstring>
+        <name>state_</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="48" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1a03b48b610dbd224a38eb226c1b2ba23d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>go_to_point.desired_position_</definition>
+        <argsstring></argsstring>
+        <name>desired_position_</name>
+        <initializer>=  Point()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="52" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1a328c9a3bb9322f150f2e67371cd73306" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>go_to_point.x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="56" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="56" bodyend="-1"/>
+        <referencedby refid="my__simulation_8cpp_1a7e333af55a708cf53de07126dcd3006b" compoundref="my__simulation_8cpp" startline="31" endline="35">distfromtarget</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1ac372e1a492f9aa66d29f365cc1c57d8c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>go_to_point.y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="57" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="57" bodyend="-1"/>
+        <referencedby refid="my__simulation_8cpp_1a7e333af55a708cf53de07126dcd3006b" compoundref="my__simulation_8cpp" startline="31" endline="35">distfromtarget</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1a2fd68a76b8583598a4bceccdeae5d73b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>go_to_point.z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="58" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="58" bodyend="-1"/>
+        <referencedby refid="my__simulation_8cpp_1a7e333af55a708cf53de07126dcd3006b" compoundref="my__simulation_8cpp" startline="31" endline="35">distfromtarget</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1a67f95834f0959feb3facd17bc7fa2b38" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int go_to_point.yaw_precision_</definition>
+        <argsstring></argsstring>
+        <name>yaw_precision_</name>
+        <initializer>=  math.pi / 9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="61" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1af74ccf49164d0478ca8343e2031d5813" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int go_to_point.yaw_precision_2_</definition>
+        <argsstring></argsstring>
+        <name>yaw_precision_2_</name>
+        <initializer>=  math.pi / 90</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="65" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1a6a1e4eb20ebd4fce0fc56b0ebfd7a8d5" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float go_to_point.dist_precision_</definition>
+        <argsstring></argsstring>
+        <name>dist_precision_</name>
+        <initializer>=  0.3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="69" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1a524106fc7667a0927951dfd89d52d6a7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float go_to_point.kp_a</definition>
+        <argsstring></argsstring>
+        <name>kp_a</name>
+        <initializer>=  3.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="73" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1a7bc498652ca66932e704e738b50c297b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float go_to_point.kp_d</definition>
+        <argsstring></argsstring>
+        <name>kp_d</name>
+        <initializer>=  0.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="74" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1acb4e14986fafe5cb73bb8ad0c178869d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float go_to_point.ub_a</definition>
+        <argsstring></argsstring>
+        <name>ub_a</name>
+        <initializer>=  0.6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="75" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1afecad4058844db05d8321199e25b4498" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float go_to_point.lb_a</definition>
+        <argsstring></argsstring>
+        <name>lb_a</name>
+        <initializer>=  -0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="76" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1a16c473b9e717200c483d18e66b48152a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float go_to_point.ub_d</definition>
+        <argsstring></argsstring>
+        <name>ub_d</name>
+        <initializer>=  0.6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="77" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacego__to__point_1a3caa5a6c1e8d7b4854f62a9e35dfad6f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>go_to_point.pub</definition>
+        <argsstring></argsstring>
+        <name>pub</name>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="80" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacego__to__point_1a1ace7fa0371345e7a7501959f0e004e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def go_to_point.go_to_point_switch</definition>
+        <argsstring>(req)</argsstring>
+        <name>go_to_point_switch</name>
+        <param>
+          <type>req</type>
+          <defname>req</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>SERVICE IMPLEMENTATION OF /go_to_point_switch
+
+the service sets the value of the activity flag.
+
+Args:
+    req (std_srvs/SetBoolRequest):
+        the activity value will be equal to the req.data passed to the
+        service
+
+Returns:
+    (std_srvs/SetBoolResponse) success is always true</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="85" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="85" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacego__to__point_1a36304a9f313b0579f7fc69fa01695524" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def go_to_point.clbk_odom</definition>
+        <argsstring>(msg)</argsstring>
+        <name>clbk_odom</name>
+        <param>
+          <type>msg</type>
+          <defname>msg</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Description of the callback:
+
+This function retrieves the current robot position for saving
+it within the *position_* global variable and is responsible for
+transforming the orientation from quaternion angles to Euler ones
+
+Args:
+    msg(Twist): data retrieved by */cmd_vel* topic
+
+Returns:
+    None</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="110" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="110" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacego__to__point_1a31ee48e5cae36821049b572a96b7c8be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def go_to_point.change_state</definition>
+        <argsstring>(state)</argsstring>
+        <name>change_state</name>
+        <param>
+          <type>state</type>
+          <defname>state</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Description of the change_state function:
+
+This value retrieve and assigns the current state to the
+global one (*state_*)
+
+Args:
+    state(int): the state of the robot
+
+Returns:
+    None
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="140" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="140" bodyend="156"/>
+        <referencedby refid="namespacego__to__point_1a9bb3c726bc638ed49519d74277fce5a4" compoundref="go__to__point_8py" startline="248" endline="270">done</referencedby>
+        <referencedby refid="namespacego__to__point_1a9c3011a3065fcbefcc1c5ad8c9979669" compoundref="go__to__point_8py" startline="172" endline="205">fix_yaw</referencedby>
+        <referencedby refid="namespacego__to__point_1ac8579665c0fbf665f734476554fac37d" compoundref="go__to__point_8py" startline="206" endline="247">go_straight_ahead</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacego__to__point_1ac688bb56fa84763ea2edefc30cae032a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def go_to_point.normalize_angle</definition>
+        <argsstring>(angle)</argsstring>
+        <name>normalize_angle</name>
+        <param>
+          <type>angle</type>
+          <defname>angle</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Function for normalizing the angle between -pi and pi.
+
+Args:
+    angle(Float): the input angle
+
+Returns:
+    angle(Float): the normalized angle.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="157" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="157" bodyend="171"/>
+        <referencedby refid="namespacego__to__point_1a9c3011a3065fcbefcc1c5ad8c9979669" compoundref="go__to__point_8py" startline="172" endline="205">fix_yaw</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacego__to__point_1a9c3011a3065fcbefcc1c5ad8c9979669" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def go_to_point.fix_yaw</definition>
+        <argsstring>(des_pos)</argsstring>
+        <name>fix_yaw</name>
+        <param>
+          <type>des_pos</type>
+          <defname>des_pos</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Description of the fix_yaw function:
+
+This function computes the robot orientation among x and y 
+coordinates and sets the angular velocity needed for achieving
+the desired robot position. 
+    
+Args:
+    des_pos(Point):  the expected x and y coordinates
+Returns:
+    None
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="172" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="172" bodyend="205"/>
+        <references refid="namespacego__to__point_1a31ee48e5cae36821049b572a96b7c8be" compoundref="go__to__point_8py" startline="140" endline="156">change_state</references>
+        <references refid="namespacego__to__point_1ac688bb56fa84763ea2edefc30cae032a" compoundref="go__to__point_8py" startline="157" endline="171">normalize_angle</references>
+        <referencedby refid="namespacego__to__point_1aa8c9e45da31814a8cd403b354dbd6ba4" compoundref="go__to__point_8py" startline="271" endline="310">go_to_point</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacego__to__point_1ac8579665c0fbf665f734476554fac37d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def go_to_point.go_straight_ahead</definition>
+        <argsstring>(des_pos)</argsstring>
+        <name>go_straight_ahead</name>
+        <param>
+          <type>des_pos</type>
+          <defname>des_pos</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Description of the go_straight_ahead function:
+
+This function computes the robot orientation among x and y 
+coordinates necessary to reach the x,y target point. Once the
+linear velocities have been set, an angular velocity is defined
+by means of an error. It is proportional to this latter and it 
+allows a correction of the trajectory, by checking a treshold
+over a distance
+    
+    
+Args:
+    des_pos(Point): the expected x and y coordinates
+Returns:
+    None</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="206" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="206" bodyend="247"/>
+        <references refid="namespacego__to__point_1a31ee48e5cae36821049b572a96b7c8be" compoundref="go__to__point_8py" startline="140" endline="156">change_state</references>
+        <referencedby refid="namespacego__to__point_1aa8c9e45da31814a8cd403b354dbd6ba4" compoundref="go__to__point_8py" startline="271" endline="310">go_to_point</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacego__to__point_1a9bb3c726bc638ed49519d74277fce5a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def go_to_point.done</definition>
+        <argsstring>(des_pos)</argsstring>
+        <name>done</name>
+        <param>
+          <type>des_pos</type>
+          <defname>des_pos</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Description of done function:
+    
+This function marks the goal target as succeeded, once all the
+linear and angular velocities are set to zero  
+
+Args :
+    None
+
+Returns :
+    None</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="248" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="248" bodyend="270"/>
+        <references refid="namespacego__to__point_1a31ee48e5cae36821049b572a96b7c8be" compoundref="go__to__point_8py" startline="140" endline="156">change_state</references>
+        <referencedby refid="namespacego__to__point_1aa8c9e45da31814a8cd403b354dbd6ba4" compoundref="go__to__point_8py" startline="271" endline="310">go_to_point</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacego__to__point_1aa8c9e45da31814a8cd403b354dbd6ba4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def go_to_point.go_to_point</definition>
+        <argsstring>(req)</argsstring>
+        <name>go_to_point</name>
+        <param>
+          <type>req</type>
+          <defname>req</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>SERVICE IMPLEMENTATION OF /go_to_point
+    
+This function retrieves the ROS params from the ROS
+parameter server. Secondly, it truggers a different 
+robot behaviour, depending on the state&apos;s value 
+
+Args :
+    None
+
+Returns :
+    None</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="271" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="271" bodyend="310"/>
+        <references refid="namespacego__to__point_1a9bb3c726bc638ed49519d74277fce5a4" compoundref="go__to__point_8py" startline="248" endline="270">done</references>
+        <references refid="namespacego__to__point_1a9c3011a3065fcbefcc1c5ad8c9979669" compoundref="go__to__point_8py" startline="172" endline="205">fix_yaw</references>
+        <references refid="namespacego__to__point_1ac8579665c0fbf665f734476554fac37d" compoundref="go__to__point_8py" startline="206" endline="247">go_straight_ahead</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacego__to__point_1ab92bd6db1ec323a4d795ed6cb40aebe1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def go_to_point.main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_2/scripts/go_to_point.py" line="311" column="1" bodyfile="erl_assignment_2/scripts/go_to_point.py" bodystart="311" bodyend="328"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>.. module:: go_to_point
+:platform: Unix
+:synopsis: Python module for piloting the robot to the target
+
+.. moduleauthor:: Iacopo Pietrasanta iacopo.pietrasanta@gmail.com
+
+ROS node for driving a robot to a specific point within a simulated
+environment, given a certain orientation.
+
+Subscribes to:
+/odom topic where the simulator publishes the robot position
+
+Publishes to:
+/cmd_vel the desired robot position
+
+Service :
+/go_to_point to start the robot motion.</verbatim> </para>
+    </detaileddescription>
+    <location file="erl_assignment_2/scripts/go_to_point.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

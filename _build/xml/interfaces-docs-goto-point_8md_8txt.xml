@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="interfaces-docs-goto-point_8md_8txt" kind="file" language="C++">
+    <compoundname>interfaces-docs-goto-point.md.txt</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>Interfaces<sp/>Documentation<sp/>--<sp/>node<sp/>*go_to_point.py*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>geometry_msgs/Twist</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">Vector3<sp/><sp/>linear</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">Vector3<sp/><sp/>angular</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>geometry_msgs/Vector3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">float64<sp/><ref refid="namespacego__to__point_1a328c9a3bb9322f150f2e67371cd73306" kindref="member">x</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">float64<sp/><ref refid="namespacego__to__point_1ac372e1a492f9aa66d29f365cc1c57d8c" kindref="member">y</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">float64<sp/><ref refid="namespacego__to__point_1a2fd68a76b8583598a4bceccdeae5d73b" kindref="member">z</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>nav_msgs/Odometry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">Header<sp/>header</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>child_frame_id</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">geometry_msgs/PoseWithCovariance<sp/>pose</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">geometry_msgs/TwistWithCovariance<sp/>twist</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>std_msgs/Header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>Standard<sp/>metadata<sp/>for<sp/>higher-level<sp/>stamped<sp/>data<sp/>types.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>This<sp/>is<sp/>generally<sp/>used<sp/>to<sp/>communicate<sp/>timestamped<sp/>data<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>in<sp/>a<sp/>particular<sp/>coordinate<sp/>frame.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>sequence<sp/>ID:<sp/>consecutively<sp/>increasing<sp/>ID<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">uint32<sp/>seq</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#Two-integer<sp/>timestamp<sp/>that<sp/>is<sp/>expressed<sp/>as:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>*<sp/>stamp.sec:<sp/>seconds<sp/>(stamp_secs)<sp/>since<sp/>epoch<sp/>(in<sp/>Python<sp/>the<sp/>variable<sp/>is<sp/>called<sp/>&apos;secs&apos;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>*<sp/>stamp.nsec:<sp/>nanoseconds<sp/>since<sp/>stamp_secs<sp/>(in<sp/>Python<sp/>the<sp/>variable<sp/>is<sp/>called<sp/>&apos;nsecs&apos;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>time-handling<sp/>sugar<sp/>is<sp/>provided<sp/>by<sp/>the<sp/>client<sp/>library</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">time<sp/>stamp</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#Frame<sp/>this<sp/>data<sp/>is<sp/>associated<sp/>with</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>frame_id</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>geometry_msgs/PoseWithCovariance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>This<sp/>represents<sp/>a<sp/>pose<sp/>in<sp/>free<sp/>space<sp/>with<sp/>uncertainty.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">Pose<sp/>pose</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>Row-major<sp/>representation<sp/>of<sp/>the<sp/>6x6<sp/>covariance<sp/>matrix</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>The<sp/>orientation<sp/>parameters<sp/>use<sp/>a<sp/>fixed-axis<sp/>representation.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>In<sp/>order,<sp/>the<sp/>parameters<sp/>are:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>(x,<sp/>y,<sp/>z,<sp/>rotation<sp/>about<sp/>X<sp/>axis,<sp/>rotation<sp/>about<sp/>Y<sp/>axis,<sp/>rotation<sp/>about<sp/>Z<sp/>axis)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">float64[36]<sp/>covariance</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>geometry_msgs/Pose</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">Point<sp/>position</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">Quaternion<sp/>orientation</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>geometry_msgs/Point</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>This<sp/>contains<sp/>the<sp/>position<sp/>of<sp/>a<sp/>point<sp/>in<sp/>free<sp/>space</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">float64<sp/><ref refid="namespacego__to__point_1a328c9a3bb9322f150f2e67371cd73306" kindref="member">x</ref></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">float64<sp/><ref refid="namespacego__to__point_1ac372e1a492f9aa66d29f365cc1c57d8c" kindref="member">y</ref></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">float64<sp/><ref refid="namespacego__to__point_1a2fd68a76b8583598a4bceccdeae5d73b" kindref="member">z</ref></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>geometry_msgs/Quaternion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">float64<sp/><ref refid="namespacego__to__point_1a328c9a3bb9322f150f2e67371cd73306" kindref="member">x</ref></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">float64<sp/><ref refid="namespacego__to__point_1ac372e1a492f9aa66d29f365cc1c57d8c" kindref="member">y</ref></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">float64<sp/><ref refid="namespacego__to__point_1a2fd68a76b8583598a4bceccdeae5d73b" kindref="member">z</ref></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">float64<sp/>w</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>geometry_msgs/TwistWithCovariance<sp/>Message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>This<sp/>expresses<sp/>velocity<sp/>in<sp/>free<sp/>space<sp/>with<sp/>uncertainty.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">Twist<sp/>twist</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>Row-major<sp/>representation<sp/>of<sp/>the<sp/>6x6<sp/>covariance<sp/>matrix</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>The<sp/>orientation<sp/>parameters<sp/>use<sp/>a<sp/>fixed-axis<sp/>representation.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>In<sp/>order,<sp/>the<sp/>parameters<sp/>are:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>(x,<sp/>y,<sp/>z,<sp/>rotation<sp/>about<sp/>X<sp/>axis,<sp/>rotation<sp/>about<sp/>Y<sp/>axis,<sp/>rotation<sp/>about<sp/>Z<sp/>axis)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">float64[36]<sp/>covariance</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>std_srvs/SetBool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">see<sp/>also<sp/>[std_srvs<sp/>package](http:</highlight><highlight class="comment">//docs.ros.org/en/api/std_srvs/html/index-msg.html)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>data<sp/>#<sp/>e.g.<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>hardware<sp/>enabling<sp/>/<sp/>disabling</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">---</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>success<sp/><sp/><sp/>#<sp/>indicate<sp/>successful<sp/>run<sp/>of<sp/>triggered<sp/><ref refid="_oracle_8rst_8txt_1a9107981f4bf5ab9f24785a661dddb14a" kindref="member">service</ref></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>message<sp/>#<sp/>informational,<sp/>e.g.<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>error<sp/>messages</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="_build/html/_sources/documents/interfaces-docs-goto-point.md.txt"/>
+  </compounddef>
+</doxygen>

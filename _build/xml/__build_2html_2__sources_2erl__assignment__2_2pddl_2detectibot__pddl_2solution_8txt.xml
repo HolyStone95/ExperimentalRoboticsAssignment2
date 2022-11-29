@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="__build_2html_2__sources_2erl__assignment__2_2pddl_2detectibot__pddl_2solution_8txt" kind="file" language="C++">
+    <compoundname>solution.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="__build_2html_2__sources_2erl__assignment__2_2pddl_2detectibot__pddl_2solution_8txt_1a9bc6fd77a51cf5ed077132bd42c3abcc" prot="public" static="no" mutable="no">
+        <type>Number of</type>
+        <definition>Number of literals</definition>
+        <argsstring></argsstring>
+        <name>literals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/erl_assignment_2/pddl/detectibot_pddl/solution.txt" line="1" column="11" bodyfile="_build/html/_sources/erl_assignment_2/pddl/detectibot_pddl/solution.txt" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__build_2html_2__sources_2erl__assignment__2_2pddl_2detectibot__pddl_2solution_8txt_1a0fe54b7d3b0b4981b00a577753feb775" prot="public" static="no" mutable="no">
+        <type>analytic limits</type>
+        <definition>analytic limits found</definition>
+        <argsstring></argsstring>
+        <name>found</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/erl_assignment_2/pddl/detectibot_pddl/solution.txt" line="4" column="18" bodyfile="_build/html/_sources/erl_assignment_2/pddl/detectibot_pddl/solution.txt" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">Number<sp/>of<sp/><ref refid="__build_2html_2__sources_2erl__assignment__2_2pddl_2detectibot__pddl_2solution_8txt_1a9bc6fd77a51cf5ed077132bd42c3abcc" kindref="member">literals</ref>:<sp/>25</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">Constructing<sp/>lookup<sp/>tables:<sp/>[10%]<sp/>[20%]<sp/>[30%]<sp/>[40%]<sp/>[50%]<sp/>[60%]<sp/>[70%]<sp/>[80%]<sp/>[90%]<sp/>[100%]<sp/>[110%]<sp/>[120%]</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">Post<sp/>filtering<sp/>unreachable<sp/>actions:<sp/><sp/>[10%]<sp/>[20%]<sp/>[30%]<sp/>[40%]<sp/>[50%]<sp/>[60%]<sp/>[70%]<sp/>[80%]<sp/>[90%]<sp/>[100%]<sp/>[110%]<sp/>[120%]</highlight></codeline>
+<codeline lineno="4" refid="__build_2html_2__sources_2erl__assignment__2_2pddl_2detectibot__pddl_2solution_8txt_1a9bc6fd77a51cf5ed077132bd42c3abcc" refkind="member"><highlight class="normal"><sp value="27"/>[01;34mNo<sp/>analytic<sp/>limits<sp/><ref refid="__build_2html_2__sources_2erl__assignment__2_2pddl_2detectibot__pddl_2solution_8txt_1a0fe54b7d3b0b4981b00a577753feb775" kindref="member">found</ref>,<sp/>not<sp/>considering<sp/>limit<sp/>effects<sp/>of<sp/>goal-only<sp/>operators<sp value="27"/>[00m</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">35%<sp/>of<sp/>the<sp/>ground<sp/>temporal<sp/>actions<sp/>in<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>problem<sp/>are<sp/>compression-safe</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">Initial<sp/>heuristic<sp/>=<sp/>16.000</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">b<sp/>(15.000<sp/>|<sp/>4.003)b<sp/>(13.000<sp/>|<sp/>5.004)b<sp/>(11.000<sp/>|<sp/>7.006)b<sp/>(9.000<sp/>|<sp/>8.007)b<sp/>(8.000<sp/>|<sp/>10.009)b<sp/>(7.000<sp/>|<sp/>10.009)b<sp/>(5.000<sp/>|<sp/>11.010)b<sp/>(3.000<sp/>|<sp/>12.011)b<sp/>(2.000<sp/>|<sp/>13.012)b<sp/>(1.000<sp/>|<sp/>13.012);;;;<sp/>Solution<sp/>Found</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">;<sp/>States<sp/>evaluated:<sp/>54</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">;<sp/>Cost:<sp/>14.013</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">;<sp/>Time<sp/>0.00</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">0.000:<sp/>(leave_temple<sp/>tp<sp/>wp1)<sp/><sp/>[1.000]</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">1.001:<sp/>(shift_gripper<sp/>wp1)<sp/><sp/>[1.000]</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">2.002:<sp/>(gather_hint<sp/>wp1)<sp/><sp/>[1.000]</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">3.003:<sp/>(go_to_wp<sp/>wp1<sp/>wp2)<sp/><sp/>[1.000]</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">4.004:<sp/>(shift_gripper<sp/>wp2)<sp/><sp/>[1.000]</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">5.005:<sp/>(gather_hint<sp/>wp2)<sp/><sp/>[1.000]</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">6.006:<sp/>(go_to_wp<sp/>wp2<sp/>wp3)<sp/><sp/>[1.000]</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">7.007:<sp/>(shift_gripper<sp/>wp3)<sp/><sp/>[1.000]</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">8.008:<sp/>(gather_hint<sp/>wp3)<sp/><sp/>[1.000]</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">9.009:<sp/>(go_to_wp<sp/>wp3<sp/>wp4)<sp/><sp/>[1.000]</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">10.010:<sp/>(shift_gripper<sp/>wp4)<sp/><sp/>[1.000]</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">11.011:<sp/>(gather_hint<sp/>wp4)<sp/><sp/>[1.000]</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">12.012:<sp/>(reach_temple<sp/>wp4<sp/>tp)<sp/><sp/>[1.000]</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">12.012:<sp/>(check_consistent_hypo<sp/>wp1)<sp/><sp/>[1.000]</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">13.013:<sp/>(query_hypo<sp/>tp)<sp/><sp/>[1.000]</highlight></codeline>
+    </programlisting>
+    <location file="_build/html/_sources/erl_assignment_2/pddl/detectibot_pddl/solution.txt"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+
+<launch>
+
+<!-- leave_temple -->
+<node pkg="erl_assignment_2" type="action_interface" name="rpi_leave_temple"
+	respawn="false" output="screen">
+
+	<param name="pddl_action_name" value="leave_temple" />
+	<param name="action_duration" value="1.0" />
+	<param name="action_probability" value="1.0" />
+	
+	<param name="knowledge_base" value="rosplan_knowledge_base" />
+	<param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/action_dispatch" />
+	<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
+
+</node>
+
+<!-- shift_gripper -->
+<node pkg="erl_assignment_2" type="action_interface" name="rpi_shift_gripper"
+	respawn="false" output="screen">
+
+	<param name="pddl_action_name" value="shift_gripper" />
+	<param name="action_duration" value="1.0" />
+	<param name="action_probability" value="1.0" />
+	
+	<param name="knowledge_base" value="rosplan_knowledge_base" />
+	<param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/action_dispatch" />
+	<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
+
+</node>
+
+<!-- gather_hint -->
+<node pkg="erl_assignment_2" type="action_interface" name="rpi_gather_hint"
+	respawn="false" output="screen">
+
+	<param name="pddl_action_name" value="gather_hint" />
+	<param name="action_duration" value="1.0" />
+	<param name="action_probability" value="1.0" />
+	
+	<param name="knowledge_base" value="rosplan_knowledge_base" />
+	<param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/action_dispatch" />
+	<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
+
+</node>
+
+<!-- go_to_wp -->
+<node pkg="erl_assignment_2" type="action_interface" name="rpi_go_to_wp"
+	respawn="false" output="screen">
+
+	<param name="pddl_action_name" value="go_to_wp" />
+	<param name="action_duration" value="1.0" />
+	<param name="action_probability" value="1.0" />
+	
+	<param name="knowledge_base" value="rosplan_knowledge_base" />
+	<param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/action_dispatch" />
+	<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
+
+</node>
+
+<!-- reach_temple -->
+<node pkg="erl_assignment_2" type="action_interface" name="rpi_reach_temple"
+	respawn="false" output="screen">
+
+	<param name="pddl_action_name" value="reach_temple" />
+	<param name="action_duration" value="1.0" />
+	<param name="action_probability" value="1.0" />
+	
+	<param name="knowledge_base" value="rosplan_knowledge_base" />
+	<param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/action_dispatch" />
+	<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
+
+</node>
+
+<!-- check_consistent_hypo -->
+<node pkg="erl_assignment_2" type="action_interface" name="rpi_check_consistent_hypo"
+	respawn="false" output="screen">
+
+	<param name="pddl_action_name" value="check_consistent_hypo" />
+	<param name="action_duration" value="1.0" />
+	<param name="action_probability" value="1.0" />
+	
+	<param name="knowledge_base" value="rosplan_knowledge_base" />
+	<param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/action_dispatch" />
+	<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
+
+</node>
+
+<!-- query_hypo -->
+<node pkg="erl_assignment_2" type="action_interface" name="rpi_query_hypo"
+	respawn="false" output="screen">
+
+	<param name="pddl_action_name" value="query_hypo" />
+	<param name="action_duration" value="1.0" />
+	<param name="action_probability" value="1.0" />
+	
+	<param name="knowledge_base" value="rosplan_knowledge_base" />
+	<param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/action_dispatch" />
+	<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
+
+</node>
+
+</launch>

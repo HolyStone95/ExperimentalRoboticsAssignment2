@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_b930f76dc92bdcca0a0f99df67331e55" kind="dir">
+    <compoundname>erl_assignment_2</compoundname>
+    <innerdir refid="dir_ffbedad2841d703e2d166fd609a893cf">erl_assignment_2/pddl</innerdir>
+    <innerdir refid="dir_e5f6a432fdab201ad870d7689d2a031e">erl_assignment_2/scripts</innerdir>
+    <innerdir refid="dir_31508095010e70e9f76cbbf3db9bce1e">erl_assignment_2/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erl_assignment_2/"/>
+  </compounddef>
+</doxygen>

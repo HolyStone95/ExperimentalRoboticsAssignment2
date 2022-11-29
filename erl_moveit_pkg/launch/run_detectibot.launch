@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<launch>
+
+<param name="des_pos_x" value="0.0" />
+<param name="des_pos_y" value="0.0" />
+
+<node pkg="erl_assignment_2" type="manipulation" name="manipulation" />
+<node pkg="erl_assignment_2" type="go_to_point.py" name="go_to_point" />
+
+<include file="$(find erl_moveit_pkg)/launch/demo_gazebo.launch" />
+
+</launch>

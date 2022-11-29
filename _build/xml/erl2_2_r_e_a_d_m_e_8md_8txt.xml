@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="erl2_2_r_e_a_d_m_e_8md_8txt" kind="file" language="C++">
+    <compoundname>README.md.txt</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#<sp/>Repository<sp/>for<sp/>the<sp/>2nd<sp/>assignment<sp/>of<sp/>the<sp/>Experimental<sp/>Robotics<sp/>Laboratory<sp/>course</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">You<sp/>can<sp/>start<sp/>from<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">for<sp/>the<sp/>implementation<sp/>of<sp/>the<sp/>2nd<sp/>assignment<sp/>of<sp/>the<sp/>course.<sp/>You<sp/>find<sp/>here<sp/>the<sp/>simulation<sp/>environment<sp/>and<sp/>the<sp/>oracle<sp/>node.<sp/>Please<sp/>refer<sp/>to<sp/>the<sp/>class<sp/>slides<sp/>for<sp/>more<sp/>info!</highlight></codeline>
+    </programlisting>
+    <location file="_build/html/_sources/erl2/README.md.txt"/>
+  </compounddef>
+</doxygen>

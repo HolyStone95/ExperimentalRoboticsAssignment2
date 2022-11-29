@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="md_documents_run-the-project" kind="page">
+    <compoundname>md_documents_run-the-project</compoundname>
+    <title>How to run the project</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>shell 1:</para>
+<para><programlisting><codeline><highlight class="normal">roslaunch<sp/>erl_moveit_pkg<sp/>run_detectibot.launch<sp/>2&gt;/dev/null</highlight></codeline>
+</programlisting></para>
+<para>shell 2:</para>
+<para><programlisting><codeline><highlight class="normal">roslaunch<sp/>erl_assignment_2<sp/>run_rosplan.launch</highlight></codeline>
+</programlisting></para>
+<para>shell 3:</para>
+<para><programlisting><codeline><highlight class="normal">rosrun<sp/>erl_assignment_2<sp/>main.py</highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

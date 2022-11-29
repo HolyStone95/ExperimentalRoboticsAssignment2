@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_9d7ac93d5eedbcfa49bb62b56a3c0003" kind="dir">
+    <compoundname>_build/html/_sources/erl_assignment_2/pddl</compoundname>
+    <innerdir refid="dir_4c38237d9b4fa0c1d1887cf4d4f363ec">_build/html/_sources/erl_assignment_2/pddl/detectibot_pddl</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="_build/html/_sources/erl_assignment_2/pddl/"/>
+  </compounddef>
+</doxygen>

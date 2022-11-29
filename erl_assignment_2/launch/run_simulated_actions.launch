@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<launch>
+
+<!-- leave_temple -->
+<include file="$(find rosplan_planning_system)/launch/includes/simulated_action.launch" >
+	<arg name="pddl_action_name" value="leave_temple" />
+</include>
+
+<!-- shift_gripper -->
+<include file="$(find rosplan_planning_system)/launch/includes/simulated_action.launch" >
+	<arg name="pddl_action_name" value="shift_gripper" />
+</include>
+
+<!-- gather_hint -->
+<include file="$(find rosplan_planning_system)/launch/includes/simulated_action.launch" >
+	<arg name="pddl_action_name" value="gather_hint" />
+</include>
+
+<!-- go_to_wp -->
+<include file="$(find rosplan_planning_system)/launch/includes/simulated_action.launch" >
+	<arg name="pddl_action_name" value="go_to_wp" />
+</include>
+
+<!-- reach_temple -->
+<include file="$(find rosplan_planning_system)/launch/includes/simulated_action.launch" >
+	<arg name="pddl_action_name" value="reach_temple" />
+</include>
+
+<!-- check_consistent_hypo -->
+<include file="$(find rosplan_planning_system)/launch/includes/simulated_action.launch" >
+	<arg name="pddl_action_name" value="check_consistent_hypo" />
+</include>
+
+<!-- query_hypo -->
+<include file="$(find rosplan_planning_system)/launch/includes/simulated_action.launch" >
+	<arg name="pddl_action_name" value="query_hypo" />
+</include>
+
+</launch>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code docs – go_to_point.py &mdash; ExperimentalRoboticsAssignment2 v1.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Code docs – main" href="main.html" />
+    <link rel="prev" title="Code docs – cluedo_kb" href="cluedo_kb.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> ExperimentalRoboticsAssignment2
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Code documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Code Documentation for ExperimentalRoboticsAssignment2</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Oracle.html">Code docs – <em>simulation.cpp</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="action_interface.html">Code docs – <em>action_interface</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="cluedo_kb.html">Code docs – <em>cluedo_kb</em></a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Code docs – <em>go_to_point.py</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-use-this-node-service-behaviour">How to use this node – service behaviour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-go_to_point">code reference</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">Code docs – <em>main</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html">Code docs – <em>manipulation</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html">Code docs – <em>simulation</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_nav.html">Code docs – <em>test_nav</em></a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Other Documents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../documents/index.html">Other Documentation for ExperimentalRoboticsAssignment2</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ExperimentalRoboticsAssignment2</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Code Documentation for ExperimentalRoboticsAssignment2</a> &raquo;</li>
+      <li>Code docs – <em>go_to_point.py</em></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/code_documentation/go_to_point.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="code-docs-go-to-point-py">
+<h1>Code docs – <em>go_to_point.py</em><a class="headerlink" href="#code-docs-go-to-point-py" title="Permalink to this heading"></a></h1>
+<div class="section" id="how-to-use-this-node-service-behaviour">
+<h2>How to use this node – service behaviour<a class="headerlink" href="#how-to-use-this-node-service-behaviour" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>set the ROSParameters <em>des_pos_x</em> and <em>des_pos_y</em> in the parameter server using <em>rospy.set_param( “name”, value )</em></p></li>
+<li><p>send <em>data=true</em> to the service <code class="docutils literal notranslate"><span class="pre">/go_to_point</span></code> of type <code class="docutils literal notranslate"><span class="pre">std_srvs::SetBool</span></code></p></li>
+<li><p>wait until the server returns</p></li>
+</ol>
+<p><em>and here we go!</em></p>
+</div>
+<div class="section" id="module-go_to_point">
+<span id="code-reference"></span><h2>code reference<a class="headerlink" href="#module-go_to_point" title="Permalink to this heading"></a></h2>
+<p>ROS node for driving a robot to a specific point within a simulated
+environment, given a certain orientation.</p>
+<dl class="simple">
+<dt>Subscribes to:</dt><dd><p>/odom topic where the simulator publishes the robot position</p>
+</dd>
+<dt>Publishes to:</dt><dd><p>/cmd_vel the desired robot position</p>
+</dd>
+<dt>Service :</dt><dd><p>/go_to_point to start the robot motion.</p>
+</dd>
+</dl>
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">go_to_point.</span></span><span class="sig-name descname"><span class="pre">active_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
+<dd><p>Service activity flag</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">go_to_point.</span></span><span class="sig-name descname"><span class="pre">change_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/go_to_point.html#change_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Description of the change_state function:</p>
+<p>This value retrieve and assigns the current state to the
+global one (<em>state_</em>)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>state</strong> (<em>int</em>) – the state of the robot</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">go_to_point.</span></span><span class="sig-name descname"><span class="pre">clbk_odom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/go_to_point.html#clbk_odom"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Description of the callback:</p>
+<p>This function retrieves the current robot position for saving
+it within the <em>position_</em> global variable and is responsible for
+transforming the orientation from quaternion angles to Euler ones</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>msg</strong> (<em>Twist</em>) – data retrieved by <em>/cmd_vel</em> topic</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">go_to_point.</span></span><span class="sig-name descname"><span class="pre">desired_position_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">x:</span> <span class="pre">rospy.get_param</span> <span class="pre">y:</span> <span class="pre">rospy.get_param</span> <span class="pre">z:</span> <span class="pre">0</span></em></dt>
+<dd><p>ctarget robot position</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Point</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">go_to_point.</span></span><span class="sig-name descname"><span class="pre">dist_precision_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.3</span></em></dt>
+<dd><p>linear distance allowed</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">go_to_point.</span></span><span class="sig-name descname"><span class="pre">done</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">des_pos</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/go_to_point.html#done"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Description of done function:</p>
+<p>This function marks the goal target as succeeded, once all the
+linear and angular velocities are set to zero</p>
+<dl class="simple">
+<dt>Args :</dt><dd><p>None</p>
+</dd>
+<dt>Returns :</dt><dd><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">go_to_point.</span></span><span class="sig-name descname"><span class="pre">fix_yaw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">des_pos</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/go_to_point.html#fix_yaw"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Description of the fix_yaw function:</p>
+<p>This function computes the robot orientation among x and y
+coordinates and sets the angular velocity needed for achieving
+the desired robot position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>des_pos</strong> (<em>Point</em>) – the expected x and y coordinates</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">go_to_point.</span></span><span class="sig-name descname"><span class="pre">go_straight_ahead</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">des_pos</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/go_to_point.html#go_straight_ahead"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Description of the go_straight_ahead function:</p>
+<p>This function computes the robot orientation among x and y
+coordinates necessary to reach the x,y target point. Once the
+linear velocities have been set, an angular velocity is defined
+by means of an error. It is proportional to this latter and it
+allows a correction of the trajectory, by checking a treshold
+over a distance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>des_pos</strong> (<em>Point</em>) – the expected x and y coordinates</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">go_to_point.</span></span><span class="sig-name descname"><span class="pre">go_to_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/go_to_point.html#go_to_point"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>SERVICE IMPLEMENTATION OF /go_to_point</p>
+<p>This function retrieves the ROS params from the ROS
+parameter server. Secondly, it truggers a different
+robot behaviour, depending on the state’s value</p>
+<dl class="simple">
+<dt>Args :</dt><dd><p>None</p>
+</dd>
+<dt>Returns :</dt><dd><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">go_to_point.</span></span><span class="sig-name descname"><span class="pre">go_to_point_switch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/go_to_point.html#go_to_point_switch"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>SERVICE IMPLEMENTATION OF /go_to_point_switch</p>
+<p>the service sets the value of the activity flag.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>req</strong> (<em>std_srvs/SetBoolRequest</em>) – the activity value will be equal to the req.data passed to the
+service</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(std_srvs/SetBoolResponse) success is always true</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">go_to_point.</span></span><span class="sig-name descname"><span class="pre">normalize_angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/go_to_point.html#normalize_angle"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Function for normalizing the angle between -pi and pi.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> (<em>Float</em>) – the input angle</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the normalized angle.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>angle(Float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">go_to_point.</span></span><span class="sig-name descname"><span class="pre">position_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">x:</span> <span class="pre">0.0</span> <span class="pre">y:</span> <span class="pre">0.0</span> <span class="pre">z:</span> <span class="pre">0.0</span></em></dt>
+<dd><p>current robot position</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Point</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">go_to_point.</span></span><span class="sig-name descname"><span class="pre">state_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em></dt>
+<dd><p>current state of the server</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">go_to_point.</span></span><span class="sig-name descname"><span class="pre">yaw_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em></dt>
+<dd><p>current robot orientation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Pose</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">go_to_point.</span></span><span class="sig-name descname"><span class="pre">yaw_precision_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.3490658503988659</span></em></dt>
+<dd><p>yaw acc +/- 20 deg allowed</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">go_to_point.</span></span><span class="sig-name descname"><span class="pre">yaw_precision_2_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.03490658503988659</span></em></dt>
+<dd><p>tight yaw acc +/- 2</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="cluedo_kb.html" class="btn btn-neutral float-left" title="Code docs – cluedo_kb" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="main.html" class="btn btn-neutral float-right" title="Code docs – main" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Iacopo Pietrasanta.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

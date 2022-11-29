@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespace_k_c_l__rosplan" kind="namespace" language="C++">
+    <compoundname>KCL_rosplan</compoundname>
+    <innerclass refid="class_k_c_l__rosplan_1_1action__interface__class" prot="public">KCL_rosplan::action_interface_class</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erl_assignment_2/src/action_interface.cpp" line="77" column="1"/>
+  </compounddef>
+</doxygen>
